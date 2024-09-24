@@ -6,14 +6,161 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>index</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
 </head>
 
 <body>
   <%- include('./layout/header'); -%>
 
+  <section class="recommend py-7 py-lg-12">
+    <img class="bg-img-2" src="../assets/images/recommend-bg-2.png" alt="">
+    <img class="bg-img-3" src="../assets/images/recommend-bg-3.png" alt="">
+    <div class="container">
+      <h3 class="text-center fs-3 fs-lg-1 pb-8 fw-bold">推薦旅程</h3>
+      <div class="recommend-trip W-100 border-0 rounded-5 bg-primary-4 p-sm-4 d-flex flex-column flex-md-row gap-4 gap-lg-2">
+        <div class="d-flex flex-column py-sm-3 px-sm-7 align-items-center align-items-lg-start">
+          <div class="trip-title text-center text-lg-start">
+            <h6 class="text-primary-1">TravelTales</h6>
+            <h4 class="fw-bold pb-3">帶您去澎湖</h4>
+            <img src="../assets/images/recommend-bg-1.png" alt="">
+          </div>
+          <div class="swiper swiper-container">
+            <div class="swiper-wrapper pb-4">
+              <div class="swiper-slide">
+                <img src="../assets/images/recommend-1.png" alt="">
+                <div class="info bg-neutral-7 p-4">
+                  <h5 class="pb-2 fw-medium">澎湖花火節</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-neutral-2 fs-6">3天2夜澎湖花火節</p>
+                    <div class="cart rounded-circle">
+                      <span class="material-symbols-outlined position-absolute top-50 start-50 translate-middle">
+                        shopping_cart
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"><img src="../assets/images/recommend-1.png" alt="">
+                <div class="info bg-neutral-7 p-4">
+                  <h5 class="pb-2 fw-medium">澎湖花火節</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-neutral-2 fs-6">3天2夜澎湖花火節</p>
+                    <div class="cart rounded-circle">
+                      <span class="material-symbols-outlined position-absolute top-50 start-50 translate-middle">
+                        shopping_cart
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide"><img src="../assets/images/recommend-1.png" alt="">
+                <div class="info bg-neutral-7 p-4">
+                  <h5 class="pb-2 fw-medium">澎湖花火節</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-neutral-2 fs-6">3天2夜澎湖花火節</p>
+                    <div class="cart rounded-circle">
+                      <span class="material-symbols-outlined position-absolute top-50 start-50 translate-middle">
+                        shopping_cart
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination text-center px-4 px-lg-7 py-4 w-100">
+            <div class="swiper-prev material-symbols-outlined">
+              arrow_back_ios
+            </div>
+            <div class="swiper-pagination-custom"></div>
+            <div class="swiper-next material-symbols-outlined">
+              arrow_forward_ios
+            </div>
+          </div>
+        </div>
+        <div class="comment w-100 rounded-4 p-6 d-flex flex-column align-items-end justify-content-between">
+          <button class="btn btn-primary-2 rounded-4">點我看更多</button>
+          <div class="d-flex flex-column align-items-end w-100">
+            <div class="score mb-2">
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-neutral-7">
+                star
+              </span>
+              <p>4.8</p>
+            </div>
+            <div class="text-neutral-7 d-flex gap-2 border rounded-3 border-neutral-7 px-4 py-2 mb-6">
+              <span class="material-symbols-outlined">
+                sms
+              </span>
+              <p>2,577</p>
+              <p>|</p>
+              <p>1K+人 參加過</p>
+            </div>
+            <swiper-container class="comment-swiper" slides-per-view="auto" space-between="16" loop="true">
+              <swiper-slide>
+                <div class="comment-tag">
+                  <img src="../assets/images/person-1.png" class="rounded-circle object-fit-cover" alt="person-1">
+                  <p>這個行程太優惠了，行程又多</p>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="comment-tag">
+                  <img src="../assets/images/person-2.png" class="rounded-circle object-fit-cover" alt="person-2">
+                  <p>下次還會再來玩</p>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="comment-tag">
+                  <img src="../assets/images/person-3.png" class="rounded-circle object-fit-cover" alt="person-3">
+                  <p>還能加購更多</p>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="comment-tag">
+                  <img src="../assets/images/person-1.png" class="rounded-circle object-fit-cover" alt="person-1">
+                  <p>這個行程太優惠了，行程又多</p>
+                </div>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <%- include('./layout/footer'); -%>
 
   <script type="module" src="../main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      spaceBetween: 12,
+      pagination: {
+        el: '.swiper-pagination-custom',
+        bulletClass: 'swiper-pagination-bullet', // 自定義分頁指示器的class名
+        bulletActiveClass: 'swiper-pagination-bullet-active', // 自定義活動分頁指示器的class名
+      },
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+    });
+  </script>
 </body>
 
 </html>

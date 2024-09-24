@@ -1,0 +1,159 @@
+.recommend {
+    background-image: url('../images/bg-recommend.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .bg-img-3 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-188px, 57px);
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+
+    .bg-img-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(-520px, 69px);
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-image: none;
+        background-color: $primary-4;
+    }
+
+    .trip-title {
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-272.35px, 0px);
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+    }
+
+    .swiper-container {
+        max-width: 306px;
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+        }
+    }
+
+    .swiper-slide {
+        img {
+            box-shadow: 0px 1px 2px 0px #0000004D;
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .info {
+            box-shadow: 0px 1px 3px 1px #00000026;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+
+            .cart {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+
+                span {
+                    color: $neutral-3;
+                }
+
+                &:hover {
+                    background-color: $primary-1;
+
+                    span {
+                        color: $neutral-7;
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: $primary-3;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 24px;
+        border-radius: 8px;
+        background-color: $primary-1;
+    }
+
+    .comment {
+        background-image: url('../images/recommend-2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background-position: center;
+
+        @include media-breakpoint-down(md) {
+            height: 469px;
+        }
+
+        .score {
+            display: flex;
+            align-items: end;
+
+            span {
+                font-style: 20px;
+            }
+
+            p {
+                line-height: 1.2;
+                font-size: 64px;
+                color: $neutral-7;
+                font-weight: 900;
+            }
+        }
+
+        .comment-swiper {
+            width: 100%;
+            height: 100%;
+
+            swiper-slide {
+                display: inline-block;
+                width: auto;
+                text-align: center;
+            }
+
+            .comment-tag {
+                display: flex;
+                border-radius: 30px;
+                align-items: center;
+                justify-content: start;
+                background-color: #EBF6FACC;
+                padding: 8px 12px;
+                gap: 12px;
+                width: auto;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
