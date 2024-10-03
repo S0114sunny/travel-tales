@@ -1,0 +1,86 @@
+.banner{
+    overflow-y: hidden;
+    position: absolute;
+    width: 100%;
+    top:-70px;
+    z-index: -1;
+    &::before{
+        content: "";
+         background: 
+         linear-gradient(180deg, rgba(255, 255, 255, 0) 52.83%, #FFFFFF 100%),
+         linear-gradient(360deg, rgba(0, 47, 218, 0.1) 22.53%, rgba(14, 75, 196, 0.2) 100%),
+         linear-gradient(360deg, rgba(0, 0, 0, 0) 14.6%, rgba(0, 0, 0, 0.2) 42.59%, rgba(0, 0, 0, 0.172017) 61.79%, rgba(0, 0, 0, 0.0423077) 93.31%);
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.search{
+    max-width: 1028px;
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+        width: 87%;
+      }
+    .search-item{
+        position: relative;
+        width: 100%; 
+    }
+    .icon-more{
+        position: absolute;   
+        right: 15px;
+        padding-right: 4px;
+    }
+    h1{
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    //套件
+    input {
+        padding: 8px;
+    }
+    input::placeholder{
+        color: $neutral-3;
+    }
+    .form-content{
+        width: 100%;
+        border: 0px;
+        background-color: transparent;
+    }
+    .form-control::before{
+        content: "keyboard_arrow_down" ; //icon 名稱
+        font-family:"Material Icons"; // 採用的 icon 庫
+        width: auto !important;
+        height: auto !important;
+        font-size: 24px;
+        color: #4b4b4b;
+        background-image: none;
+        border: 0px;
+        right: 0px;
+        position: absolute;
+        pointer-events: none; /* 使圖標不干擾輸入框 */
+    }
+
+    .form-control, .form-control:focus {
+        border-color: transparent;
+        background-color: transparent;
+        color: $neutral-3;
+    }
+    .inputTime, .inputTime:focus {
+        border-color: #FFFFFF;
+        background-color: transparent;
+        color: #C1C1C1;
+    }
+    .datepicker-picker {
+        max-width: 316px;
+        width: 100%;
+    }
+    .datepicker-cell:not(.disabled):hover {
+        background-color: #e8e8e8;
+    }
+    .datepicker-cell.selected, .datepicker-cell.selected:hover {
+        background-color: #e8e8e8;
+        color: #000;
+    }
+
+}
