@@ -1,5 +1,61 @@
-.reason{
-    .img{
+body {
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.reason {
+    .img {
         height: 220px;
+    }
+}
+
+.rank {
+    background-image: url("/assets/images/bg-rank.png");
+    background-size: cover;
+
+    @include media-breakpoint-down(lg) {
+        background-image: none;
+    }
+
+    .rank-item {
+        &:hover {
+            background-color: $primary-4;
+            cursor: pointer;
+            border-radius: 24px;
+        }
+    }
+
+    ol {
+        list-style: none;
+    }
+
+    .rank-img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .material-icons {
+        vertical-align: sub;
+    }
+
+    .span-star {
+        width: 20px;
+        height: 20px;
+        color: $secondary-6;
+    }
+
+    .span-textsms {
+        width: 20px;
+        height: 20px;
+        color: $neutral-5;
+    }
+
+    .span-arrow-right {
+        width: 24px;
+        height: 24px;
+        color: $neutral-4;
+    }
+
+    .border-shadow {
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
     }
 }
