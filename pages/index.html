@@ -2,41 +2,160 @@
 <html lang="zh-Hant-TW">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>index</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+  <%- include('./layout/head'); -%>
   <title>TravelTales - 每段旅程，都是一段故事</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--datepicker日曆套件-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
 </head>
 
 <body>
-  <%- include('./layout/header'); -%>
-  
-  <section class="contenter-fluid">
-    <div class="banner">
-      <img src="../assets/images/banner.png" alt="" width="1920px" height="1024px" class="object-fit-cover">
+  <section class="banner">
+    <%- include('./layout/header'); -%>
+    <div class="contenter-fluid z-3 ">
+      <div class="d-flex flex-column align-items-center justify-content-between px-lg-10 py-lg-13  py-8  position-relative">
+        <img src="../assets/images/logo.png" width="147px" height="56px" alt="logo" class="object-fit-cover mb-lg-10 mb-8">
+        <h1 class="display-3 fw-semibold text-white mb-lg-10 mb-8">每段旅程，都是一段故事</h1>
+        <!--datepicker ejs-->
+        <%- include('./layout/datepicker'); -%>
+        <a href="#"><span class="material-symbols-outlined custom-icon text-center " >keyboard_double_arrow_down</span></a>    
+      </div>
     </div>
-    <div class="container z-3">
-     <div class="d-flex flex-column align-items-center justify-content-between px-lg-10 py-lg-13  py-8  position-relative">
-      <img src="../assets/images/logo.png" width="147px" height="56px" alt="logo" class="object-fit-cover mb-lg-10 mb-8">
-      <h1 class="display-3 fw-semibold text-white mb-lg-10 mb-8">每段旅程，都是一段故事</h1>
-      <!--datepicker ejs-->
-      <%- include('./layout/datepicker'); -%>
-      <a href="#"><span class="material-icons custom-icon text-center " >keyboard_double_arrow_down</span></a>    
-     </div>
+  </section>
+  
+  <section class="popular py-7 py-lg-12 bg-eutral-5 z-1">
+    <img class="popular_bg-1 d-none d-md-block" src="/assets/images/popular-bg-1.png" alt="bg-waves">
+    <div class="container position-relative">
+      <img class="popular_bg-2 d-none d-md-block" src="/assets/images/popular-bg-2.png" alt="bg-airplane">
+      <img class="popular_bg-3 d-none d-md-block" src="/assets/images/popular-bg-3.png" alt="bg-passport">
+      <h3 class="text-center fs-3 fs-lg-1 pb-8 fw-bold text-neutral-2">熱門旅程</h3>
+      <div class="swiper swiper-popular mb-6">
+        <div class="swiper-wrapper pb-4 swiper-popular_wrapper">
+          <div class="swiper-slide swiper-popular_slide">
+            <div class="popular_img popular_img_1 d-flex justify-content-between">
+              <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">日本</div>
+              <%- include('./layout/collect-love'); -%>
+            </div>
+            <div class="p-4 bg-white popular_content">
+              <h5 class="mb-2 fw-medium fs-5 text-neutral-1">大阪奇蹟郵輪</h5>
+              <div class="d-flex align-items-center mb-2">
+                <span class="star-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FACC44"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+                <span class="fw-medium fs-6 text-neutral-2">4.5</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-primary-2 popular_price fw-bold">NT$ 32,000 起</p>
+                <div class="popular_cart position-relative">
+                  <span class="material-symbols-outlined position-relative z-1">
+                    shopping_cart
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-popular_slide ">
+            <div class="d-flex justify-content-between">
+              <div class="swiper swiperPopular2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="popular_img popular_img_2 d-flex justify-content-between">
+                      <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">台中</div>
+                      <%- include('./layout/collect-love'); -%>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="popular_img popular_img_3 d-flex justify-content-between">
+                      <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">台中</div>
+                      <%- include('./layout/collect-love'); -%>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="popular_img popular_img_4 d-flex justify-content-between">
+                      <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">台中</div>
+                      <%- include('./layout/collect-love'); -%>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-popular-two"></div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-white popular_content">
+              <h5 class="mb-2 fw-medium fs-5 text-neutral-1">高美濕地 & 宮原眼科</h5>
+              <div class="d-flex align-items-center mb-2">
+                <span class="star-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FACC44"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+                <span class="fw-medium fs-6 text-neutral-2">4.5</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-primary-2 popular_price fw-bold">NT$ 600 起</p>
+                <div class="popular_cart position-relative">
+                  <span class="material-symbols-outlined position-relative z-1">
+                    shopping_cart
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-popular_slide">
+            <div class="popular_img popular_img_5 d-flex justify-content-between">
+              <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">日本</div>
+              <%- include('./layout/collect-love'); -%>
+            </div>
+            <div class="p-4 bg-white popular_content">
+              <h5 class="mb-2 fw-medium fs-5 text-neutral-1">日本環球影城</h5>
+              <div class="d-flex align-items-center mb-2">
+                <span class="star-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FACC44"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+                <span class="fw-medium fs-6 text-neutral-2">4.8</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-primary-2 popular_price fw-bold">NT$ 3,500 起</p>
+                <div class="popular_cart position-relative">
+                  <span class="material-symbols-outlined position-relative z-1">
+                    shopping_cart
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-popular_slide">
+            <div class="popular_img popular_img_6 d-flex justify-content-between">
+              <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">歐洲</div>
+              <%- include('./layout/collect-love'); -%>
+            </div>
+            <div class="p-4 bg-white popular_content">
+              <h5 class="mb-2 fw-medium fs-5 text-neutral-1">4天3夜 克里穆圖火山</h5>
+              <div class="d-flex align-items-center mb-2">
+                <span class="star-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FACC44"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+                <span class="fw-medium fs-6 text-neutral-2">4.5</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-primary-2 popular_price fw-bold">NT$ 32,000 起</p>
+                <div class="popular_cart position-relative">
+                  <span class="material-symbols-outlined position-relative z-1">
+                    shopping_cart
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="pagination pagination-popular text-center p-4">
+          <div class="swiper-popular-prev material-symbols-outlined">
+            arrow_back_ios
+          </div>
+          <div class="swiper-pagination-popular"></div>
+          <div class="swiper-popular-next material-symbols-outlined">
+            arrow_forward_ios
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -211,13 +330,13 @@
                     <p class="fw-medium mb-2 text-truncate">新北｜許家麵線｜親子體驗：流水麵線</p>
                     <div>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0 me-3"><span
-                          class="material-icons span-star me-2">star</span>4.3</p>
+                          class="material-symbols-outlined span-star me-2">star</span>4.3</p>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0"><span
-                          class="material-icons span-textsms me-2">textsms</span>560+</p>
+                          class="material-symbols-outlined span-textsms me-2">textsms</span>560+</p>
                     </div>
                   </div>
                   <div class="mx-2 mx-lg-4">
-                    <a href="#"><span class="material-icons span-arrow-right">arrow_forward_ios</span></a>
+                    <a href="#"><span class="material-symbols-outlined span-arrow-right">arrow_forward_ios</span></a>
                   </div>
                 </div>
               </li>
@@ -232,14 +351,14 @@
                     <p class="fw-medium mb-2 text-truncate">南投｜玉山2天1夜前峰團 · 2天2夜</p>
                     <div>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0 me-3"><span
-                          class="material-icons span-star me-2">star</span>4.6</p>
+                          class="material-symbols-outlined span-star me-2">star</span>4.6</p>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0"><span
-                          class="material-icons span-textsms me-2">textsms</span>400+
+                          class="material-symbols-outlined span-textsms me-2">textsms</span>400+
                       </p>
                     </div>
                   </div>
                   <div class="mx-2 mx-lg-4">
-                    <span class="material-icons span-arrow-right">arrow_forward_ios</span>
+                    <span class="material-symbols-outlined span-arrow-right">arrow_forward_ios</span>
                   </div>
                 </div>
               </li>
@@ -254,14 +373,14 @@
                     <p class="fw-medium mb-2 text-truncate">SNOWTOWN 雪樂地門票</p>
                     <div>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0 me-3"><span
-                          class="material-icons span-star me-2">star</span>4.5</p>
+                          class="material-symbols-outlined span-star me-2">star</span>4.5</p>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0"><span
-                          class="material-icons span-textsms me-2">textsms</span>350+
+                          class="material-symbols-outlined span-textsms me-2">textsms</span>350+
                       </p>
                     </div>
                   </div>
                   <div class="mx-2 mx-lg-4">
-                    <span class="material-icons span-arrow-right">arrow_forward_ios</span>
+                    <span class="material-symbols-outlined span-arrow-right">arrow_forward_ios</span>
                   </div>
                 </div>
               </li>
@@ -283,13 +402,13 @@
                     <p class="fw-medium mb-2 text-truncate">新北八里左岸｜SUP立槳｜沙洲蛤水麵</p>
                     <div>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0 me-3"><span
-                          class="material-icons span-star me-2">star</span>4.8</p>
+                          class="material-symbols-outlined span-star me-2">star</span>4.8</p>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0"><span
-                          class="material-icons span-textsms me-2">textsms</span>670+</p>
+                          class="material-symbols-outlined span-textsms me-2">textsms</span>670+</p>
                     </div>
                   </div>
                   <div class="mx-2 mx-lg-4">
-                    <a href="#"><span class="material-icons span-arrow-right">arrow_forward_ios</span></a>
+                    <a href="#"><span class="material-symbols-outlined span-arrow-right">arrow_forward_ios</span></a>
                   </div>
                 </div>
               </li>
@@ -304,14 +423,14 @@
                     <p class="fw-medium mb-2 text-truncate">台中國立自然科學博物館門票</p>
                     <div>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0 me-3"><span
-                          class="material-icons span-star me-2">star</span>4.6</p>
+                          class="material-symbols-outlined span-star me-2">star</span>4.6</p>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0"><span
-                          class="material-icons span-textsms me-2">textsms</span>420+
+                          class="material-symbols-outlined span-textsms me-2">textsms</span>420+
                       </p>
                     </div>
                   </div>
                   <div class="mx-2 mx-lg-4">
-                    <span class="material-icons span-arrow-right">arrow_forward_ios</span>
+                    <span class="material-symbols-outlined span-arrow-right">arrow_forward_ios</span>
                   </div>
                 </div>
               </li>
@@ -326,14 +445,14 @@
                     <p class="fw-medium mb-2 text-truncate">台中｜經典行程&高美濕地一日遊</p>
                     <div>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0 me-3"><span
-                          class="material-icons span-star me-2">star</span>4.5</p>
+                          class="material-symbols-outlined span-star me-2">star</span>4.5</p>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0"><span
-                          class="material-icons span-textsms me-2">textsms</span>350+
+                          class="material-symbols-outlined span-textsms me-2">textsms</span>350+
                       </p>
                     </div>
                   </div>
                   <div class="mx-2 mx-lg-4">
-                    <span class="material-icons span-arrow-right">arrow_forward_ios</span>
+                    <span class="material-symbols-outlined span-arrow-right">arrow_forward_ios</span>
                   </div>
                 </div>
               </li>
@@ -355,13 +474,13 @@
                     <p class="fw-medium mb-2 text-truncate">宜蘭張美阿嬤農場</p>
                     <div>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0 me-3"><span
-                          class="material-icons span-star me-2">star</span>4.9</p>
+                          class="material-symbols-outlined span-star me-2">star</span>4.9</p>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0"><span
-                          class="material-icons span-textsms me-2">textsms</span>560+</p>
+                          class="material-symbols-outlined span-textsms me-2">textsms</span>560+</p>
                     </div>
                   </div>
                   <div class="mx-2 mx-lg-4">
-                    <a href="#"><span class="material-icons span-arrow-right">arrow_forward_ios</span></a>
+                    <a href="#"><span class="material-symbols-outlined span-arrow-right">arrow_forward_ios</span></a>
                   </div>
                 </div>
               </li>
@@ -376,14 +495,14 @@
                     <p class="fw-medium mb-2 text-truncate">花蓮賞鯨｜多羅滿海洋賞鯨導覽體</p>
                     <div>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0 me-3"><span
-                          class="material-icons span-star me-2">star</span>4.5</p>
+                          class="material-symbols-outlined span-star me-2">star</span>4.5</p>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0"><span
-                          class="material-icons span-textsms me-2">textsms</span>400+
+                          class="material-symbols-outlined span-textsms me-2">textsms</span>400+
                       </p>
                     </div>
                   </div>
                   <div class="mx-2 mx-lg-4">
-                    <span class="material-icons span-arrow-right">arrow_forward_ios</span>
+                    <span class="material-symbols-outlined span-arrow-right">arrow_forward_ios</span>
                   </div>
                 </div>
               </li>
@@ -398,14 +517,14 @@
                     <p class="fw-medium mb-2 text-truncate">南投｜日月潭之美·海陸空體驗一日遊</p>
                     <div>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0 me-3"><span
-                          class="material-icons span-star me-2">star</span>4.5</p>
+                          class="material-symbols-outlined span-star me-2">star</span>4.5</p>
                       <p class="d-inline-block d-lg-block d-xl-inline-block fs-7 mb-0"><span
-                          class="material-icons span-textsms me-2">textsms</span>500+
+                          class="material-symbols-outlined span-textsms me-2">textsms</span>500+
                       </p>
                     </div>
                   </div>
                   <div class="mx-2 mx-lg-4">
-                    <span class="material-icons span-arrow-right">arrow_forward_ios</span>
+                    <span class="material-symbols-outlined span-arrow-right">arrow_forward_ios</span>
                   </div>
                 </div>
               </li>
@@ -416,29 +535,13 @@
     </div>
   </section>
 
-
-
   <%- include('./layout/footer'); -%>
 
   <script type="module" src="../main.js"></script>
+  <script type="module" src="../assets/js/collect-love.js"></script>
+  <script type="module" src="../assets/js/travel_swiper.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      spaceBetween: 12,
-      pagination: {
-        el: '.swiper-pagination-custom',
-        bulletClass: 'swiper-pagination-bullet', // 自定義分頁指示器的class名
-        bulletActiveClass: 'swiper-pagination-bullet-active', // 自定義活動分頁指示器的class名
-      },
-      navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
-      },
-    });
-  </script>
 </body>
 
 </html>
