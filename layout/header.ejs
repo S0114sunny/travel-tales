@@ -1,0 +1,100 @@
+<nav class="navbar navbar-light z-3" >   
+  <div class="container justify-content-end"> 
+    <!--滾動後出現-->
+    <nav class="navbar navbar-expand-lg navbar-light z-3 d-none d-lg-block" id="navBarA">
+      <div class="container">
+        <a class="navbar-brand position-relative d-none" href="#" id="logo">
+          <img src="../assets/images/logo2.png" width="107px" height="40"  alt="logo">
+        </a>
+        <ul class="d-flex ms-auto">
+          <li><a class="px-5 py-2 text-white textColor" href="#">全部旅程</a></li>
+          <li><a class="px-5 py-2 text-white textColor" href="#">優惠景點</a></li>
+          <li><a class="px-5 py-2 text-white textColor" href="#">熱門旅程</a></li>
+          <li><a class="px-5 py-2 text-white textColor" href="#">客服中心</a></li> 
+          <li class="custom-btn-all">
+            <button href="#" class="btn custom-1 textColor2">註冊/登入</button>
+          </li>
+        </ul> 
+      </div>
+    </nav>
+  </div>
+
+  <div class="container-fluid justify-content-end">
+    <!--mobile-->
+    <nav class="navbar navbar-light z-3 d-block d-lg-none" id="navBarB">
+      <!--滾動後出現--->
+      <div class="mx-6 d-none" id="navbara">
+        <div class="d-flex justify-content-between">
+          <a class="navbar-brand position-relative" href="#">
+            <img src="../assets/images/logo2.png" width="107px" height="40"  alt="logo" class="ms-2">
+          </a>
+          <!--漢堡--->
+          <button class="navbar-toggler position-relative ms-auto pe-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="material-symbols-outlined material-custom2">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!--首頁靜止出現-navbar-b-->
+      <div class="container">
+        <button class="navbar-toggler position-relative ms-auto pe-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" id="navbarb">
+          <span class="material-symbols-outlined material-custom">menu</span>
+        </button>
+      </div>
+    </nav>    
+  </div>
+</nav>
+
+
+
+<!--offcanvas-->
+<div class="navbar">
+  <div class="offcanvas offcanvas-end w-lg-25 w-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <a class="navbar-brand position-relative" href="#">
+        <img src="../assets/images/logo2.png" width="107px" height="40"  alt="logo" class="ms-2">
+      </a>
+      <button class="material-symbols-outlined material-custom2" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+        menu
+      </button>
+    </div>
+    <div class="offcanvas-body vh-100 p-0">
+      <ul class="navbar-nav px-0">
+        <li class="border-top border-1 py-2"></li>
+        <li class="nav-item px-3 mt-5">
+          <a class="nav-link nav-link-mb" aria-current="page" href="#">
+            <p>全部旅程</p>
+            <span class="material-icons">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link nav-link-mb" href="#">
+            <p>優惠景點</p>
+            <span class="material-icons">arrow_forward_ios</span>
+          </a>
+          
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link nav-link-mb" href="#">
+            <p>熱門旅程</p>
+            <span class="material-icons">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="nav-item px-3 mb-5">
+          <a class="nav-link nav-link-mb" href="#">
+            客服中心
+            <span class="material-icons">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="border-bottom border-3 py-2"></li>
+        <li class="nav-item px-3 py-1">
+          <a href="#" class="nav-link d-flex align-items-center">
+            <span class="material-symbols-outlined pe-2">login</span>
+           註冊/登入
+          </a>
+        </li> 
+      </ul>
+    </div>
+    
+  </div>  
+</div>  
