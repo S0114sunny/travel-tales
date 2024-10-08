@@ -23,20 +23,155 @@
 </head>
 
 <body>
-  <%- include('./layout/header'); -%>
-  
-  <section class="contenter-fluid">
-    <div class="banner">
-      <img src="../assets/images/banner.png" alt="" width="1920px" height="1024px" class="object-fit-cover">
+  <section class="banner">
+    <%- include('./layout/header'); -%>
+    <div class="contenter-fluid z-3 ">
+      <div class="d-flex flex-column align-items-center justify-content-between px-lg-10 py-lg-13  py-8  position-relative">
+        <img src="../assets/images/logo.png" width="147px" height="56px" alt="logo" class="object-fit-cover mb-lg-10 mb-8">
+        <h1 class="display-3 fw-semibold text-white mb-lg-10 mb-8">每段旅程，都是一段故事</h1>
+        <!--datepicker ejs-->
+        <%- include('./layout/datepicker'); -%>
+        <a href="#"><span class="material-icons custom-icon text-center " >keyboard_double_arrow_down</span></a>    
+      </div>
     </div>
-    <div class="container z-3">
-     <div class="d-flex flex-column align-items-center justify-content-between px-lg-10 py-lg-13  py-8  position-relative">
-      <img src="../assets/images/logo.png" width="147px" height="56px" alt="logo" class="object-fit-cover mb-lg-10 mb-8">
-      <h1 class="display-3 fw-semibold text-white mb-lg-10 mb-8">每段旅程，都是一段故事</h1>
-      <!--datepicker ejs-->
-      <%- include('./layout/datepicker'); -%>
-      <a href="#"><span class="material-icons custom-icon text-center " >keyboard_double_arrow_down</span></a>    
-     </div>
+  </section>
+  
+  <section class="popular py-7 py-lg-12 bg-eutral-5 z-1">
+    <img class="popular_bg-1 d-none d-md-block" src="/assets/images/popular-bg-1.png" alt="bg-waves">
+    <div class="container position-relative">
+      <img class="popular_bg-2 d-none d-md-block" src="/assets/images/popular-bg-2.png" alt="bg-airplane">
+      <img class="popular_bg-3 d-none d-md-block" src="/assets/images/popular-bg-3.png" alt="bg-passport">
+      <h3 class="text-center fs-3 fs-lg-1 pb-8 fw-bold text-neutral-2">熱門旅程</h3>
+      <div class="swiper swiper-popular mb-6">
+        <div class="swiper-wrapper pb-4 swiper-popular_wrapper">
+          <div class="swiper-slide swiper-popular_slide">
+            <div class="popular_img popular_img_1 d-flex justify-content-between">
+              <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">日本</div>
+              <%- include('./layout/collect-love'); -%>
+            </div>
+            <div class="p-4 bg-white popular_content">
+              <h5 class="mb-2 fw-medium fs-5 text-neutral-1">大阪奇蹟郵輪</h5>
+              <div class="d-flex align-items-center mb-2">
+                <span class="star-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FACC44"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+                <span class="fw-medium fs-6 text-neutral-2">4.5</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-primary-2 popular_price fw-bold">NT$ 32,000 起</p>
+                <div class="popular_cart position-relative">
+                  <span class="material-symbols-outlined position-relative z-1">
+                    shopping_cart
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-popular_slide ">
+            <div class="d-flex justify-content-between">
+              <div class="swiper swiperPopular2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="popular_img popular_img_2 d-flex justify-content-between">
+                      <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">台中</div>
+                      <%- include('./layout/collect-love'); -%>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="popular_img popular_img_3 d-flex justify-content-between">
+                      <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">台中</div>
+                      <%- include('./layout/collect-love'); -%>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="popular_img popular_img_4 d-flex justify-content-between">
+                      <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">台中</div>
+                      <%- include('./layout/collect-love'); -%>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-popular-two"></div>
+              </div>
+            </div>
+
+            <div class="p-4 bg-white popular_content">
+              <h5 class="mb-2 fw-medium fs-5 text-neutral-1">高美濕地 & 宮原眼科</h5>
+              <div class="d-flex align-items-center mb-2">
+                <span class="star-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FACC44"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+                <span class="fw-medium fs-6 text-neutral-2">4.5</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-primary-2 popular_price fw-bold">NT$ 600 起</p>
+                <div class="popular_cart position-relative">
+                  <span class="material-symbols-outlined position-relative z-1">
+                    shopping_cart
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-popular_slide">
+            <div class="popular_img popular_img_5 d-flex justify-content-between">
+              <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">日本</div>
+              <%- include('./layout/collect-love'); -%>
+            </div>
+            <div class="p-4 bg-white popular_content">
+              <h5 class="mb-2 fw-medium fs-5 text-neutral-1">日本環球影城</h5>
+              <div class="d-flex align-items-center mb-2">
+                <span class="star-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FACC44"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+                <span class="fw-medium fs-6 text-neutral-2">4.8</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-primary-2 popular_price fw-bold">NT$ 3,500 起</p>
+                <div class="popular_cart position-relative">
+                  <span class="material-symbols-outlined position-relative z-1">
+                    shopping_cart
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-popular_slide">
+            <div class="popular_img popular_img_6 d-flex justify-content-between">
+              <div class="fs-6 text-white fw-medium bg-primary-2 popular_img-tag">歐洲</div>
+              <%- include('./layout/collect-love'); -%>
+            </div>
+            <div class="p-4 bg-white popular_content">
+              <h5 class="mb-2 fw-medium fs-5 text-neutral-1">4天3夜 克里穆圖火山</h5>
+              <div class="d-flex align-items-center mb-2">
+                <span class="star-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FACC44"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+                <span class="fw-medium fs-6 text-neutral-2">4.5</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-primary-2 popular_price fw-bold">NT$ 32,000 起</p>
+                <div class="popular_cart position-relative">
+                  <span class="material-symbols-outlined position-relative z-1">
+                    shopping_cart
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="pagination pagination-popular text-center p-4">
+          <div class="swiper-popular-prev material-symbols-outlined">
+            arrow_back_ios
+          </div>
+          <div class="swiper-pagination-popular"></div>
+          <div class="swiper-popular-next material-symbols-outlined">
+            arrow_forward_ios
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -416,29 +551,13 @@
     </div>
   </section>
 
-
-
   <%- include('./layout/footer'); -%>
 
   <script type="module" src="../main.js"></script>
+  <script type="module" src="../assets/js/collect-love.js"></script>
+  <script type="module" src="../assets/js/travel_swiper.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      spaceBetween: 12,
-      pagination: {
-        el: '.swiper-pagination-custom',
-        bulletClass: 'swiper-pagination-bullet', // 自定義分頁指示器的class名
-        bulletActiveClass: 'swiper-pagination-bullet-active', // 自定義活動分頁指示器的class名
-      },
-      navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
-      },
-    });
-  </script>
 </body>
 
 </html>

@@ -12,4 +12,4 @@ collectLoves.forEach(function(collectLove) {
     // 點選會切換成 active 時會改變顏色
     this.classList.toggle('active');
   });
-});
+});a
