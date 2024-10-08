@@ -108,7 +108,7 @@ body {
 
     .comment {
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 52.41%, rgba(0, 0, 0, 0.498) 84.15%, rgba(0, 0, 0, 0.6) 99.08%),
-        url("../images/recommend-2.jpg");
+            url("../images/recommend-2.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         overflow: hidden;
@@ -134,12 +134,11 @@ body {
             }
         }
 
-        .comment-btn{
+        .comment-btn {
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 backdrop-filter: blur(4px)
-                
             }
         }
 
@@ -169,7 +168,8 @@ body {
                 }
             }
         }
-
+    }
+}
 
 .reason {
     .img {
