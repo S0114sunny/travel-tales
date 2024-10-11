@@ -402,7 +402,7 @@
 }
 .reason {
     .img {
-        height: 220px;
+        height: 220px; // 第三張圖大小不一樣
     }
 }
 .rank {
@@ -421,13 +421,11 @@
         }
     }
 
-    ol {
-        list-style: none;
-    }
-
     .rank-img {
         width: 64px;
         height: 64px;
+        min-width: 64px;
+        min-height: 64px;
     }
 
     .material-icons {
