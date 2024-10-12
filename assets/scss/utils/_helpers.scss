@@ -1,42 +1,77 @@
-.material-icons,.material-symbols-outlined{
+.material-icons,
+.material-symbols-outlined {
     color: $neutral-3;
     font-size: 24px;
 }
 
-.custom-icon{
+.custom-icon {
     color: white;
     font-size: 48px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 //btn
-@mixin hover-effect{
-    color: white !important; 
+@mixin hover-effect {
+    color: white !important;
     background-color: $primary-3 !important;
     border: transparent !important;
     outline: 1px solid transparent !important;
 }
-.custom-btn-all{
-    a,button{
+
+.custom-btn-all {
+
+    a,
+    button {
         color: white;
         background-color: $primary-2;
         border: 0px;
-        &:hover,&:active{
+
+        &:hover,
+        &:active {
             @include hover-effect;
         }
-    }  
-    .custom-1{
+    }
+
+    .custom-1 {
         background-color: transparent;
         outline: 1px solid white;
 
     }
-    .custom-2{
+
+    .custom-2 {
         background-color: transparent;
         outline: 1px solid $primary-2;
         color: $primary-2;
 
     }
 }
-.w-lg-25{
+
+.w-lg-25 {
     width: 25%;
+}
+
+//position
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.min-w-0 {
+    min-width: 0px;
+}
+
+// swiper pagination
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: $primary-3;
+}
+
+.swiper-pagination-bullet-active {
+    width: 24px;
+    border-radius: 8px;
+    background-color: $primary-1;
 }

@@ -20,13 +20,13 @@
 @import "../../node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap/scss/buttons";
 // @import "../../node_modules/bootstrap/scss/transitions";
-// @import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/dropdown";
 // @import "../../node_modules/bootstrap/scss/button-group";
-// @import "../../node_modules/bootstrap/scss/nav";
-// @import "../../node_modules/bootstrap/scss/navbar";
+ @import "../../node_modules/bootstrap/scss/nav";
+ @import "../../node_modules/bootstrap/scss/navbar";
 // @import "../../node_modules/bootstrap/scss/card";
 // @import "../../node_modules/bootstrap/scss/accordion";
-// @import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
 // @import "../../node_modules/bootstrap/scss/pagination";
 // @import "../../node_modules/bootstrap/scss/badge";
 // @import "../../node_modules/bootstrap/scss/alert";
@@ -39,7 +39,7 @@
 // @import "../../node_modules/bootstrap/scss/popover";
 // @import "../../node_modules/bootstrap/scss/carousel";
 // @import "../../node_modules/bootstrap/scss/spinners";
-// @import "../../node_modules/bootstrap/scss/offcanvas";
+@import "../../node_modules/bootstrap/scss/offcanvas";
 // @import "../../node_modules/bootstrap/scss/placeholders";
 
 // Helpers
@@ -54,18 +54,13 @@ $utilities: map-merge($utilities,
                 )),
         ));
 
-@import './base/base';
-
-$utilities: map-merge($utilities,
-        ("font-size": map-merge(map-get($utilities, "font-size"),
-                (responsive: true,
-                )),
-        ));
 
 @import './base/base';
 @import './utils/helpers';
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
-
+@import './layout/collect-love.scss';
+@import './layout/_memberCenterFilter';
 @import './pages/index.scss';
+@import './pages/singleTrip.scss';

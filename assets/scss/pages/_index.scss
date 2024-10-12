@@ -1,26 +1,16 @@
-
-body {
-    font-family: "Noto Sans TC", sans-serif;
-}
 .banner{
+    background-image: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 52.83%, #FFFFFF 100%),
+    linear-gradient(360deg, rgba(0, 47, 218, 0.1) 22.53%, rgba(14, 75, 196, 0.2) 100%),
+    linear-gradient(360deg, rgba(0, 0, 0, 0) 14.6%, rgba(0, 0, 0, 0.2) 42.59%, rgba(0, 0, 0, 0.172017) 61.79%, rgba(0, 0, 0, 0.0423077) 93.31%),
+    url("../assets/images/banner.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
     overflow-y: hidden;
-    position: absolute;
     width: 100%;
-    top:-70px;
-    z-index: -1;
-    &::before{
-        content: "";
-         background: 
-         linear-gradient(180deg, rgba(255, 255, 255, 0) 52.83%, #FFFFFF 100%),
-         linear-gradient(360deg, rgba(0, 47, 218, 0.1) 22.53%, rgba(14, 75, 196, 0.2) 100%),
-         linear-gradient(360deg, rgba(0, 0, 0, 0) 14.6%, rgba(0, 0, 0, 0.2) 42.59%, rgba(0, 0, 0, 0.172017) 61.79%, rgba(0, 0, 0, 0.0423077) 93.31%);
-        z-index: 1;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
 }
-
 .search{
     max-width: 1028px;
     width: 100%;
@@ -88,7 +78,156 @@ body {
     }
 
 }
-
+.popular {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  &_bg-1 {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+  }
+  &_bg-2 {
+    position: absolute;
+    z-index: -1;
+    top: 42%;
+    left: -12%;
+  }
+  &_bg-3 {
+    position: absolute;
+    z-index: -1;
+    top: 30%;
+    right: -16%;
+  }
+  .swiper-popular {
+    padding: 0px -12px;
+    width: 100%;
+    overflow: visible;
+    &_wrapper {
+      overflow: visible;
+    }
+    &_slide {
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+  }
+  .popular_slide-second {
+    transition: transform 0.3s ease;
+  }
+  .pagination-popular {
+    width: 375px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-breakpoint-down(sm) {
+      width: 351px;
+    }
+  }
+  .swiper-pagination-popular {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+  }
+  .swiper-popular-next,
+  .swiper-popular-prev {
+    @include media-breakpoint-down(sm) {
+      padding: 16px;
+      border-radius: 50%;
+      border: 1px solid $neutral-6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @include media-breakpoint-up(lg) {
+      opacity: 0.5; 
+      pointer-events: none; // PC 版設定不能執行換頁
+    }
+  }
+  .swiper-pagination-popular-two {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      background-color: $primary-4;
+    }
+  
+    .swiper-pagination-bullet-active {
+        width: 8px;
+        width: 8px;
+        background-color: $neutral-4;
+    }
+  }
+  .popular_img {
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 24px 24px 0px 0px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    &_1 {
+      background-image: url("/assets/images/popular-1.png");
+    }
+    &_2 {
+      background-image: url("/assets/images/popular-2.png");
+    }
+    &_3 {
+      background-image: url("/assets/images/popular-4.png");
+    }
+    &_4 {
+      background-image: url("/assets/images/popular-3.png");
+    }
+    &_5 {
+      background-image: url("/assets/images/popular-5.png");
+    }
+    &_6 {
+      background-image: url("/assets/images/popular-6.png");
+    }
+    &-tag {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 36px;
+      border-radius: 24px 0px 24px 0px ;
+    }
+  }
+  &_content {
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 24px 24px;
+    flex: 1;
+    &_price {
+      font-size: 18px;
+    }
+    .star-icon {
+      margin-right: 6px;
+    }
+  }
+  &_cart span {
+    color: $neutral-3;
+    cursor: pointer;
+  }
+  &_cart:hover span {
+    color: $neutral-7;
+  }
+  &_cart:hover::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: $primary-1;
+    border-radius: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 0; 
+  }
+}
 .recommend {
     background-image: url('../images/bg-recommend.png');
     background-size: cover;
@@ -181,17 +320,17 @@ body {
         }
     }
 
-    .swiper-pagination-bullet {
-        width: 8px;
-        height: 8px;
-        background-color: $primary-3;
-    }
+    // .swiper-pagination-bullet {
+    //     width: 8px;
+    //     height: 8px;
+    //     background-color: $primary-3;
+    // }
 
-    .swiper-pagination-bullet-active {
-        width: 24px;
-        border-radius: 8px;
-        background-color: $primary-1;
-    }
+    // .swiper-pagination-bullet-active {
+    //     width: 24px;
+    //     border-radius: 8px;
+    //     background-color: $primary-1;
+    // }
 
     .comment {
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 52.41%, rgba(0, 0, 0, 0.498) 84.15%, rgba(0, 0, 0, 0.6) 99.08%),
@@ -257,13 +396,11 @@ body {
         }
     }
 }
-
 .reason {
     .img {
-        height: 220px;
+        height: 220px; // 第三張圖大小不一樣
     }
 }
-
 .rank {
     background-image: url("/assets/images/bg-rank.png");
     background-size: cover;
@@ -280,16 +417,14 @@ body {
         }
     }
 
-    ol {
-        list-style: none;
-    }
-
     .rank-img {
         width: 64px;
         height: 64px;
+        min-width: 64px;
+        min-height: 64px;
     }
 
-    .material-icons {
+    .material-symbols-outlined {
         vertical-align: sub;
     }
 
