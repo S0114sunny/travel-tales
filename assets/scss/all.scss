@@ -34,7 +34,7 @@
 // @import "../../node_modules/bootstrap/scss/list-group";
 // @import "../../node_modules/bootstrap/scss/close";
 // @import "../../node_modules/bootstrap/scss/toasts";
-// @import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/modal";
 // @import "../../node_modules/bootstrap/scss/tooltip";
 // @import "../../node_modules/bootstrap/scss/popover";
 // @import "../../node_modules/bootstrap/scss/carousel";
@@ -61,6 +61,6 @@ $utilities: map-merge($utilities,
 @import './layout/header.scss';
 @import './layout/footer.scss';
 @import './layout/collect-love.scss';
-@import './layout/_memberCenterFilter';
+@import './layout/memberCenterFilter';
 @import './pages/index.scss';
 @import './pages/singleTrip.scss';

@@ -53,7 +53,9 @@
                         <div class="ms-3 relative">
                             <img src="/assets/images/singleTrip-banner-5.png" alt="trip photo">
                             <div class="more-img text-white absolute">
-                                <a href="#"><span class="material-symbols-outlined span-image m-2">image</span>更多照片(10)</a>
+                                <a href="#" class="more-pic-btn" data-bs-toggle="modal" data-bs-target="#picModal">
+                                    <span class="material-symbols-outlined span-image m-2">image</span>更多照片(10)
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -116,7 +118,65 @@
             </div>
         </div>
     </section>
+
+    <div class="modal modal-xl picModal" id="picModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
+                <button type="button" data-bs-dismiss="modal" class="position-absolute top-0 start-100 btn rounded-circle ms-6"> 
+                    <span class="material-symbols-outlined text-neutral-7">
+                        close
+                    </span>
+                </button>
+                <div class="modal-body p-0 d-flex flex-column gap-2 gap-lg-6">
+                    <div class="modal-top-img">
+                        <img id="mainImage" class="rounded-6" src="" alt="">
+                    </div>
+                    <div class="modal-bottom-img">
+                        <ul class="d-flex gap-2 gap-lg-6">
+                            <li><img class="thumbnails" onclick="changeImage(this)"
+                                    src="../assets/images/singleTrip-modal-1.png" alt=""></li>
+                            <li><img class="thumbnails" onclick="changeImage(this)"
+                                    src="../assets/images/singleTrip-modal-2.png" alt=""></li>
+                            <li><img class="thumbnails" onclick="changeImage(this)"
+                                    src="../assets/images/singleTrip-modal-3.png" alt=""></li>
+                            <li><img class="thumbnails" onclick="changeImage(this)"
+                                    src="../assets/images/singleTrip-modal-4.png" alt=""></li>
+                            <li><img class="thumbnails" onclick="changeImage(this)"
+                                    src="../assets/images/singleTrip-modal-5.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="module" src="../main.js"></script>
+    <script>
+        const myModal = document.getElementById('picModal');
+        myModal.addEventListener('shown.bs.modal', () => {
+            // 獲取第一個縮圖
+            const firstThumbnail = document.querySelector('.thumbnails');
+
+            if (firstThumbnail) {
+                const firstSrc = firstThumbnail.src;
+                document.getElementById("mainImage").src = firstSrc;
+                firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
+            }
+        });
+
+        function changeImage(imgElement) {
+            // 獲取點擊的圖片的 src
+            var newSrc = imgElement.src;
+
+            // 將主圖片的 src 設置為點擊的圖片的 src
+            document.getElementById("mainImage").src = newSrc;
+            // 移除所有縮圖的高亮樣式
+            var thumbnails = document.getElementsByClassName("thumbnails");
+            for (var i = 0; i < thumbnails.length; i++) {
+                thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
+            }
+            imgElement.style.border = "4px #FACC44 solid";
+        }
+    </script>
 </body>
 
 </html>

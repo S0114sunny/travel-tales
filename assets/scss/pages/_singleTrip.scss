@@ -45,13 +45,13 @@
         }
     }
 
-    .span-image{
+    .span-image {
         width: 20px;
         height: 20px;
         color: $white;
     }
 
-    .more-img{
+    .more-img {
         max-height: 100%;
         right: 8px;
         bottom: 8px;
@@ -60,4 +60,43 @@
         border-radius: 16px;
         border: 1px solid $white;
     }
+}
+
+.picModal {
+    .modal-dialog{
+        margin-top: 136px;
+    }
+    .modal-content {
+        max-width: 982px;
+        /* 防止 Bootstrap 自動設定最大寬度 */
+
+        button {
+            backdrop-filter: blur(4px);
+            border: 1px solid #F3F3F3;
+            background-color: #707070D9;
+            width: 56px;
+            height: 56px;
+
+            span{
+               vertical-align: middle;
+            }
+        }
+
+        .modal-top-img {
+            img {
+               max-height: 596px;
+            }
+        }
+
+        .modal-bottom-img {
+            img {
+                border-radius: 16px;
+
+                @include media-breakpoint-down(lg) {
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+
 }
