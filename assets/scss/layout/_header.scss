@@ -16,27 +16,7 @@
         justify-content: space-between;
         align-items: center;
     }
-    .material-custom{
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 48px;
-        color: white;
-        padding: 0;
-        margin: 0;
-        border: 0px;
-    }
-    .material-custom2{
-        color: $primary-2;
-        background-color: transparent;
-        margin-right: 20px;
-        padding: 0;
-        margin: 0;
-        border: 0px;
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 48px;
-
-    }
+    
     .offcanvas {
         width: 100%;
         @include media-breakpoint-up(lg){
@@ -47,6 +27,9 @@
         justify-content: space-between;
         
     }
+    .bg-light{
+        background-color: #ffffff75 !important;
+    }
     .fixed-top {
         position: fixed;
         top: 0;
@@ -54,7 +37,7 @@
         right: 0;
         background-color: white; 
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 999;
+        z-index: 100;
         transition: all 0.3s ease;  
     }
 }

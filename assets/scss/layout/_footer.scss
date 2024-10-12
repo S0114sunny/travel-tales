@@ -1,4 +1,5 @@
 .footer{
+    position: relative;
     background-image: url("/assets/images/footer-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,20 +16,15 @@
 
 }
 
-.top-btn{
-    container{
-        position: relative;
-    }
-    .topbtn{
-        position: fixed;
-        width: 48px;
-        height: 48px;
-        right: 40px;
-        margin-bottom: 40px;
-        z-index: 1;
-        color: white;
-        bottom: 0px;
-        background-color: $primary-2;
-        border-radius: 400px;
-    }
+.topbtn{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right: 40px;
+    top:-30px;
+    z-index: 999;
+    color: white;
+    bottom: 0px;
+    background-color: $primary-2;
+    border-radius: 400px;
 }
