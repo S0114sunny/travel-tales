@@ -112,6 +112,9 @@
       transition: transform 0.3s ease;
     }
   }
+  .popular_slide-second {
+    transition: transform 0.3s ease;
+  }
   .pagination-popular {
     width: 375px;
     display: flex;
@@ -126,17 +129,6 @@
     opacity: 1 !important;
     pointer-events: none !important;
   }
-  // .swiper-pagination-bullet {
-  //   width: 8px;
-  //   height: 8px;
-  //   background-color: $primary-3;
-  // }
-
-  // .swiper-pagination-bullet-active {
-  //     width: 24px;
-  //     border-radius: 8px;
-  //     background-color: $primary-1;
-  // }
   .swiper-popular-next,
   .swiper-popular-prev {
     @include media-breakpoint-down(sm) {
@@ -146,6 +138,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    @include media-breakpoint-up(lg) {
+      opacity: 0.5; 
+      pointer-events: none; // PC 版設定不能執行換頁
     }
   }
   .swiper-pagination-popular-two {
@@ -181,10 +177,10 @@
       background-image: url("/assets/images/popular-2.png");
     }
     &_3 {
-      background-image: url("/assets/images/popular-1.png");
+      background-image: url("/assets/images/popular-4.png");
     }
     &_4 {
-      background-image: url("/assets/images/popular-5.png");
+      background-image: url("/assets/images/popular-3.png");
     }
     &_5 {
       background-image: url("/assets/images/popular-5.png");
