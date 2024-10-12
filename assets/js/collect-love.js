@@ -3,7 +3,7 @@ let collectLoves = document.querySelectorAll('.collect-love_bg');
 
 // 預設第二個收藏愛心為 active
 if (collectLoves.length > 1) {
-  collectLoves[1,2,3].classList.add('active'); 
+  collectLoves[1].classList.add('active'); 
 }
 
 // 為每個元素增加點擊事件
