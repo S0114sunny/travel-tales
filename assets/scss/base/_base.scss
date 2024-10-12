@@ -27,25 +27,3 @@ ul {
     padding: 0;
     margin: 0;
 }
-
-ol {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-input[type=checkbox] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-}
