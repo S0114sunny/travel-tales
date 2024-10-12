@@ -43,3 +43,9 @@ img {
 *::after {
     box-sizing: border-box;
 }
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
