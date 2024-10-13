@@ -1,16 +1,16 @@
 <nav class="navbar navbar-light z-3" >   
-  <div class="container justify-content-end"> 
+  <div class="container"> 
     <!--滾動後出現-->
-    <nav class="navbar navbar-expand-lg navbar-light z-3 d-none d-lg-block" id="navBarA">
+    <nav class="navbar navbar-expand-lg navbar-light z-3 d-none d-lg-block fixed-top bg-light">
       <div class="container">
-        <a class="navbar-brand position-relative d-none" href="./index.html" id="logo">
+        <a class="navbar-brand position-relative" href="#">
           <img src="../assets/images/logo2.png" width="107px" height="40"  alt="logo">
         </a>
         <ul class="d-flex ms-auto">
-          <li><a class="p-1 my-1 mx-4 text-white textColor" href="#">全部旅程</a></li>
-          <li><a class="p-1 my-1 mx-4 text-white textColor" href="#">優惠景點</a></li>
-          <li><a class="p-1 my-1 mx-4 text-white textColor" href="#">熱門旅程</a></li>
-          <li><a class="p-1 my-1 mx-4 text-white textColor" href="#">客服中心</a></li> 
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">全部旅程</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">優惠景點</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">熱門旅程</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">客服中心</a></li> 
           <li>
             <button class="navbar-toggler position-relative ms-auto pe-4 d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <img src="../assets/images/member-photo.png" alt="member-photo" width="40px" height="40px">
@@ -23,24 +23,13 @@
 
   <div class="container-fluid justify-content-end">
     <!--mobile-->
-    <nav class="navbar navbar-light z-3 d-block d-lg-none" id="navBarB">
-      <!--滾動後出現--->
-      <div class="mx-6 d-none" id="navbara">
-        <div class="d-flex justify-content-between">
-          <a class="navbar-brand position-relative" href="#">
-            <img src="../assets/images/logo2.png" width="107px" height="40"  alt="logo" class="ms-2">
-          </a>
-          <!--漢堡--->
-          <button class="navbar-toggler position-relative ms-auto pe-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="material-symbols-outlined material-custom2">menu</span>
-          </button>
-        </div>
-      </div>
-
-      <!--首頁靜止出現-navbar-b-->
-      <div class="container">
-        <button class="navbar-toggler position-relative ms-auto pe-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" id="navbarb">
-          <span class="material-symbols-outlined material-custom">menu</span>
+    <nav class="navbar navbar-light z-3 d-block d-lg-none fixed-top bg-light">
+      <div class="d-flex justify-content-between">
+        <a class="navbar-brand position-relative" href="#">
+          <img src="../assets/images/logo2.png" width="107px" height="40"  alt="logo" class="ms-2">
+        </a>
+        <button class="navbar-toggler position-relative ms-auto pe-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="material-symbols-outlined material-custom2">menu</span>
         </button>
       </div>
     </nav>    
