@@ -3,11 +3,12 @@
 
 <head>
     <%- include('./layout/head'); -%>
-        <title>日本環球影城</title>
+    <title>日本環球影城</title>
 </head>
 
 <body>
-    <section class="singleTrip-banner py-8 pt-lg-12 pb-lg-11">
+  <%- include('./layout/header'); -%>
+  <section class="singleTrip-banner py-8 pt-lg-12 pb-lg-11">
         <div class="container">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="pb-4 pb-lg-8">
                 <ol class="breadcrumb fs-7 fs-lg-6 text-neutral-3">
@@ -115,8 +116,101 @@
                 </div>
             </div>
         </div>
-    </section>
-    <script type="module" src="../main.js"></script>
+  </section>
+
+  <section class="bg-white z-3 sticky-top trip">
+    <div class="container py-2">
+      <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-lg-start flex-column justify-content-between tripTitle">
+            <h3 class="fw-lg-700 fw-500 fs-lg-3 fs-5 text-black lh-12 mb-2">日本環球影城</h3>
+            <div class="d-flex justify-content-lg-start justify-content-between align-items-center">
+                <a class="fw-500 fs-6 lh-12 pb-1 me-lg-6 me-0 trip-subTitle" href="#travel-intro">旅程介紹</a>
+                <a class="fw-500 fs-6 lh-12 pb-1 me-lg-6 me-0 trip-subTitle" href="#travel-notice">旅程須知</a>
+                <a class="fw-500 fs-6 lh-12 trip-subTitle" href="#travel-comment">最新評論</a>
+            </div>
+          </div>
+          
+          <div class="d-lg-block d-none">
+            <div class="py-2 d-flex justify-content-lg-end align-items-lg-center ">
+                <div class="d-flex align-items-center me-4">
+                  <span class="material-symbols-outlined me-1 text-neutral-4">
+                      calendar_today
+                  </span>
+                  <p class="fs-6 fw-500 lh-12 text-neutral-4">2024/08/08(四)~2024/08/10(六)</p>
+                </div>
+                <div class="d-flex align-items-center me-4">
+                  <span class="material-symbols-outlined me-1 text-neutral-4">
+                      person
+                  </span>
+                  <p class="fs-6 fw-500 lh-12 text-neutral-4">2人</p>
+                </div>
+                <div class="d-flex align-items-center me-4">
+                  <span class="material-symbols-outlined me-1 text-neutral-4">
+                      paid
+                  </span>
+                  <p class="fs-6 fw-500 lh-12 text-neutral-4">NT$ 20,000</p>
+                </div>
+                <div class="trip-pro-edit me-6">
+                  <a href="#">
+                      <span class="material-symbols-outlined trip-edit-text">
+                        edit
+                      </span>
+                  </a>
+                </div>
+                <button type="button" class="trip-btn fs-6 lh-base fw-400">加入購物車</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 旅程介紹+旅程須知+最新評價 -->
+  <section class="mt-lg-12 mt-8 container">
+      <div class="scroll-container">
+        <div class="scroll-page mb-lg-12 mb-8" id="travel-intro">
+            <h6>旅程介紹</h6>
+            <img src="/assets/images/singleTrip-banner-1.png" alt="">
+            <p>歡迎來到大阪環球影城,這是日本境內最為知名的遊樂設施之一,也是環球影城品牌在亞洲的一個矚目據點。作為日本環球影城的一部分,它擁有眾多令人驚嘆的遊樂設施和娛樂活動,為遊客提供一場極致的娛樂體驗。無論您是環球影城的愛好者還是首次造訪,都可以透過日本環球影城門票輕鬆進入這個令人興奮的主題樂園。為了更方便您的入場體驗,您還可以選擇使用環球特快入場券或電子憑證,節省寶貴的時間,讓您更充分地享受每個精彩時刻。在這裡,您可以盡情體驗眾多獨家遊樂設施,其中包括飛天翼龍、歐賽車庫巴等令人心跳加速的刺激項目。不僅如此,日本環球影城官方還提供便捷的官方App,讓您隨時隨地獲取最新的活動信息、等候時間和地圖導覽,確保您的遊樂之旅更加順暢。無論您是本地居民還是海外遊客,大阪環球影城都歡迎您的光臨。這裡將為您打開通向無盡娛樂的大門,讓您在環球影城的奇妙世界中留下難以忘懷的回憶。</p>
+        </div>
+        <div class="scroll-page mb-lg-12 mb-8" id="travel-notice">
+            <h6>旅程須知</h6>
+            <img src="/assets/images/singleTrip-banner-1.png" alt="">
+            <p>歡迎來到大阪環球影城,這是日本境內最為知名的遊樂設施之一,也是環球影城品牌在亞洲的一個矚目據點。作為日本環球影城的一部分,它擁有眾多令人驚嘆的遊樂設施和娛樂活動,為遊客提供一場極致的娛樂體驗。無論您是環球影城的愛好者還是首次造訪,都可以透過日本環球影城門票輕鬆進入這個令人興奮的主題樂園。為了更方便您的入場體驗,您還可以選擇使用環球特快入場券或電子憑證,節省寶貴的時間,讓您更充分地享受每個精彩時刻。在這裡,您可以盡情體驗眾多獨家遊樂設施,其中包括飛天翼龍、歐賽車庫巴等令人心跳加速的刺激項目。不僅如此,日本環球影城官方還提供便捷的官方App,讓您隨時隨地獲取最新的活動信息、等候時間和地圖導覽,確保您的遊樂之旅更加順暢。無論您是本地居民還是海外遊客,大阪環球影城都歡迎您的光臨。這裡將為您打開通向無盡娛樂的大門,讓您在環球影城的奇妙世界中留下難以忘懷的回憶。</p>
+        </div>
+        <div class="scroll-page" id="travel-comment">
+            <h6>最新評價</h6>
+            <img src="/assets/images/singleTrip-banner-1.png" alt="">
+            <p>歡迎來到大阪環球影城,這是日本境內最為知名的遊樂設施之一,也是環球影城品牌在亞洲的一個矚目據點。作為日本環球影城的一部分,它擁有眾多令人驚嘆的遊樂設施和娛樂活動,為遊客提供一場極致的娛樂體驗。無論您是環球影城的愛好者還是首次造訪,都可以透過日本環球影城門票輕鬆進入這個令人興奮的主題樂園。為了更方便您的入場體驗,您還可以選擇使用環球特快入場券或電子憑證,節省寶貴的時間,讓您更充分地享受每個精彩時刻。在這裡,您可以盡情體驗眾多獨家遊樂設施,其中包括飛天翼龍、歐賽車庫巴等令人心跳加速的刺激項目。不僅如此,日本環球影城官方還提供便捷的官方App,讓您隨時隨地獲取最新的活動信息、等候時間和地圖導覽,確保您的遊樂之旅更加順暢。無論您是本地居民還是海外遊客,大阪環球影城都歡迎您的光臨。這裡將為您打開通向無盡娛樂的大門,讓您在環球影城的奇妙世界中留下難以忘懷的回憶。</p>
+        </div>
+      </div>
+  </section>
+
+  <%- include('./layout/footer'); -%>
+
+  <section class="container py-4 sticky-bottom d-block d-lg-none z-0 bg-white">
+      <div class="d-flex justify-content-end flex-column">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <div class="trip-pro-edit me-6">
+            <a href="#">
+                <span class="material-symbols-outlined trip-edit-text">
+                  edit
+                </span>
+            </a>
+          </div>
+          <button type="button" class="trip-btn fs-6 lh-base fw-400 w-100">加入購物車</button>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <p class="fs-8 fw-500 lh-12 text-neutral-3">2024/08/08(四)~2024/08/10(六)</p>
+          <p class="fs-6 fw-500 lh-12 text-neutral-3">2人</p>
+          <p class="fs-6 fw-500 lh-12 text-neutral-3">NT$ 20,000</p>
+        </div>
+      </div>
+  </section>
+
+<script type="module" src="../main.js"></script>
+<script type="module" src="../assets/js/travel_swiper.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 
 </html>
