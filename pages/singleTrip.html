@@ -2,181 +2,180 @@
 <html lang="zh-Hant-TW">
 
 <head>
-    <%- include('./layout/head'); -%>
-        <title>日本環球影城</title>
+  <%- include('./layout/head'); -%>
+  <title>日本環球影城</title>
 </head>
 
 <body>
-    <section class="singleTrip-banner py-8 pt-lg-12 pb-lg-11">
-        <div class="container">
-            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="pb-4 pb-lg-8">
-                <ol class="breadcrumb fs-7 fs-lg-6 text-neutral-3">
-                    <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
-                    <li class="breadcrumb-item"><a href="#">全部旅程</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">日本環球影城</li>
-                </ol>
-            </nav>
-            <h1 class="h3 fw-bold">日本環球影城</h1>
-            <div class="d-sm-flex justify-content-between mb-4">
-                <div class="py-2">
-                    <p class="d-inline-block me-2 fw-medium">
-                        <span class="material-symbols-outlined span-star me-1">star</span>4.8
-                    </p>
-                    <p class="d-inline-block me-2 fs-7">(2,577人評價)</p>
-                    <p class="d-inline-block fs-7 text-neutral-3">1K人參加過</p>
-                </div>
-                <div>
-                    <input type="checkbox" id="favorite" class="btn-favorite" />
-                    <label for="favorite">
-                        <span class="material-symbols-outlined span-favorite m-2">favorite</span>
-                    </label>
-                    <a href="#"><span class="material-symbols-outlined span-share m-2">share</span></a>
-                </div>
-            </div>
-            <div class="row d-flex mb-4">
-                <div class="col-lg-6 mb-4">
-                    <img class="img" src="/assets/images/singleTrip-banner-1.png" alt="trip photo">
-                </div>
-                <div class="col-lg-6">
-                    <div class="d-flex mb-4 mb-lg-6">
-                        <div class="me-3">
-                            <img src="/assets/images/singleTrip-banner-2.png" alt="trip photo">
-                        </div>
-                        <div class="ms-3">
-                            <img src="/assets/images/singleTrip-banner-4.png" alt="trip photo">
-                        </div>
-                    </div>
-                    <div class="d-flex mb-lg-4">
-                        <div class="me-3">
-                            <img src="/assets/images/singleTrip-banner-3.png" alt="trip photo">
-                        </div>
-                        <div class="ms-3 relative">
-                            <img src="/assets/images/singleTrip-banner-5.png" alt="trip photo">
-                            <div class="more-img text-white absolute">
-                                <a href="#" class="more-pic-btn" data-bs-toggle="modal" data-bs-target="#picModal">
-                                    <span class="material-symbols-outlined span-image m-2">image</span>更多照片(10)
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="singleTrip-booking bg-secondary-5 p-4 mb-8 rounded-5">
-                <div class="d-lg-block d-none">
-                    <div class="d-flex justify-content-around align-items-center">
-                        <div class="container search bg-white rounded-pill p-2 shadow">
-                            <ul class="row d-flex align-items-center">
-                                <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
-                                    <span class="material-symbols-outlined">flight_takeoff</span>
-                                    <input type="text" placeholder="旅行開始時間" name="datepicker" class="form-control">
-                                    <span class="material-symbols-outlined icon-more">expand_more</span>
-                                </li>
-                                <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
-                                    <span class="material-symbols-outlined ">flight_land</span>
-                                    <input type="text" placeholder="旅行結束時間" name="datepicker2" class="form-control">
-                                    <span class="material-symbols-outlined icon-more">expand_more</span>
-                                </li>
-                                <li class="col position-relative px-2 ms-2 d-flex align-items-center">
-                                    <span class="material-symbols-outlined me-1">person</span>
-                                    <input type="text" placeholder="人數" class="form-content">
-                                    <span class="material-symbols-outlined icon-more">expand_more</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="custom-btn-all ">
-                            <button class="btn px-xxl-7 px-xl-5 py-lg-3 fs-5 rounded-pill">預定行程</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-lg-none">
-                    <div class="d-flex flex-column justify-content-around align-items-center">
-                        <div class="container search mb-3">
-                            <ul class="row d-flex bg-white rounded-5 shadow align-items-center p-4">
-                                <li class="col-12 position-relative py-2 border-bottom d-flex align-items-center">
-                                    <span class="material-symbols-outlined">flight_takeoff</span>
-                                    <input type="text" placeholder="旅行開始時間" name="datepicker3" class="form-control">
-                                    <span class="material-symbols-outlined icon-more">expand_more</span>
-                                </li>
-                                <li class="col-12 position-relative  py-2 border-bottom d-flex align-items-center">
-                                    <span class="material-symbols-outlined">flight_land</span>
-                                    <input type="text" placeholder="旅行結束時間" name="datepicker4" class="form-control">
-                                    <span class="material-symbols-outlined icon-more">expand_more</span>
-                                </li>
-                                <li class="col-12 position-relative  py-2 d-flex align-items-center">
-                                    <span class="material-symbols-outlined me-1">person</span>
-                                    <input type="text" placeholder="人數" class="form-content">
-                                    <span class="material-symbols-outlined icon-more">expand_more</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="custom-btn-all w-100">
-                            <button class="btn col-12 fs-5 py-4 rounded-pill ">預定行程</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section class="singleTrip-banner py-8 pt-lg-12 pb-lg-11">
+    <div class="container">
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="pb-4 pb-lg-8">
+        <ol class="breadcrumb fs-7 fs-lg-6 text-neutral-3">
+          <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+          <li class="breadcrumb-item"><a href="#">全部旅程</a></li>
+          <li class="breadcrumb-item active" aria-current="page">日本環球影城</li>
+        </ol>
+      </nav>
+      <h1 class="h3 fw-bold">日本環球影城</h1>
+      <div class="d-sm-flex justify-content-between mb-4">
+        <div class="py-2">
+          <p class="d-inline-block me-2 fw-medium">
+            <span class="material-symbols-outlined span-star me-1">star</span>4.8
+          </p>
+          <p class="d-inline-block me-2 fs-7">(2,577人評價)</p>
+          <p class="d-inline-block fs-7 text-neutral-3">1K人參加過</p>
         </div>
-    </section>
-
-    <div class="modal modal-xl picModal" id="picModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
-                <button type="button" data-bs-dismiss="modal" class="position-absolute top-0 start-100 btn rounded-circle ms-6"> 
-                    <span class="material-symbols-outlined text-neutral-7">
-                        close
-                    </span>
-                </button>
-                <div class="modal-body p-0 d-flex flex-column gap-2 gap-lg-6">
-                    <div class="modal-top-img">
-                        <img id="mainImage" class="rounded-6" src="" alt="">
-                    </div>
-                    <div class="modal-bottom-img">
-                        <ul class="d-flex gap-2 gap-lg-6">
-                            <li><img class="thumbnails" onclick="changeImage(this)"
-                                    src="../assets/images/singleTrip-modal-1.png" alt=""></li>
-                            <li><img class="thumbnails" onclick="changeImage(this)"
-                                    src="../assets/images/singleTrip-modal-2.png" alt=""></li>
-                            <li><img class="thumbnails" onclick="changeImage(this)"
-                                    src="../assets/images/singleTrip-modal-3.png" alt=""></li>
-                            <li><img class="thumbnails" onclick="changeImage(this)"
-                                    src="../assets/images/singleTrip-modal-4.png" alt=""></li>
-                            <li><img class="thumbnails" onclick="changeImage(this)"
-                                    src="../assets/images/singleTrip-modal-5.png" alt=""></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div>
+          <input type="checkbox" id="favorite" class="btn-favorite" />
+          <label for="favorite">
+            <span class="material-symbols-outlined span-favorite m-2">favorite</span>
+          </label>
+          <a href="#"><span class="material-symbols-outlined span-share m-2">share</span></a>
         </div>
+      </div>
+      <div class="row d-flex mb-4">
+        <div class="col-lg-6 mb-4">
+          <img class="img" src="/assets/images/singleTrip-banner-1.png" alt="trip photo">
+        </div>
+        <div class="col-lg-6">
+          <div class="d-flex mb-4 mb-lg-6">
+            <div class="me-3">
+              <img src="/assets/images/singleTrip-banner-2.png" alt="trip photo">
+            </div>
+            <div class="ms-3">
+              <img src="/assets/images/singleTrip-banner-4.png" alt="trip photo">
+            </div>
+          </div>
+          <div class="d-flex mb-lg-4">
+            <div class="me-3">
+              <img src="/assets/images/singleTrip-banner-3.png" alt="trip photo">
+            </div>
+            <div class="ms-3 relative">
+              <img src="/assets/images/singleTrip-banner-5.png" alt="trip photo">
+              <div class="more-img text-white absolute">
+                <a href="#" class="more-pic-btn" data-bs-toggle="modal" data-bs-target="#picModal">
+                  <span class="material-symbols-outlined span-image m-2">image</span>更多照片(10)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="singleTrip-booking bg-secondary-5 p-4 mb-8 rounded-5">
+        <div class="d-lg-block d-none">
+          <div class="d-flex justify-content-around align-items-center">
+            <div class="container search bg-white rounded-pill p-2 shadow">
+              <ul class="row d-flex align-items-center">
+                <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_takeoff</span>
+                  <input type="text" placeholder="旅行開始時間" name="datepicker" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
+                  <span class="material-symbols-outlined ">flight_land</span>
+                  <input type="text" placeholder="旅行結束時間" name="datepicker2" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col position-relative px-2 ms-2 d-flex align-items-center">
+                  <span class="material-symbols-outlined me-1">person</span>
+                  <input type="text" placeholder="人數" class="form-content">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+              </ul>
+            </div>
+            <div class="custom-btn-all ">
+              <button class="btn px-xxl-7 px-xl-5 py-lg-3 fs-5 rounded-pill">預定行程</button>
+            </div>
+          </div>
+        </div>
+        <div class="d-lg-none">
+          <div class="d-flex flex-column justify-content-around align-items-center">
+            <div class="container search mb-3">
+              <ul class="row d-flex bg-white rounded-5 shadow align-items-center p-4">
+                <li class="col-12 position-relative py-2 border-bottom d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_takeoff</span>
+                  <input type="text" placeholder="旅行開始時間" name="datepicker3" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col-12 position-relative  py-2 border-bottom d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_land</span>
+                  <input type="text" placeholder="旅行結束時間" name="datepicker4" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col-12 position-relative  py-2 d-flex align-items-center">
+                  <span class="material-symbols-outlined me-1">person</span>
+                  <input type="text" placeholder="人數" class="form-content">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+              </ul>
+            </div>
+            <div class="custom-btn-all w-100">
+              <button class="btn col-12 fs-5 py-4 rounded-pill ">預定行程</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script type="module" src="../main.js"></script>
-    <script>
-        const myModal = document.getElementById('picModal');
-        myModal.addEventListener('shown.bs.modal', () => {
-            // 獲取第一個縮圖
-            const firstThumbnail = document.querySelector('.thumbnails');
+  </section>
 
-            if (firstThumbnail) {
-                const firstSrc = firstThumbnail.src;
-                document.getElementById("mainImage").src = firstSrc;
-                firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
-            }
-        });
+  <div class="modal modal-xl picModal" id="picModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
+        <button type="button" data-bs-dismiss="modal" class="position-absolute btn rounded-circle">
+          <span class="material-symbols-outlined text-neutral-7">
+            close
+          </span>
+        </button>
+        <div class="modal-body p-0 d-flex flex-column gap-2 gap-lg-6">
+          <div class="position-relative">
+            <img id="mainImage" class="rounded-6" src="" alt="">
+            <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6  mb-4 mb-lg-6">
+              <span id="imgPage">1</span> / 5
+            </div>
+          </div>
+          <div class="modal-bottom-img">
+            <ul class="d-flex gap-2 gap-lg-6">
+              <li><img class="thumbnails" onclick="changeImage(this,1)" src="../assets/images/singleTrip-modal-1.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeImage(this,2)" src="../assets/images/singleTrip-modal-2.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeImage(this,3)" src="../assets/images/singleTrip-modal-3.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeImage(this,4)" src="../assets/images/singleTrip-modal-4.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeImage(this,5)" src="../assets/images/singleTrip-modal-5.png" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../main.js"></script>
+  <script>
+    const myModal = document.getElementById('picModal');
+    myModal.addEventListener('shown.bs.modal', () => {
+      // 獲取第一個縮圖
+      const firstThumbnail = document.querySelector('.thumbnails');
 
-        function changeImage(imgElement) {
-            // 獲取點擊的圖片的 src
-            var newSrc = imgElement.src;
+      if (firstThumbnail) {
+        const firstSrc = firstThumbnail.src;
+        document.getElementById("mainImage").src = firstSrc;
+        firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
+      }
+    });
 
-            // 將主圖片的 src 設置為點擊的圖片的 src
-            document.getElementById("mainImage").src = newSrc;
-            // 移除所有縮圖的高亮樣式
-            var thumbnails = document.getElementsByClassName("thumbnails");
-            for (var i = 0; i < thumbnails.length; i++) {
-                thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
-            }
-            imgElement.style.border = "4px #FACC44 solid";
-        }
-    </script>
+    function changeImage(imgElement, page) {
+      // 獲取點擊的圖片的 src
+      var newSrc = imgElement.src;
+
+      // 將主圖片的 src 設置為點擊的圖片的 src
+      document.getElementById("mainImage").src = newSrc;
+      // 移除所有縮圖的高亮樣式
+      var thumbnails = document.getElementsByClassName("thumbnails");
+      for (var i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
+      }
+      document.getElementById("imgPage").textContent = page;
+      imgElement.style.border = "4px #FACC44 solid";
+    }
+  </script>
 </body>
 
 </html>
