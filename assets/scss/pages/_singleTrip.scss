@@ -61,3 +61,52 @@
         border: 1px solid $white;
     }
 }
+.scroll-container {
+    scroll-behavior: smooth;
+}
+.scroll-page {
+    scroll-margin-top: 120px; /* 依據上方導覽列的高度调整，不被蓋住 */
+}
+.trip {
+    box-shadow: 
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+    
+    .tripTitle {
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
+    }
+    .trip-subTitle {
+        color: black;
+    }
+    .trip-subTitle:hover {
+        padding-bottom: 4px;
+        color: $primary-2;
+        border-bottom: 2px solid $primary-3;
+    }
+}
+.trip-pro-edit {
+    width: 40px;
+    height: 40px;
+    border-radius: 19px;
+    background: $neutral-6;
+    .trip-edit-text {
+        color: $primary-2;
+        padding: 8px;
+    }
+
+}
+.trip-edit-text:hover {
+    color: $neutral-6;
+}
+.trip-pro-edit:hover {
+    background: $primary-2;
+}
+.trip-btn {
+    border: transparent;
+    border-radius: 16px;
+    padding: 8px 20px;
+    color: $white;
+    background: $primary-2;
+}
