@@ -35,20 +35,17 @@ const logo = document.getElementById('logo');
 const textColors = document.querySelectorAll('.textColor');
 const textColors2 = document.querySelector('.textColor2');
 
-
-
-// 判断是否滚动超过50px
-
+// 判断是否滾動超过50px
 window.addEventListener('scroll', () => {
   const isScrolled = window.scrollY > 50;
 
-  // 更新 navbar 类
+  // 更新 navbar
   navBarA.classList.toggle('fixed-top', isScrolled);
   navBarA.classList.toggle('bg-light', isScrolled);
   navBarB.classList.toggle('fixed-top', isScrolled);
   navBarB.classList.toggle('bg-light', isScrolled);
 
-  // 更新 navbara 和 navbarb 的类
+  // 更新 navbara 和 navbarb
   navbara.classList.toggle('d-block', isScrolled);
   navbara.classList.toggle('d-none', !isScrolled);
   
@@ -63,6 +60,8 @@ window.addEventListener('scroll', () => {
   textColors.forEach(textColor => {
     textColor.classList.toggle('text-primary-2', isScrolled);
     textColor.classList.toggle('text-white', !isScrolled);
+    textColor.classList.toggle('linkline', isScrolled);
+
   });
   
   textColors2.classList.toggle('custom-2', isScrolled);

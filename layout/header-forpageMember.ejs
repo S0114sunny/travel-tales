@@ -1,0 +1,124 @@
+<nav class="navbar navbar-light z-3" >   
+  <div class="container"> 
+    <!--滾動後出現-->
+    <nav class="navbar navbar-expand-lg navbar-light z-3 d-none d-lg-block fixed-top bg-light">
+      <div class="container">
+        <a class="navbar-brand position-relative" href="#">
+          <img src="../assets/images/logo2.png" width="107px" height="40"  alt="logo">
+        </a>
+        <ul class="d-flex ms-auto">
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">全部旅程</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">優惠景點</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">熱門旅程</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">客服中心</a></li> 
+          <li>
+            <button class="navbar-toggler position-relative ms-auto pe-4 d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <img src="../assets/images/member-photo.png" alt="member-photo" width="40px" height="40px">
+            </button>
+          </li>
+        </ul> 
+      </div>
+    </nav>
+  </div>
+
+  <div class="container-fluid justify-content-end">
+    <!--mobile-->
+    <nav class="navbar navbar-light z-3 d-block d-lg-none fixed-top bg-light">
+      <div class="d-flex justify-content-between">
+        <a class="navbar-brand position-relative" href="#">
+          <img src="../assets/images/logo2.png" width="107px" height="40"  alt="logo" class="ms-2">
+        </a>
+        <button class="navbar-toggler position-relative ms-auto pe-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="material-symbols-outlined material-custom2">menu</span>
+        </button>
+      </div>
+    </nav>    
+  </div>
+</nav>
+
+
+
+<!--offcanvas-->
+<div class="navbar">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <a class="navbar-brand position-relative" href="#">
+        <img src="../assets/images/logo2.png" width="107px" height="40"  alt="logo" class="ms-2">
+      </a>
+      <button class="material-symbols-outlined material-custom2" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+        menu
+      </button>
+    </div>
+    <div class="offcanvas-body vh-100 p-0">
+      <ul class="navbar-nav px-0">
+        <li class="border-top border-1 py-2"></li>
+        <li class="nav-item d-flex justify-content-start align-items-center px-3 py-5">
+          <a href=""><img src="../assets/images/member-photo.png" alt="member-photo" width="60px" height="60px" class="me-6"></a>
+          <div class="member-info d-flex flex-column justify-content-start">
+            <p class="text-neutral-3">會員</p>
+            <p>Claire158872</p>
+          </div>
+        </li>
+        <li class="nav-item bg-neutral-6 px-3 py-2">
+          <p class="text-neutral-3 fw-medium">帳號管理</p>
+        </li>
+        <li class="nav-item my-5">
+          <ul>
+            <li><a class="nav-link px-3 py-2" href="#">我的帳戶</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">我的訂單</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">我的收藏</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">我的評論</a></li>
+          </ul>
+        </li>
+        </li>
+        <li class="nav-item bg-neutral-6 px-3 py-2">
+          <p class="text-neutral-3 fw-medium">賣場管理</p>
+        </li>
+        <li class="nav-item my-5">
+          <ul>
+            <li><a class="nav-link px-3 py-2" href="#">成為廠商</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">商品管理</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">訂單管理</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">商場審核</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">會員管理</a></li>
+          </ul>
+        </li>
+        <li class="border-bottom border-3 py-2"></li>
+  
+        <li class="nav-item px-3 mt-5">
+          <a class="nav-link nav-link-mb" aria-current="page" href="#">
+            <p>全部旅程</p>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link nav-link-mb" href="#">
+            <p>優惠景點</p>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+          
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link nav-link-mb" href="#">
+            <p>熱門旅程</p>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="nav-item px-3 mb-5">
+          <a class="nav-link nav-link-mb" href="#">
+            客服中心
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="border-bottom border-3 py-2"></li>
+        <li class="nav-item px-3 py-1">
+          <a href="#" class="nav-link d-flex align-items-center">
+            <span class="material-symbols-outlined pe-2">logout</span>
+           登出
+          </a>
+        </li> 
+      </ul>
+    </div>
+    
+  </div>  
+</div>  
