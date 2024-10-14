@@ -54,7 +54,7 @@
             <div class="ms-3 relative">
               <img src="/assets/images/singleTrip-banner-5.png" alt="trip photo">
               <div class="more-img text-white absolute">
-                <a href="#" class="more-pic-btn" data-bs-toggle="modal" data-bs-target="#picModal">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#picModal">
                   <span class="material-symbols-outlined span-image m-2">image</span>更多照片(10)
                 </a>
               </div>
@@ -205,7 +205,7 @@
                         ">
                     </div>
                     <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
                         <span class="material-symbols-outlined">
                           image
                         </span>
@@ -255,7 +255,7 @@
                         ">
                     </div>
                     <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
                         <span class="material-symbols-outlined">
                           image
                         </span>
@@ -305,7 +305,7 @@
                         ">
                     </div>
                     <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
                         <span class="material-symbols-outlined">
                           image
                         </span>
@@ -355,7 +355,7 @@
                         ">
                     </div>
                     <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
                         <span class="material-symbols-outlined">
                           image
                         </span>
@@ -406,7 +406,7 @@
                         ">
                     </div>
                     <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
                         <span class="material-symbols-outlined">
                           image
                         </span>
@@ -456,7 +456,7 @@
                         ">
                     </div>
                     <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
                         <span class="material-symbols-outlined">
                           image
                         </span>
@@ -489,29 +489,103 @@
     </div>
   </section>
 
+  <!--官方圖Modal-->
   <div class="modal modal-xl picModal" id="picModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
-        <button type="button" data-bs-dismiss="modal" class="position-absolute btn rounded-circle">
-          <span class="material-symbols-outlined text-neutral-7">
-            close
-          </span>
-        </button>
+        <div class="button-position position-absolute">
+          <button type="button" data-bs-dismiss="modal" class="btn rounded-circle">
+            <span class="material-symbols-outlined text-neutral-7">
+              close
+            </span>
+          </button>
+        </div>
         <div class="modal-body p-0 d-flex flex-column gap-2 gap-lg-6">
           <div class="position-relative">
-            <img id="mainImage" class="rounded-6" src="" alt="">
-            <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6  mb-4 mb-lg-6">
-              <span id="imgPage">1</span> / 5
+            <img id="picModal_mainImage" class="rounded-6" src="" alt="">
+            <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6 mb-4 mb-lg-6">
+              <span id="picModal_imgPage">1</span> / 5
             </div>
           </div>
           <div class="modal-bottom-img">
             <ul class="d-flex gap-2 gap-lg-6">
-              <li><img class="thumbnails" onclick="changeImage(this,1)" src="../assets/images/singleTrip-modal-1.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changeImage(this,2)" src="../assets/images/singleTrip-modal-2.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changeImage(this,3)" src="../assets/images/singleTrip-modal-3.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changeImage(this,4)" src="../assets/images/singleTrip-modal-4.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changeImage(this,5)" src="../assets/images/singleTrip-modal-5.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changePicModalImage(this,1)" src="../assets/images/singleTrip-modal-1.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changePicModalImage(this,2)" src="../assets/images/singleTrip-modal-2.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changePicModalImage(this,3)" src="../assets/images/singleTrip-modal-3.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changePicModalImage(this,4)" src="../assets/images/singleTrip-modal-4.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changePicModalImage(this,5)" src="../assets/images/singleTrip-modal-5.png" alt=""></li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--評論圖Modal-->
+  <div class="modal modal-xl commentModal picModal" id="commentModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
+        <div class="button-position position-absolute d-flex flex-lg-column">
+          <button type="button" data-bs-dismiss="modal" class="btn rounded-circle">
+            <span class="material-symbols-outlined text-neutral-7">
+              close
+            </span>
+          </button>
+          <button type="button" class="btn rounded-circle next">
+            <span class="material-symbols-outlined text-neutral-7">
+              arrow_forward_ios
+            </span>
+          </button>
+        </div>
+        <div class="modal-body p-0 d-flex flex-column gap-4 gap-lg-6">
+          <div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <img src="../assets/images/person-2.png" class="rounded-circle object-fit-cover member-photo me-4" alt="person-2">
+              <span>Mack</span>
+              <time class="ms-auto" datetime="">2024/07/08</time>
+            </div>
+            <div>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-neutral-7">
+                star
+              </span>
+            </div>
+          </div>
+          <div>
+            <h5 class="mb-2">食物也太吸引人了!!</h5>
+            <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+          </div>
+          <div class="position-relative">
+            <img id="commentModal_mainImage" class="rounded-6" src="" alt="">
+            <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6 mb-4 mb-lg-6">
+              <span id="commentModal_imgPage">1</span> / 5
+            </div>
+          </div>
+          <div class="modal-bottom-img">
+            <ul class="d-flex gap-2 gap-lg-6">
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,1)" src="../assets/images/singleTrip-modal-1.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,2)" src="../assets/images/singleTrip-modal-2.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,3)" src="../assets/images/singleTrip-modal-3.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,4)" src="../assets/images/singleTrip-modal-4.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,5)" src="../assets/images/singleTrip-modal-5.png" alt=""></li>
+            </ul>
+          </div>
+          <div class="modal-todo d-flex justify-content-between justify-content-lg-end align-items-center gap-8">
+            <span class="material-symbols-outlined thumb-up" onclick="changeColor(this,'#FACC44')">thumb_up</span>
+            <span class="material-symbols-outlined favorite" onclick="changeColor(this,'#FF4B30')">favorite</span>
+            <span class="material-symbols-outlined share" onclick="changeColor(this,'#394997')">share</span>
+            <a href="#">立即預訂</a>
           </div>
         </div>
       </div>
@@ -542,36 +616,9 @@
 
   <script type="module" src="../main.js"></script>
   <script type="module" src="../assets/js/travel_swiper.js"></script>
+  <script type="module" src="../assets/js/singleTrip.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-  <script>
-    const myModal = document.getElementById('picModal');
-    myModal.addEventListener('shown.bs.modal', () => {
-      // 獲取第一個縮圖
-      const firstThumbnail = document.querySelector('.thumbnails');
-
-      if (firstThumbnail) {
-        const firstSrc = firstThumbnail.src;
-        document.getElementById("mainImage").src = firstSrc;
-        firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
-      }
-    });
-
-    function changeImage(imgElement, page) {
-      // 獲取點擊的圖片的 src
-      var newSrc = imgElement.src;
-
-      // 將主圖片的 src 設置為點擊的圖片的 src
-      document.getElementById("mainImage").src = newSrc;
-      // 移除所有縮圖的高亮樣式
-      var thumbnails = document.getElementsByClassName("thumbnails");
-      for (var i = 0; i < thumbnails.length; i++) {
-        thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
-      }
-      document.getElementById("imgPage").textContent = page;
-      imgElement.style.border = "4px #FACC44 solid";
-    }
-  </script>
 </body>
 
 </html>
