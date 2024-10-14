@@ -1,0 +1,33 @@
+.orderList {
+    img {
+        max-width: 119px;
+    }
+
+    .page {
+        color: #212121;
+
+        .material-symbols-outlined {
+            font-size: 14px;
+            vertical-align: sub;
+            color: #212121;
+        }
+
+        .page-item {
+            width: 32px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+
+            &:not(.disabled):hover {
+                background-color: #ebebeb;
+                border-radius: 50%;
+            }
+
+            &.disabled,
+            &.disabled .material-symbols-outlined,
+            &.disabled a {
+                color: #ababab;
+                cursor: default;
+            }
+        }
+    }
+}
