@@ -64,7 +64,7 @@ const swiperPopular2 = new Swiper('.swiperPopular2', {
 
 
 const swiperComment= new Swiper(".swiperComment", {
-  slidesPerView: 1.25,
+  slidesPerView: 1,
   spaceBetween: 24,
   loop: true,
   pagination: {
@@ -80,13 +80,13 @@ const swiperComment= new Swiper(".swiperComment", {
     576: {
       slidesPerView: 1
     },
-    768: {
-      slidesPerView: 2
-    },
     992: {
       slidesPerView: 2
     },
     1200: {
+      slidesPerView: 2
+    },
+    1400: {
       slidesPerView: 3
     }
   },
