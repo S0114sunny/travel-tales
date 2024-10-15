@@ -143,10 +143,11 @@
 
 .pic-sm {
     width: 100%;
-    max-width: 110px;
+    max-width: 30%;
     max-height: 110px;
     border-radius: 16px;
     object-fit: cover;
+    
 }
 
 .comment-body {
@@ -172,11 +173,6 @@
     right: 0;
     margin-bottom: 5px;
     margin-right: 5px;
-}
-
-html {
-    //解決id連結時的對齊
-    scroll-padding-top: 80px;
 }
 
 .picModal {
