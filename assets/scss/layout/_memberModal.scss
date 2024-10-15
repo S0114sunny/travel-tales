@@ -1,8 +1,19 @@
 .orderModal{
-    .button-position{
+    .modal-content{
+        max-width: 1050px;
+    }
+    .button-position {
         left: 100%;
         top: 0;
         margin-left: 24px;
+
+        @include media-breakpoint-down(lg) {
+            left: 50%;
+            bottom: 100%;
+            top: auto;
+            margin-left: 0;
+            transform: translate(-50%, -50%);
+        }
     }
     .btn{
         backdrop-filter: blur(4px);
