@@ -54,6 +54,7 @@
             <div class="ms-3 relative">
               <img src="/assets/images/singleTrip-banner-5.png" alt="trip photo">
               <div class="more-img text-white absolute">
+
                 <a href="#" data-bs-toggle="modal" data-bs-target="#picModal">
                   <span class="material-symbols-outlined span-image m-2">image</span>更多照片(10)
                 </a>
@@ -62,9 +63,61 @@
           </div>
         </div>
       </div>
-    </div>
-    </div>
-    </div>
+
+      <div class="singleTrip-booking bg-secondary-5 p-4 mb-8 rounded-5">
+        <div class="d-lg-block d-none">
+          <div class="d-flex justify-content-around align-items-center">
+            <div class="container search bg-white rounded-pill p-2 shadow">
+              <ul class="row d-flex align-items-center">
+                <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_takeoff</span>
+                  <input type="text" placeholder="旅行開始時間" name="datepicker" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
+                  <span class="material-symbols-outlined ">flight_land</span>
+                  <input type="text" placeholder="旅行結束時間" name="datepicker2" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col position-relative px-2 ms-2 d-flex align-items-center">
+                  <span class="material-symbols-outlined me-1">person</span>
+                  <input type="text" placeholder="人數" class="form-content">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+              </ul>
+            </div>
+            <div class="custom-btn-all ">
+              <button class="btn px-xxl-7 px-xl-5 py-lg-3 fs-5 rounded-pill">預定行程</button>
+            </div>
+          </div>
+        </div>
+        <div class="d-lg-none">
+          <div class="d-flex flex-column justify-content-around align-items-center">
+            <div class="container search mb-3">
+              <ul class="row d-flex bg-white rounded-5 shadow align-items-center p-4">
+                <li class="col-12 position-relative py-2 border-bottom d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_takeoff</span>
+                  <input type="text" placeholder="旅行開始時間" name="datepicker3" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col-12 position-relative  py-2 border-bottom d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_land</span>
+                  <input type="text" placeholder="旅行結束時間" name="datepicker4" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col-12 position-relative  py-2 d-flex align-items-center">
+                  <span class="material-symbols-outlined me-1">person</span>
+                  <input type="text" placeholder="人數" class="form-content">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+              </ul>
+            </div>
+            <div class="custom-btn-all w-100">
+              <button class="btn col-12 fs-5 py-4 rounded-pill ">預定行程</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
