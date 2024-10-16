@@ -8,159 +8,221 @@
 
 <body>
     <%- include('./layout/header-forpageMember'); -%>
-    <section class="filter container">
-        <%- include('./layout/memberCenterFilter'); -%>
-    </section>
-    <section class="orderList">
-        <div class="container">
-            <ul>
-                <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
-                    <div class="text-neutral-3 fw-medium mb-4">
-                        訂單編號 : travelorder000011
-                    </div>
-                    <div class="d-lg-flex justify-content-lg-between pt-4 border-top border-neutral-5">
-                        <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
-                            <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-1.png" alt="trip photo"></div>
-                            <div class="min-w-0">
-                                <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">日本環球影城</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
-                            <div class="text-warning-700 mb-lg-2">已付款 | 已處理</div>
-                            <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$10,000</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
-                    <div class="text-neutral-3 fw-medium mb-4">
-                        訂單編號 : travelorder000012
-                    </div>
-                    <div class="d-lg-flex justify-content-lg-between">
-                        <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
-                            <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-2.png" alt="trip photo"></div>
-                            <div class="min-w-0">
-                                <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">夜宿海生館體驗</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
-                            <div class="text-warning-500 mb-lg-2">未付款 | 待處理</div>
-                            <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$2680</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
-                    <div class="text-neutral-3 fw-medium mb-4">
-                        訂單編號 : travelorder000013
-                    </div>
-                    <div class="d-lg-flex justify-content-lg-between">
-                        <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
-                            <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-3.png" alt="trip photo"></div>
-                            <div class="min-w-0">
-                                <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">高雄 | 蒸輕松汗蒸文化 | 汗蒸幕 & 按摩體驗</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
-                            <div class="text-warning-500 mb-lg-2">未付款 | 待處理</div>
-                            <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$1,000</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
-                    <div class="text-neutral-3 fw-medium mb-4">
-                        訂單編號 : travelorder000014
-                    </div>
-                    <div class="d-lg-flex justify-content-lg-between">
-                        <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
-                            <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-4.png" alt="trip photo"></div>
-                            <div class="min-w-0">
-                                <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">南投 | 日月潭 & 清境農場一日</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
-                            <div class="text-warning-700 mb-lg-2">已付款 | 已處理</div>
-                            <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$999</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
-                    <div class="text-neutral-3 fw-medium mb-4">
-                        訂單編號 : travelorder000015
-                    </div>
-                    <div class="d-lg-flex justify-content-lg-between">
-                        <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
-                            <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-5.png" alt="trip photo"></div>
-                            <div class="min-w-0">
-                                <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">宜蘭傳藝園區：門票、DIY套票</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
-                                <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
-                            <div class="text-warning-700 mb-lg-2">已付款 | 已處理</div>
-                            <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$499</div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <!--分頁-->
-            <div class="mt-6 mb-10 mt-lg-8 mb-lg-12">
-                <ul class="d-flex justify-content-center page fs-7 text-center">
-                    <li class="page-item disabled d-none d-lg-block">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span class="material-symbols-outlined">
-                                skip_previous
-                            </span>
-                        </a>
+
+    <section class="container py-lg-12 py-8">
+        <div class="d-flex w-100 overflow-hidden">
+        <input type="checkbox" name="" id="sideMenu-active" />
+            <div class="d-lg-block d-none px-0 sideMenu-container">
+                <div class="border border-1 border-primary-3 pt-6 sideMenu">
+    
+                <a href="./memberCenter.html" class="d-flex flex-column align-items-center mb-6">
+                    <img src="/assets/images/member-photo.png" alt="member-photo" class="mb-2" width="84px" height="84px">
+                    <p class="fw-medium fs-5 text-black lh-12">claire</p>
+                </a>
+    
+                <ul class="member-menu d-flex justify-content-center flex-column mb-6">
+                    <li class="py-8-5 bg-neutral-6 text-neutral-3 fw-medium fs-5 lh-12">
+                    帳戶管理
                     </li>
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span class="material-symbols-outlined">
-                                arrow_back_ios
-                            </span>
-                        </a>
+                    <li>
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">我的帳戶</a>
                     </li>
-                    <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item"><a class="page-link" href="#">6</a></li>
-                    <li class="page-item"><a class="page-link" href="#">7</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span class="material-symbols-outlined">
-                                arrow_forward_ios
-                            </span>
-                        </a>
+                    <li>
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">我的訂單</a>
                     </li>
-                    <li class="page-item d-none d-lg-block">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span class="material-symbols-outlined">
-                                skip_next
-                            </span>
-                        </a>
+                    <li>
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">我的收藏</a>
+                    </li>
+                    <li>
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">我的評論</a>
                     </li>
                 </ul>
+    
+                <ul class="member-menu d-flex justify-content-center flex-column mb-6">
+                    <li class="py-8-5 bg-neutral-6 text-neutral-3 fw-medium fs-5 lh-12">
+                    賣場管理
+                    </li>
+                    <li>
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">成為廠商</a>
+                    </li>
+                    <li>
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">商品名稱</a>
+                    </li>
+                    <li>
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">訂單管理</a>
+                    </li>
+                    <li>
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">廠商審核</a>
+                    </li>
+                    <li class="mb-6">
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">會員管理</a>
+                    </li>
+                    <li class="mb-6 border-top border-4 border-neutral-6"></li>
+                    <li>
+                    <a href="#" class="py-8-5 fw-medium fs-5 lh-12">登出</a>
+                    </li>
+                </ul>
+    
+                <label for="sideMenu-active" class="sideMenu-switch material-symbols-outlined">
+                    keyboard_double_arrow_left
+                </label>
+                </div>
+            </div>
+            
+            <div class="filter ms-6">
+                <h2 class="filter-text fw-bold lh-12 fs-2 mb-lg-8 mb-6">訂單管理</h3>
+                <%- include('./layout/memberCenterFilter'); -%>
+
+                <div class="orderList">
+                    <ul>
+                        <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
+                            <div class="text-neutral-3 fw-medium mb-4">
+                                訂單編號 : travelorder000011
+                            </div>
+                            <div class="d-lg-flex justify-content-lg-between pt-4 border-top border-neutral-5">
+                                <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                    <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-1.png" alt="trip photo"></div>
+                                    <div class="min-w-0">
+                                        <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">日本環球影城</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                    <div class="text-warning-700 mb-lg-2">已付款 | 已處理</div>
+                                    <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$10,000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
+                            <div class="text-neutral-3 fw-medium mb-4">
+                                訂單編號 : travelorder000012
+                            </div>
+                            <div class="d-lg-flex justify-content-lg-between">
+                                <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                    <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-2.png" alt="trip photo"></div>
+                                    <div class="min-w-0">
+                                        <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">夜宿海生館體驗</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                    <div class="text-warning-500 mb-lg-2">未付款 | 待處理</div>
+                                    <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$2680</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
+                            <div class="text-neutral-3 fw-medium mb-4">
+                                訂單編號 : travelorder000013
+                            </div>
+                            <div class="d-lg-flex justify-content-lg-between">
+                                <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                    <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-3.png" alt="trip photo"></div>
+                                    <div class="min-w-0">
+                                        <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">高雄 | 蒸輕松汗蒸文化 | 汗蒸幕 & 按摩體驗</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                    <div class="text-warning-500 mb-lg-2">未付款 | 待處理</div>
+                                    <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$1,000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
+                            <div class="text-neutral-3 fw-medium mb-4">
+                                訂單編號 : travelorder000014
+                            </div>
+                            <div class="d-lg-flex justify-content-lg-between">
+                                <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                    <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-4.png" alt="trip photo"></div>
+                                    <div class="min-w-0">
+                                        <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">南投 | 日月潭 & 清境農場一日</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                    <div class="text-warning-700 mb-lg-2">已付款 | 已處理</div>
+                                    <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$999</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" >
+                            <div class="text-neutral-3 fw-medium mb-4">
+                                訂單編號 : travelorder000015
+                            </div>
+                            <div class="d-lg-flex justify-content-lg-between">
+                                <div class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                    <div><img class="rounded-4 me-3 me-lg-5" src="/assets/images/order-list-5.png" alt="trip photo"></div>
+                                    <div class="min-w-0">
+                                        <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">宜蘭傳藝園區：門票、DIY套票</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01 23:59:59</div>
+                                        <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                    <div class="text-warning-700 mb-lg-2">已付款 | 已處理</div>
+                                    <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$499</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--分頁-->
+                    <div class="mt-6 mb-10 mt-lg-8 mb-lg-12">
+                        <ul class="d-flex justify-content-center page fs-7 text-center">
+                            <li class="page-item disabled d-none d-lg-block">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span class="material-symbols-outlined">
+                                        skip_previous
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span class="material-symbols-outlined">
+                                        arrow_back_ios
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item"><a class="page-link" href="#">7</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="page-item d-none d-lg-block">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span class="material-symbols-outlined">
+                                        skip_next
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <%- include('./layout/memberOrderModal'); -%>
     <%- include('./layout/footer'); -%>
 
-        <script type="module" src="../main.js"></script>
-        <script type="module" src="../assets/js/collect-love.js"></script>
-        <script type="module" src="../assets/js/travel_swiper.js"></script>
-        <script type="module" src="../assets/js/filter_dorpdown.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/collect-love.js"></script>
+    <script type="module" src="../assets/js/travel_swiper.js"></script>
+    <script type="module" src="../assets/js/filter_dorpdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
-
 </html>
