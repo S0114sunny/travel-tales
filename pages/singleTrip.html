@@ -3,597 +3,239 @@
 
 <head>
   <%- include('./layout/head'); -%>
-  <title>日本環球影城</title>
+    <title>日本環球影城</title>
 </head>
 
 <body>
   <%- include('./layout/header-forpageMember'); -%>
-  <section class="singleTrip-banner py-8 pt-lg-12 pb-lg-11">
-    <div class="container">
-      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="pb-4 pb-lg-8">
-        <ol class="breadcrumb fs-7 fs-lg-6 text-neutral-3">
-          <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
-          <li class="breadcrumb-item"><a href="#">全部旅程</a></li>
-          <li class="breadcrumb-item active" aria-current="page">日本環球影城</li>
-        </ol>
-      </nav>
-      <h1 class="h3 fw-bold">日本環球影城</h1>
-      <div class="d-sm-flex justify-content-between mb-4">
-        <div class="py-2">
-          <p class="d-inline-block me-2 fw-medium">
-            <span class="material-symbols-outlined span-star me-1">star</span>4.8
-          </p>
-          <p class="d-inline-block me-2 fs-7">(2,577人評價)</p>
-          <p class="d-inline-block fs-7 text-neutral-3">1K人參加過</p>
+    <section class="singleTrip-banner py-8 pt-lg-12 pb-lg-11">
+      <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="pb-4 pb-lg-8">
+          <ol class="breadcrumb fs-7 fs-lg-6 text-neutral-3">
+            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+            <li class="breadcrumb-item"><a href="#">全部旅程</a></li>
+            <li class="breadcrumb-item active" aria-current="page">日本環球影城</li>
+          </ol>
+        </nav>
+        <h1 class="h3 fw-bold">日本環球影城</h1>
+        <div class="d-sm-flex justify-content-between mb-4">
+          <div class="py-2">
+            <p class="d-inline-block me-2 fw-medium">
+              <span class="material-symbols-outlined span-star me-1">star</span>4.8
+            </p>
+            <p class="d-inline-block me-2 fs-7">(2,577人評價)</p>
+            <p class="d-inline-block fs-7 text-neutral-3">1K人參加過</p>
+          </div>
+          <div>
+            <input type="checkbox" id="favorite" class="btn-favorite" />
+            <label for="favorite">
+              <span class="material-symbols-outlined span-favorite m-2">favorite</span>
+            </label>
+            <a href="#"><span class="material-symbols-outlined span-share m-2">share</span></a>
+          </div>
         </div>
-        <div>
-          <input type="checkbox" id="favorite" class="btn-favorite" />
-          <label for="favorite">
-            <span class="material-symbols-outlined span-favorite m-2">favorite</span>
-          </label>
-          <a href="#"><span class="material-symbols-outlined span-share m-2">share</span></a>
-        </div>
-      </div>
-      <div class="row d-flex mb-4">
-        <div class="col-lg-6 mb-4">
-          <img class="img" src="/assets/images/singleTrip-banner-1.png" alt="trip photo">
-        </div>
-        <div class="col-lg-6">
-          <div class="d-flex mb-4 mb-lg-6 justify-content-center">
-            <div class="me-3">
-              <img src="/assets/images/singleTrip-banner-2.png" alt="trip photo">
+        <div class="row d-flex mb-4">
+          <div class="col-lg-6 mb-4">
+            <img class="img w-100" src="/assets/images/singleTrip-banner-1.png" alt="trip photo">
+          </div>
+          <div class="col-lg-6">
+            <div class="d-flex mb-4 mb-lg-6 justify-content-between">
+              <div class="me-3 flex-fill">
+                <img class="w-100" src="/assets/images/singleTrip-banner-2.png" alt="trip photo">
+              </div>
+              <div class="ms-3 flex-fill">
+                <img class="w-100" src="/assets/images/singleTrip-banner-4.png" alt="trip photo">
+              </div>
             </div>
-            <div class="ms-3">
-              <img src="/assets/images/singleTrip-banner-4.png" alt="trip photo">
+            <div class="d-flex mb-lg-4 justify-content-center">
+              <div class="me-3 flex-fill">
+                <img class="w-100" src="/assets/images/singleTrip-banner-3.png" alt="trip photo">
+              </div>
+              <div class="ms-3 flex-fill relative">
+                <img class="w-100" src="/assets/images/singleTrip-banner-5.png" alt="trip photo">
+                <div class="more-img text-white absolute">
+
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#picModal">
+                    <div class="d-inline-flex align-items-center">
+                      <span class="material-symbols-outlined span-image m-2">image</span>更多照片(10)
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="d-flex mb-lg-4 justify-content-center">
-            <div class="me-3">
-              <img src="/assets/images/singleTrip-banner-3.png" alt="trip photo">
-            </div>
-            <div class="ms-3 relative">
-              <img src="/assets/images/singleTrip-banner-5.png" alt="trip photo">
-              <div class="more-img text-white absolute">
+        </div>
 
-                <a href="#" data-bs-toggle="modal" data-bs-target="#picModal">
-                  <span class="material-symbols-outlined span-image m-2">image</span>更多照片(10)
+        <div class="singleTrip-booking bg-secondary-5 py-4 px-4 px-lg-0 rounded-5">
+          <!--pc-->
+          <div class="container d-lg-block d-none w-100">
+            <div class="d-flex justify-content-around align-items-center">
+              <div class="search bg-white rounded-pill p-2 shadow">
+                <ul class="row d-flex align-items-center">
+                  <li class="col position-relative ps-7 mx-2 border-end d-flex align-items-center">
+                    <span class="material-symbols-outlined">flight_takeoff</span>
+                    <input type="text" placeholder="旅行開始時間" name="datepicker" class="form-control">
+                    <span class="material-symbols-outlined icon-more">expand_more</span>
+                  </li>
+                  <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
+                    <span class="material-symbols-outlined">flight_land</span>
+                    <input type="text" placeholder="旅行結束時間" name="datepicker2" class="form-control">
+                    <span class="material-symbols-outlined icon-more">expand_more</span>
+                  </li>
+                  <li class="col position-relative ms-2 d-flex align-items-center">
+                    <span class="material-symbols-outlined me-2">person</span>
+                    <a class="text-start p-0 w-100" href="#" role="button" id="dropdownFilter" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      人數
+                    </a>
+                    <ul class="dropdown-menu w-75" aria-labelledby="dropdownFilter">
+                      <li class="dropdown-item">1</li>
+                      <li class="dropdown-item">2</li>
+                      <li class="dropdown-item">3</li>
+                      <li class="dropdown-item">4</li>
+                      <li class="dropdown-item">5</li>
+                      <li class="dropdown-item">6</li>
+                      <li class="dropdown-item">7</li>
+                      <li class="dropdown-item">8</li>
+                      <li class="dropdown-item">9</li>
+                      <li class="dropdown-item">10</li>
+                    </ul>
+                    <span class="material-symbols-outlined icon-more ms-auto me-7">expand_more</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="custom-btn-all ">
+                <button class="btn px-xl-7 px-lg-6 py-3 ms-5 fs-5 rounded-pill">搜尋</button>
+              </div>
+            </div>
+          </div>
+          <!--mb-->
+          <div class="d-lg-none d-block w-100">
+            <div class="d-flex flex-column justify-content-around align-items-center">
+              <div class="container search mb-3">
+                <ul class="row d-flex bg-white rounded-5 shadow align-items-center p-4">
+                  <li class="col-12 position-relative py-2 border-bottom d-flex align-items-center">
+                    <span class="material-symbols-outlined">flight_takeoff</span>
+                    <input type="text" placeholder="旅行開始時間" name="datepicker3" class="form-control">
+                    <span class="material-symbols-outlined icon-more">expand_more</span>
+                  </li>
+                  <li class="col-12 position-relative py-2 border-bottom d-flex align-items-center">
+                    <span class="material-symbols-outlined">flight_land</span>
+                    <input type="text" placeholder="旅行結束時間" name="datepicker4" class="form-control">
+                    <span class="material-symbols-outlined icon-more">expand_more</span>
+                  </li>
+                  <li class="col-12 position-relative py-2 d-flex align-items-center">
+                    <span class="material-symbols-outlined">person</span>
+                    <a class="text-start p-0 w-100 m-2" href="#" role="button" id="dropdownFilter2"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      人數
+                    </a>
+                    <ul class="dropdown-menu w-75" aria-labelledby="dropdownFilter">
+                      <li class="dropdown-item">1</li>
+                      <li class="dropdown-item">2</li>
+                      <li class="dropdown-item">3</li>
+                      <li class="dropdown-item">4</li>
+                      <li class="dropdown-item">5</li>
+                      <li class="dropdown-item">6</li>
+                      <li class="dropdown-item">7</li>
+                      <li class="dropdown-item">8</li>
+                      <li class="dropdown-item">9</li>
+                      <li class="dropdown-item">10</li>
+                    </ul>
+                    <span class="material-symbols-outlined icon-more ms-auto">expand_more</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="custom-btn-all w-100 row">
+                <button class="btn col-12 fs-5 py-4 rounded-pill ">搜尋</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white z-3 sticky-top trip">
+      <div class="container py-2">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-lg-start flex-column justify-content-between tripTitle">
+            <h3 class="fw-lg-700 fw-500 fs-lg-3 fs-5 text-black lh-12 mb-2">日本環球影城</h3>
+            <div class="d-flex justify-content-lg-start justify-content-between align-items-center">
+              <a class="fw-500 fs-6 lh-12 pb-1 me-lg-6 me-0 trip-subTitle" href="#travel-intro">旅程介紹</a>
+              <a class="fw-500 fs-6 lh-12 pb-1 me-lg-6 me-0 trip-subTitle" href="#travel-notice">旅程須知</a>
+              <a class="fw-500 fs-6 lh-12 pb-1 trip-subTitle" href="#travel-comment">最新評論</a>
+            </div>
+          </div>
+
+          <div class="d-lg-block d-none">
+            <div class="py-2 d-flex justify-content-lg-end align-items-lg-center ">
+              <div class="d-flex align-items-center me-4">
+                <span class="material-symbols-outlined me-1 text-neutral-4">
+                  calendar_today
+                </span>
+                <p class="fs-6 fw-500 lh-12 text-neutral-4">2024/08/08(四)~2024/08/10(六)</p>
+              </div>
+              <div class="d-flex align-items-center me-4">
+                <span class="material-symbols-outlined me-1 text-neutral-4">
+                  person
+                </span>
+                <p class="fs-6 fw-500 lh-12 text-neutral-4">2人</p>
+              </div>
+              <div class="d-flex align-items-center me-4">
+                <span class="material-symbols-outlined me-1 text-neutral-4">
+                  paid
+                </span>
+                <p class="fs-6 fw-500 lh-12 text-neutral-4">NT$ 20,000</p>
+              </div>
+              <div class="trip-pro-edit me-6">
+                <a href="#">
+                  <span class="material-symbols-outlined trip-edit-text">
+                    edit
+                  </span>
                 </a>
               </div>
+              <button type="button" class="trip-btn fs-6 lh-base fw-400">加入購物車</button>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="singleTrip-booking bg-secondary-5 p-4 mb-8 rounded-5">
-        <div class="d-lg-block d-none">
-          <div class="d-flex justify-content-around align-items-center">
-            <div class="container search bg-white rounded-pill p-2 shadow">
-              <ul class="row d-flex align-items-center">
-                <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
-                  <span class="material-symbols-outlined">flight_takeoff</span>
-                  <input type="text" placeholder="旅行開始時間" name="datepicker" class="form-control">
-                  <span class="material-symbols-outlined icon-more">expand_more</span>
-                </li>
-                <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
-                  <span class="material-symbols-outlined ">flight_land</span>
-                  <input type="text" placeholder="旅行結束時間" name="datepicker2" class="form-control">
-                  <span class="material-symbols-outlined icon-more">expand_more</span>
-                </li>
-                <li class="col position-relative px-2 ms-2 d-flex align-items-center">
-                  <span class="material-symbols-outlined me-1">person</span>
-                  <input type="text" placeholder="人數" class="form-content">
-                  <span class="material-symbols-outlined icon-more">expand_more</span>
-                </li>
-              </ul>
+    <!-- 旅程介紹+旅程須知+最新評價 -->
+    <section class="mt-lg-12 mt-8 container">
+      <div class="scroll-container">
+        <div class="scroll-page mb-lg-12 mb-8" id="travel-intro">
+          <h6>旅程介紹</h6>
+          <p class="my-6">
+            歡迎來到大阪環球影城,這是日本境內最為知名的遊樂設施之一,也是環球影城品牌在亞洲的一個矚目據點。作為日本環球影城的一部分,它擁有眾多令人驚嘆的遊樂設施和娛樂活動,為遊客提供一場極致的娛樂體驗。無論您是環球影城的愛好者還是首次造訪,都可以透過日本環球影城門票輕鬆進入這個令人興奮的主題樂園。為了更方便您的入場體驗,您還可以選擇使用環球特快入場券或電子憑證,節省寶貴的時間,讓您更充分地享受每個精彩時刻。在這裡,您可以盡情體驗眾多獨家遊樂設施,其中包括飛天翼龍、歐賽車庫巴等令人心跳加速的刺激項目。不僅如此,日本環球影城官方還提供便捷的官方App,讓您隨時隨地獲取最新的活動信息、等候時間和地圖導覽,確保您的遊樂之旅更加順暢。無論您是本地居民還是海外遊客,大阪環球影城都歡迎您的光臨。這裡將為您打開通向無盡娛樂的大門,讓您在環球影城的奇妙世界中留下難以忘懷的回憶。
+          </p>
+          <img src="/assets/images/trip-content-pic1.png" alt="">
+        </div>
+        <div class="scroll-page mb-lg-12 mb-8" id="travel-notice">
+          <h6>旅程需知</h6>
+          <ul class="my-6">
+            <li class="mb-3">1.遊客須持有「區域入場保證券」、「區域入場號碼券/抽籤券」,才能進入超級任天堂世界TM★依據現場人潮狀況,「區域入場號碼券」可能提早被抽完。另外,遊客也有可能不需「區</li>
+            <li class="mb-3">2.購買「環球特快入場券」或附「區域入場保證券」的方案可以讓您盡情暢玩園區</li>
+            <li class="mb-3">3.區域內的遊樂設施、餐廳、商店、拍照服務等可能會有停止受理或暫停服務的狀況為了讓您有更順暢地遊玩體驗,建議您事先下載日本環球影城官方 APP,以便遊玩當天取得「區域入場號碼券」
+              ,詳情請參考日本環球影城官方網站</li>
+            <li>4.未滿4歲兒童無須購票。</li>
+          </ul>
+          <div class="mb-6 row">
+            <div class="col-6 ">
+              <img src="/assets/images/trip-content-pic2.png" class="object-fit-cover pic-md" alt="">
             </div>
-            <div class="custom-btn-all ">
-              <button class="btn px-xxl-7 px-xl-5 py-lg-3 fs-5 rounded-pill">預定行程</button>
+            <div class="col-6">
+              <img src="/assets/images/trip-content-pic3.png" class="object-fit-cover pic-md" alt="">
             </div>
           </div>
         </div>
-        <div class="d-lg-none">
-          <div class="d-flex flex-column justify-content-around align-items-center">
-            <div class="container search mb-3">
-              <ul class="row d-flex bg-white rounded-5 shadow align-items-center p-4">
-                <li class="col-12 position-relative py-2 border-bottom d-flex align-items-center">
-                  <span class="material-symbols-outlined">flight_takeoff</span>
-                  <input type="text" placeholder="旅行開始時間" name="datepicker3" class="form-control">
-                  <span class="material-symbols-outlined icon-more">expand_more</span>
-                </li>
-                <li class="col-12 position-relative  py-2 border-bottom d-flex align-items-center">
-                  <span class="material-symbols-outlined">flight_land</span>
-                  <input type="text" placeholder="旅行結束時間" name="datepicker4" class="form-control">
-                  <span class="material-symbols-outlined icon-more">expand_more</span>
-                </li>
-                <li class="col-12 position-relative  py-2 d-flex align-items-center">
-                  <span class="material-symbols-outlined me-1">person</span>
-                  <input type="text" placeholder="人數" class="form-content">
-                  <span class="material-symbols-outlined icon-more">expand_more</span>
-                </li>
-              </ul>
+        <div class="scroll-page" id="travel-comment">
+          <h6>最新評論</h6>
+          <div class="my-4 d-flex align-items-end">
+            <div class="d-flex">
+              <h2 class="fw-medium">4.8 <span class="fs-6 text-neutral-4">/5</span> </h2>
             </div>
-            <div class="custom-btn-all w-100">
-              <button class="btn col-12 fs-5 py-4 rounded-pill ">預定行程</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-white z-3 sticky-top trip">
-    <div class="container py-2">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex justify-content-lg-start flex-column justify-content-between tripTitle">
-          <h3 class="fw-lg-700 fw-500 fs-lg-3 fs-5 text-black lh-12 mb-2">日本環球影城</h3>
-          <div class="d-flex justify-content-lg-start justify-content-between align-items-center">
-            <a class="fw-500 fs-6 lh-12 pb-1 me-lg-6 me-0 trip-subTitle" href="#travel-intro">旅程介紹</a>
-            <a class="fw-500 fs-6 lh-12 pb-1 me-lg-6 me-0 trip-subTitle" href="#travel-notice">旅程須知</a>
-            <a class="fw-500 fs-6 lh-12 pb-1 trip-subTitle" href="#travel-comment">最新評論</a>
-          </div>
-        </div>
-
-        <div class="d-lg-block d-none">
-          <div class="py-2 d-flex justify-content-lg-end align-items-lg-center ">
-            <div class="d-flex align-items-center me-4">
-              <span class="material-symbols-outlined me-1 text-neutral-4">
-                calendar_today
-              </span>
-              <p class="fs-6 fw-500 lh-12 text-neutral-4">2024/08/08(四)~2024/08/10(六)</p>
-            </div>
-            <div class="d-flex align-items-center me-4">
-              <span class="material-symbols-outlined me-1 text-neutral-4">
-                person
-              </span>
-              <p class="fs-6 fw-500 lh-12 text-neutral-4">2人</p>
-            </div>
-            <div class="d-flex align-items-center me-4">
-              <span class="material-symbols-outlined me-1 text-neutral-4">
-                paid
-              </span>
-              <p class="fs-6 fw-500 lh-12 text-neutral-4">NT$ 20,000</p>
-            </div>
-            <div class="trip-pro-edit me-6">
-              <a href="#">
-                <span class="material-symbols-outlined trip-edit-text">
-                  edit
-                </span>
-              </a>
-            </div>
-            <button type="button" class="trip-btn fs-6 lh-base fw-400">加入購物車</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 旅程介紹+旅程須知+最新評價 -->
-  <section class="mt-lg-12 mt-8 container">
-    <div class="scroll-container">
-      <div class="scroll-page mb-lg-12 mb-8" id="travel-intro">
-        <h6>旅程介紹</h6>
-        <p class="my-6">歡迎來到大阪環球影城,這是日本境內最為知名的遊樂設施之一,也是環球影城品牌在亞洲的一個矚目據點。作為日本環球影城的一部分,它擁有眾多令人驚嘆的遊樂設施和娛樂活動,為遊客提供一場極致的娛樂體驗。無論您是環球影城的愛好者還是首次造訪,都可以透過日本環球影城門票輕鬆進入這個令人興奮的主題樂園。為了更方便您的入場體驗,您還可以選擇使用環球特快入場券或電子憑證,節省寶貴的時間,讓您更充分地享受每個精彩時刻。在這裡,您可以盡情體驗眾多獨家遊樂設施,其中包括飛天翼龍、歐賽車庫巴等令人心跳加速的刺激項目。不僅如此,日本環球影城官方還提供便捷的官方App,讓您隨時隨地獲取最新的活動信息、等候時間和地圖導覽,確保您的遊樂之旅更加順暢。無論您是本地居民還是海外遊客,大阪環球影城都歡迎您的光臨。這裡將為您打開通向無盡娛樂的大門,讓您在環球影城的奇妙世界中留下難以忘懷的回憶。</p>
-        <img src="/assets/images/trip-content-pic1.png" alt="">
-      </div>
-      <div class="scroll-page mb-lg-12 mb-8" id="travel-notice">
-        <h6>旅程需知</h6>
-        <ul class="my-6">
-          <li class="mb-3">1.遊客須持有「區域入場保證券」、「區域入場號碼券/抽籤券」,才能進入超級任天堂世界TM★依據現場人潮狀況,「區域入場號碼券」可能提早被抽完。另外,遊客也有可能不需「區</li>
-          <li class="mb-3">2.購買「環球特快入場券」或附「區域入場保證券」的方案可以讓您盡情暢玩園區</li>
-          <li class="mb-3">3.區域內的遊樂設施、餐廳、商店、拍照服務等可能會有停止受理或暫停服務的狀況為了讓您有更順暢地遊玩體驗,建議您事先下載日本環球影城官方 APP,以便遊玩當天取得「區域入場號碼券」 ,詳情請參考日本環球影城官方網站</li>
-          <li>4.未滿4歲兒童無須購票。</li>
-        </ul>
-        <div class="mb-6 row">
-          <div class="col-6 ">
-            <img src="/assets/images/trip-content-pic2.png" class="object-fit-cover pic-md" alt="">
-          </div>
-          <div class="col-6">
-            <img src="/assets/images/trip-content-pic3.png" class="object-fit-cover pic-md" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="scroll-page" id="travel-comment">
-        <h6>最新評論</h6>
-        <div class="my-4 d-flex align-items-end">
-          <div class="d-flex">
-            <h2 class="fw-medium">4.8 <span class="fs-6 text-neutral-4">/5</span> </h2>
-          </div>
-          <div class="d-flex">
-            <span class="material-symbols-outlined text-secondary-6">
-              star
-            </span>
-            <span class="material-symbols-outlined text-secondary-6">
-              star
-            </span>
-            <span class="material-symbols-outlined text-secondary-6">
-              star
-            </span>
-            <span class="material-symbols-outlined text-secondary-6">
-              star
-            </span>
-            <span class="material-symbols-outlined text-neutral-7">
-              star
-            </span>
-          </div>
-          <a href="" class="border-bottom border-2 border-black">587人評價</a>
-        </div>
-        <div class="container my-6">
-          <div class="swiper swiperComment">
-            <div class="swiper-wrapper swiper-popular_wrapper">
-              <div class="swiper-slide">
-                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
-                  <div class="comment-title d-flex justify-content-between">
-                    <div class="c">
-                      <img src="../assets/images/person-1.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-1">
-                      <span>Amy</span>
-                    </div>
-                    <time datetime="">2024/07/08</time>
-                  </div>
-                  <div class="score mb-4">
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-neutral-7">
-                      star
-                    </span>
-                  </div>
-                  <div class="comment-body mb-4">
-                    <h5 class="mb-2">小朋友喊著還要再來玩</h5>
-                    <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
-                  </div>
-                  <div class="comment-photo mb-4">
-                    <div class="d-flex justify-content-between">
-                      <img src="/assets/images/trip-content-pic1.png" alt="" class="pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic2.png" alt="" class="pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic3.png" alt="" class="pic-sm
-                        ">
-                    </div>
-                    <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
-                        <span class="material-symbols-outlined">
-                          image
-                        </span>
-                        <p>+10</p>
-                      </button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
-                  <div class="comment-title d-flex justify-content-between">
-                    <div class="c">
-                      <img src="../assets/images/person-2.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-2">
-                      <span>Mack</span>
-                    </div>
-                    <time datetime="">2024/07/08</time>
-                  </div>
-                  <div class="comment-score mb-4">
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-neutral-7">
-                      star
-                    </span>
-                  </div>
-                  <div class="comment-body mb-4">
-                    <h5 class="mb-2">食物也太吸引人了!!</h5>
-                    <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
-                  </div>
-                  <div class="comment-photo mb-4">
-                    <div class="d-flex justify-content-between">
-                      <img src="/assets/images/trip-content-pic4.png" alt="" class=" rounded-3 object-fit-cover pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic5.png" alt="" class=" rounded-3 object-fit-cover pic-sm
-                        me-2">
-                      <img src="/assets/images/trip-content-pic6.png" alt="" class=" rounded-3 object-fit-cover pic-sm
-                        ">
-                    </div>
-                    <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
-                        <span class="material-symbols-outlined">
-                          image
-                        </span>
-                        <p>+10</p>
-                      </button>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
-                  <div class="comment-title d-flex justify-content-between">
-                    <div class="c">
-                      <img src="../assets/images/person-3.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-3">
-                      <span>Claire</span>
-                    </div>
-                    <time datetime="">2024/07/08</time>
-                  </div>
-                  <div class="comment-score mb-4">
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-neutral-7">
-                      star
-                    </span>
-                  </div>
-                  <div class="comment-body mb-4">
-                    <h5 class="mb-2">哈利波特魔法世界必玩</h5>
-                    <p>各種主題餐廳,有哈利波特魔法世界的三把掃帚餐廳和小黃人樂園的香蕉奶昔店。看起來都很夢幻,給他買下去!!!。</p>
-                  </div>
-                  <div class="comment-photo mb-4">
-                    <div class="d-flex justify-content-between">
-                      <img src="/assets/images/trip-content-pic7.png" alt="" class="pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic8.png" alt="" class="pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic9.png" alt="" class="pic-sm
-                        ">
-                    </div>
-                    <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
-                        <span class="material-symbols-outlined">
-                          image
-                        </span>
-                        <p>+10</p>
-                      </button>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
-                  <div class="comment-title d-flex justify-content-between">
-                    <div class="c">
-                      <img src="../assets/images/person-1.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-1">
-                      <span>Amy</span>
-                    </div>
-                    <time datetime="">2024/07/08</time>
-                  </div>
-                  <div class="score mb-4">
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-neutral-7">
-                      star
-                    </span>
-                  </div>
-                  <div class="comment-body mb-4">
-                    <h5 class="mb-2">小朋友喊著還要再來玩</h5>
-                    <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
-                  </div>
-                  <div class="comment-photo mb-4">
-                    <div class="d-flex justify-content-between">
-                      <img src="/assets/images/trip-content-pic1.png" alt="" class=" rounded-3 pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic2.png" alt="" class=" rounded-3 pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic3.png" alt="" class=" rounded-3 pic-sm">
-                    </div>
-                    <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
-                        <span class="material-symbols-outlined">
-                          image
-                        </span>
-                        <p>+10</p>
-                      </button>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
-                  <div class="comment-title d-flex justify-content-between">
-                    <div class="c">
-                      <img src="../assets/images/person-2.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-2">
-                      <span>Mack</span>
-                    </div>
-                    <time datetime="">2024/07/08</time>
-                  </div>
-                  <div class="comment-score mb-4">
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-neutral-7">
-                      star
-                    </span>
-                  </div>
-                  <div class="comment-body mb-4">
-                    <h5 class="mb-2">食物也太吸引人了!!</h5>
-                    <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
-                  </div>
-                  <div class="comment-photo mb-4">
-                    <div class="d-flex justify-content-between">
-                      <img src="/assets/images/trip-content-pic5.png" alt="" class=" rounded-3 pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic6.png" alt="" class=" rounded-3 pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic7.png" alt="" class=" rounded-3 pic-sm">
-                    </div>
-                    <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
-                        <span class="material-symbols-outlined">
-                          image
-                        </span>
-                        <p>+10</p>
-                      </button>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
-                  <div class="comment-title d-flex justify-content-between">
-                    <div class="c">
-                      <img src="../assets/images/person-3.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-3">
-                      <span>Claire</span>
-                    </div>
-                    <time datetime="">2024/07/08</time>
-                  </div>
-                  <div class="comment-score mb-4">
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-secondary-6">
-                      star
-                    </span>
-                    <span class="material-symbols-outlined text-neutral-7">
-                      star
-                    </span>
-                  </div>
-                  <div class="comment-body mb-4">
-                    <h5 class="mb-2">哈利波特魔法世界必玩</h5>
-                    <p>各種主題餐廳,有哈利波特魔法世界的三把掃帚餐廳和小黃人樂園的香蕉奶昔店。看起來都很夢幻,給他買下去!!!。</p>
-                  </div>
-                  <div class="comment-photo mb-4">
-                    <div class="d-flex justify-content-between">
-                      <img src="/assets/images/trip-content-pic7.png" alt="" class=" rounded-3 pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic8.png" alt="" class=" rounded-3 pic-sm me-2">
-                      <img src="/assets/images/trip-content-pic9.png" alt="" class=" rounded-3 pic-sm">
-                    </div>
-                    <div class="comment-photo-postion custom-btn-all">
-                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
-                        <span class="material-symbols-outlined">
-                          image
-                        </span>
-                        <p>+10</p>
-                      </button>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="d-flex justify-content-center align-items-center">
-            <div class="pagination pagination-custom text-center p-4">
-              <div class="swiper-popular-prev material-symbols-outlined">
-                arrow_back_ios
-              </div>
-              <div class="swiper-pagination-popular"></div>
-              <div class="swiper-popular-next material-symbols-outlined">
-                arrow_forward_ios
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!--官方圖Modal-->
-  <div class="modal modal-xl picModal" id="picModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
-        <div class="button-position position-absolute">
-          <button type="button" data-bs-dismiss="modal" class="btn rounded-circle">
-            <span class="material-symbols-outlined text-neutral-7">
-              close
-            </span>
-          </button>
-        </div>
-        <div class="modal-body p-0 d-flex flex-column gap-2 gap-lg-6">
-          <div class="position-relative">
-            <img id="picModal_mainImage" class="rounded-6" src="" alt="">
-            <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6 mb-4 mb-lg-6">
-              <span id="picModal_imgPage">1</span> / 5
-            </div>
-          </div>
-          <div class="modal-bottom-img">
-            <ul class="d-flex gap-2 gap-lg-6">
-              <li><img class="thumbnails" onclick="changePicModalImage(this,1)" src="../assets/images/singleTrip-modal-1.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changePicModalImage(this,2)" src="../assets/images/singleTrip-modal-2.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changePicModalImage(this,3)" src="../assets/images/singleTrip-modal-3.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changePicModalImage(this,4)" src="../assets/images/singleTrip-modal-4.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changePicModalImage(this,5)" src="../assets/images/singleTrip-modal-5.png" alt=""></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--評論圖Modal-->
-  <div class="modal modal-xl commentModal picModal" id="commentModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
-        <div class="button-position position-absolute d-flex flex-lg-column">
-          <button type="button" data-bs-dismiss="modal" class="btn rounded-circle">
-            <span class="material-symbols-outlined text-neutral-7">
-              close
-            </span>
-          </button>
-          <button type="button" class="btn rounded-circle next">
-            <span class="material-symbols-outlined text-neutral-7">
-              arrow_forward_ios
-            </span>
-          </button>
-        </div>
-        <div class="modal-body p-0 d-flex flex-column gap-4 gap-lg-6">
-          <div>
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <img src="../assets/images/person-2.png" class="rounded-circle object-fit-cover member-photo me-4" alt="person-2">
-              <span>Mack</span>
-              <time class="ms-auto" datetime="">2024/07/08</time>
-            </div>
-            <div>
+            <div class="d-flex">
               <span class="material-symbols-outlined text-secondary-6">
                 star
               </span>
@@ -610,130 +252,545 @@
                 star
               </span>
             </div>
+            <a href="" class="border-bottom border-2 border-black">587人評價</a>
           </div>
-          <div>
-            <h5 class="mb-2">食物也太吸引人了!!</h5>
-            <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
-          </div>
-          <div class="position-relative">
-            <img id="commentModal_mainImage" class="rounded-6" src="" alt="">
-            <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6 mb-4 mb-lg-6">
-              <span id="commentModal_imgPage">1</span> / 5
+          <div class="container my-6">
+            <div class="swiper swiperComment">
+              <div class="swiper-wrapper swiper-popular_wrapper">
+                <div class="swiper-slide">
+                  <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                    <div class="comment-title d-flex justify-content-between">
+                      <div class="c">
+                        <img src="../assets/images/person-1.png"
+                          class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-1">
+                        <span>Amy</span>
+                      </div>
+                      <time datetime="">2024/07/08</time>
+                    </div>
+                    <div class="score mb-4">
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-neutral-7">
+                        star
+                      </span>
+                    </div>
+                    <div class="comment-body mb-4">
+                      <h5 class="mb-2">小朋友喊著還要再來玩</h5>
+                      <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+                    </div>
+                    <div class="comment-photo mb-4">
+                      <div class="d-flex justify-content-between">
+                        <img src="/assets/images/trip-content-pic1.png" alt="" class="pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic2.png" alt="" class="pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic3.png" alt="" class="pic-sm
+                        ">
+                      </div>
+                      <div class="comment-photo-postion custom-btn-all">
+                        <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                          <span class="material-symbols-outlined">
+                            image
+                          </span>
+                          <p>+10</p>
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                    <div class="comment-title d-flex justify-content-between">
+                      <div class="c">
+                        <img src="../assets/images/person-2.png"
+                          class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-2">
+                        <span>Mack</span>
+                      </div>
+                      <time datetime="">2024/07/08</time>
+                    </div>
+                    <div class="comment-score mb-4">
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-neutral-7">
+                        star
+                      </span>
+                    </div>
+                    <div class="comment-body mb-4">
+                      <h5 class="mb-2">食物也太吸引人了!!</h5>
+                      <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+                    </div>
+                    <div class="comment-photo mb-4">
+                      <div class="d-flex justify-content-between">
+                        <img src="/assets/images/trip-content-pic4.png" alt=""
+                          class=" rounded-3 object-fit-cover pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic5.png" alt="" class=" rounded-3 object-fit-cover pic-sm
+                        me-2">
+                        <img src="/assets/images/trip-content-pic6.png" alt="" class=" rounded-3 object-fit-cover pic-sm
+                        ">
+                      </div>
+                      <div class="comment-photo-postion custom-btn-all">
+                        <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                          <span class="material-symbols-outlined">
+                            image
+                          </span>
+                          <p>+10</p>
+                        </button>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                    <div class="comment-title d-flex justify-content-between">
+                      <div class="c">
+                        <img src="../assets/images/person-3.png"
+                          class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-3">
+                        <span>Claire</span>
+                      </div>
+                      <time datetime="">2024/07/08</time>
+                    </div>
+                    <div class="comment-score mb-4">
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-neutral-7">
+                        star
+                      </span>
+                    </div>
+                    <div class="comment-body mb-4">
+                      <h5 class="mb-2">哈利波特魔法世界必玩</h5>
+                      <p>各種主題餐廳,有哈利波特魔法世界的三把掃帚餐廳和小黃人樂園的香蕉奶昔店。看起來都很夢幻,給他買下去!!!。</p>
+                    </div>
+                    <div class="comment-photo mb-4">
+                      <div class="d-flex justify-content-between">
+                        <img src="/assets/images/trip-content-pic7.png" alt="" class="pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic8.png" alt="" class="pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic9.png" alt="" class="pic-sm
+                        ">
+                      </div>
+                      <div class="comment-photo-postion custom-btn-all">
+                        <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                          <span class="material-symbols-outlined">
+                            image
+                          </span>
+                          <p>+10</p>
+                        </button>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                    <div class="comment-title d-flex justify-content-between">
+                      <div class="c">
+                        <img src="../assets/images/person-1.png"
+                          class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-1">
+                        <span>Amy</span>
+                      </div>
+                      <time datetime="">2024/07/08</time>
+                    </div>
+                    <div class="score mb-4">
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-neutral-7">
+                        star
+                      </span>
+                    </div>
+                    <div class="comment-body mb-4">
+                      <h5 class="mb-2">小朋友喊著還要再來玩</h5>
+                      <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+                    </div>
+                    <div class="comment-photo mb-4">
+                      <div class="d-flex justify-content-between">
+                        <img src="/assets/images/trip-content-pic1.png" alt="" class=" rounded-3 pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic2.png" alt="" class=" rounded-3 pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic3.png" alt="" class=" rounded-3 pic-sm">
+                      </div>
+                      <div class="comment-photo-postion custom-btn-all">
+                        <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                          <span class="material-symbols-outlined">
+                            image
+                          </span>
+                          <p>+10</p>
+                        </button>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                    <div class="comment-title d-flex justify-content-between">
+                      <div class="c">
+                        <img src="../assets/images/person-2.png"
+                          class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-2">
+                        <span>Mack</span>
+                      </div>
+                      <time datetime="">2024/07/08</time>
+                    </div>
+                    <div class="comment-score mb-4">
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-neutral-7">
+                        star
+                      </span>
+                    </div>
+                    <div class="comment-body mb-4">
+                      <h5 class="mb-2">食物也太吸引人了!!</h5>
+                      <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+                    </div>
+                    <div class="comment-photo mb-4">
+                      <div class="d-flex justify-content-between">
+                        <img src="/assets/images/trip-content-pic5.png" alt="" class=" rounded-3 pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic6.png" alt="" class=" rounded-3 pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic7.png" alt="" class=" rounded-3 pic-sm">
+                      </div>
+                      <div class="comment-photo-postion custom-btn-all">
+                        <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                          <span class="material-symbols-outlined">
+                            image
+                          </span>
+                          <p>+10</p>
+                        </button>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                    <div class="comment-title d-flex justify-content-between">
+                      <div class="c">
+                        <img src="../assets/images/person-3.png"
+                          class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-3">
+                        <span>Claire</span>
+                      </div>
+                      <time datetime="">2024/07/08</time>
+                    </div>
+                    <div class="comment-score mb-4">
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-secondary-6">
+                        star
+                      </span>
+                      <span class="material-symbols-outlined text-neutral-7">
+                        star
+                      </span>
+                    </div>
+                    <div class="comment-body mb-4">
+                      <h5 class="mb-2">哈利波特魔法世界必玩</h5>
+                      <p>各種主題餐廳,有哈利波特魔法世界的三把掃帚餐廳和小黃人樂園的香蕉奶昔店。看起來都很夢幻,給他買下去!!!。</p>
+                    </div>
+                    <div class="comment-photo mb-4">
+                      <div class="d-flex justify-content-between">
+                        <img src="/assets/images/trip-content-pic7.png" alt="" class=" rounded-3 pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic8.png" alt="" class=" rounded-3 pic-sm me-2">
+                        <img src="/assets/images/trip-content-pic9.png" alt="" class=" rounded-3 pic-sm">
+                      </div>
+                      <div class="comment-photo-postion custom-btn-all">
+                        <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                          <span class="material-symbols-outlined">
+                            image
+                          </span>
+                          <p>+10</p>
+                        </button>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="pagination pagination-custom text-center p-4">
+                <div class="swiper-popular-prev material-symbols-outlined">
+                  arrow_back_ios
+                </div>
+                <div class="swiper-pagination-popular"></div>
+                <div class="swiper-popular-next material-symbols-outlined">
+                  arrow_forward_ios
+                </div>
+              </div>
             </div>
           </div>
-          <div class="modal-bottom-img">
-            <ul class="d-flex gap-2 gap-lg-6">
-              <li><img class="thumbnails" onclick="changeCommentModalImage(this,1)" src="../assets/images/singleTrip-modal-1.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changeCommentModalImage(this,2)" src="../assets/images/singleTrip-modal-2.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changeCommentModalImage(this,3)" src="../assets/images/singleTrip-modal-3.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changeCommentModalImage(this,4)" src="../assets/images/singleTrip-modal-4.png" alt=""></li>
-              <li><img class="thumbnails" onclick="changeCommentModalImage(this,5)" src="../assets/images/singleTrip-modal-5.png" alt=""></li>
-            </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!--官方圖Modal-->
+    <div class="modal modal-xl picModal" id="picModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
+          <div class="button-position position-absolute">
+            <button type="button" data-bs-dismiss="modal" class="btn rounded-circle">
+              <span class="material-symbols-outlined text-neutral-7">
+                close
+              </span>
+            </button>
           </div>
-          <div class="modal-todo d-flex justify-content-between justify-content-lg-end align-items-center gap-8">
-            <span class="material-symbols-outlined thumb-up" onclick="changeColor(this,'#FACC44')">thumb_up</span>
-            <span class="material-symbols-outlined favorite" onclick="changeColor(this,'#FF4B30')">favorite</span>
-            <span class="material-symbols-outlined share" onclick="changeColor(this,'#394997')">share</span>
-            <a href="#">立即預訂</a>
+          <div class="modal-body p-0 d-flex flex-column gap-2 gap-lg-6">
+            <div class="position-relative">
+              <img id="picModal_mainImage" class="rounded-6" src="" alt="">
+              <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6 mb-4 mb-lg-6">
+                <span id="picModal_imgPage">1</span> / 5
+              </div>
+            </div>
+            <div class="modal-bottom-img">
+              <ul class="d-flex gap-2 gap-lg-6">
+                <li><img class="thumbnails" onclick="changePicModalImage(this,1)"
+                    src="../assets/images/singleTrip-modal-1.png" alt=""></li>
+                <li><img class="thumbnails" onclick="changePicModalImage(this,2)"
+                    src="../assets/images/singleTrip-modal-2.png" alt=""></li>
+                <li><img class="thumbnails" onclick="changePicModalImage(this,3)"
+                    src="../assets/images/singleTrip-modal-3.png" alt=""></li>
+                <li><img class="thumbnails" onclick="changePicModalImage(this,4)"
+                    src="../assets/images/singleTrip-modal-4.png" alt=""></li>
+                <li><img class="thumbnails" onclick="changePicModalImage(this,5)"
+                    src="../assets/images/singleTrip-modal-5.png" alt=""></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <%- include('./layout/footer'); -%>
-  <section class="container-fluid py-4 sticky-bottom d-block d-lg-none z-3 bg-white w-100">
-    <div class="container">
-      <div class="d-flex justify-content-end flex-column">
-        <div class="d-flex align-items-center justify-content-between mb-2">
-          <div class="trip-pro-edit me-6">
-            <a href="#">
-              <span class="material-symbols-outlined trip-edit-text">
-                edit
+    <!--評論圖Modal-->
+    <div class="modal modal-xl commentModal picModal" id="commentModal" tabindex="-1" aria-labelledby="picModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
+          <div class="button-position position-absolute d-flex flex-lg-column">
+            <button type="button" data-bs-dismiss="modal" class="btn rounded-circle">
+              <span class="material-symbols-outlined text-neutral-7">
+                close
               </span>
-            </a>
+            </button>
+            <button type="button" class="btn rounded-circle next">
+              <span class="material-symbols-outlined text-neutral-7">
+                arrow_forward_ios
+              </span>
+            </button>
           </div>
-          <button type="button" class="trip-btn fs-6 lh-base fw-400 w-100">加入購物車</button>
-        </div>
-        <div class="d-flex justify-content-between align-items-center">
-          <p class="fs-8 fw-500 lh-12 text-neutral-3">2024/08/08(四)~2024/08/10(六)</p>
-          <p class="fs-6 fw-500 lh-12 text-neutral-3">2人</p>
-          <p class="fs-6 fw-500 lh-12 text-neutral-3">NT$ 20,000</p>
+          <div class="modal-body p-0 d-flex flex-column gap-4 gap-lg-6">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <img src="../assets/images/person-2.png" class="rounded-circle object-fit-cover member-photo me-4"
+                  alt="person-2">
+                <span>Mack</span>
+                <time class="ms-auto" datetime="">2024/07/08</time>
+              </div>
+              <div>
+                <span class="material-symbols-outlined text-secondary-6">
+                  star
+                </span>
+                <span class="material-symbols-outlined text-secondary-6">
+                  star
+                </span>
+                <span class="material-symbols-outlined text-secondary-6">
+                  star
+                </span>
+                <span class="material-symbols-outlined text-secondary-6">
+                  star
+                </span>
+                <span class="material-symbols-outlined text-neutral-7">
+                  star
+                </span>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-2">食物也太吸引人了!!</h5>
+              <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+            </div>
+            <div class="position-relative">
+              <img id="commentModal_mainImage" class="rounded-6" src="" alt="">
+              <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6 mb-4 mb-lg-6">
+                <span id="commentModal_imgPage">1</span> / 5
+              </div>
+            </div>
+            <div class="modal-bottom-img">
+              <ul class="d-flex gap-2 gap-lg-6">
+                <li><img class="thumbnails" onclick="changeCommentModalImage(this,1)"
+                    src="../assets/images/singleTrip-modal-1.png" alt=""></li>
+                <li><img class="thumbnails" onclick="changeCommentModalImage(this,2)"
+                    src="../assets/images/singleTrip-modal-2.png" alt=""></li>
+                <li><img class="thumbnails" onclick="changeCommentModalImage(this,3)"
+                    src="../assets/images/singleTrip-modal-3.png" alt=""></li>
+                <li><img class="thumbnails" onclick="changeCommentModalImage(this,4)"
+                    src="../assets/images/singleTrip-modal-4.png" alt=""></li>
+                <li><img class="thumbnails" onclick="changeCommentModalImage(this,5)"
+                    src="../assets/images/singleTrip-modal-5.png" alt=""></li>
+              </ul>
+            </div>
+            <div class="modal-todo d-flex justify-content-between justify-content-lg-end align-items-center gap-8">
+              <span class="material-symbols-outlined thumb-up" onclick="changeColor(this,'#FACC44')">thumb_up</span>
+              <span class="material-symbols-outlined favorite" onclick="changeColor(this,'#FF4B30')">favorite</span>
+              <span class="material-symbols-outlined share" onclick="changeColor(this,'#394997')">share</span>
+              <a href="#">立即預訂</a>
+            </div>
+          </div>
         </div>
       </div>
-  </section>
+    </div>
 
-  <script type="module" src="../main.js"></script>
-  <script type="module" src="../assets/js/travel_swiper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-  <script>
-    const picModal = document.getElementById('picModal');
-    picModal.addEventListener('shown.bs.modal', () => {
-      // 獲取第一個縮圖
-      const firstThumbnail = picModal.querySelector('.thumbnails');
+    <%- include('./layout/footer'); -%>
+      <section class="container-fluid py-4 sticky-bottom d-block d-lg-none z-3 bg-white w-100">
+        <div class="container">
+          <div class="d-flex justify-content-end flex-column">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <div class="trip-pro-edit me-6">
+                <a href="#">
+                  <span class="material-symbols-outlined trip-edit-text">
+                    edit
+                  </span>
+                </a>
+              </div>
+              <button type="button" class="trip-btn fs-6 lh-base fw-400 w-100">加入購物車</button>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="fs-8 fw-500 lh-12 text-neutral-3">2024/08/08(四)~2024/08/10(六)</p>
+              <p class="fs-6 fw-500 lh-12 text-neutral-3">2人</p>
+              <p class="fs-6 fw-500 lh-12 text-neutral-3">NT$ 20,000</p>
+            </div>
+          </div>
+      </section>
 
-      if (firstThumbnail) {
-        const firstSrc = firstThumbnail.src;
-        document.getElementById("picModal_mainImage").src = firstSrc;
-        firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
-      }
-    });
+      <script type="module" src="../main.js"></script>
+      <script type="module" src="../assets/js/travel_swiper.js"></script>
+      <script type="module" src="../assets/js/filter_dorpdown.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      <script>
+        const picModal = document.getElementById('picModal');
+        picModal.addEventListener('shown.bs.modal', () => {
+          // 獲取第一個縮圖
+          const firstThumbnail = picModal.querySelector('.thumbnails');
 
-    function changePicModalImage(imgElement, page) {
-      // 獲取點擊的圖片的 src
-      var newSrc = imgElement.src;
+          if (firstThumbnail) {
+            const firstSrc = firstThumbnail.src;
+            document.getElementById("picModal_mainImage").src = firstSrc;
+            firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
+          }
+        });
 
-      // 將主圖片的 src 設置為點擊的圖片的 src
-      document.getElementById("picModal_mainImage").src = newSrc;
-      // 移除所有縮圖的高亮樣式s
-      var thumbnails = picModal.getElementsByClassName("thumbnails");
-      for (var i = 0; i < thumbnails.length; i++) {
-        thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
-      }
-      document.getElementById("picModal_imgPage").textContent = page;
-      imgElement.style.border = "4px #FACC44 solid";
-    }
+        function changePicModalImage(imgElement, page) {
+          // 獲取點擊的圖片的 src
+          var newSrc = imgElement.src;
 
-    const commentModal = document.getElementById('commentModal');
-    commentModal.addEventListener('shown.bs.modal', () => {
-      // 獲取第一個縮圖
-      const firstThumbnail = commentModal.querySelector('.thumbnails');
+          // 將主圖片的 src 設置為點擊的圖片的 src
+          document.getElementById("picModal_mainImage").src = newSrc;
+          // 移除所有縮圖的高亮樣式s
+          var thumbnails = picModal.getElementsByClassName("thumbnails");
+          for (var i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
+          }
+          document.getElementById("picModal_imgPage").textContent = page;
+          imgElement.style.border = "4px #FACC44 solid";
+        }
 
-      if (firstThumbnail) {
-        const firstSrc = firstThumbnail.src;
-        document.getElementById("commentModal_mainImage").src = firstSrc;
-        firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
-      }
-    });
+        const commentModal = document.getElementById('commentModal');
+        commentModal.addEventListener('shown.bs.modal', () => {
+          // 獲取第一個縮圖
+          const firstThumbnail = commentModal.querySelector('.thumbnails');
 
-    function changeCommentModalImage(imgElement, page) {
-      // 獲取點擊的圖片的 src
-      var newSrc = imgElement.src;
+          if (firstThumbnail) {
+            const firstSrc = firstThumbnail.src;
+            document.getElementById("commentModal_mainImage").src = firstSrc;
+            firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
+          }
+        });
 
-      // 將主圖片的 src 設置為點擊的圖片的 src
-      document.getElementById("commentModal_mainImage").src = newSrc;
-      // 移除所有縮圖的高亮樣式
-      var thumbnails = commentModal.getElementsByClassName("thumbnails");
-      for (var i = 0; i < thumbnails.length; i++) {
-        thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
-      }
-      document.getElementById("commentModal_imgPage").textContent = page;
-      imgElement.style.border = "4px #FACC44 solid";
-    }
+        function changeCommentModalImage(imgElement, page) {
+          // 獲取點擊的圖片的 src
+          var newSrc = imgElement.src;
 
-    function changeColor(iconElement, color) {
-      var selectClassList = iconElement.classList;
-      console.log(selectClassList);
-      if (selectClassList.contains('select')) {
-        iconElement.style.color = '#B7B7B7';
-        iconElement.classList.remove('select');
-      } else {
-        iconElement.style.color = color;
-        iconElement.classList.add('select');
-      }
-    }
-  </script>
+          // 將主圖片的 src 設置為點擊的圖片的 src
+          document.getElementById("commentModal_mainImage").src = newSrc;
+          // 移除所有縮圖的高亮樣式
+          var thumbnails = commentModal.getElementsByClassName("thumbnails");
+          for (var i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
+          }
+          document.getElementById("commentModal_imgPage").textContent = page;
+          imgElement.style.border = "4px #FACC44 solid";
+        }
+
+        function changeColor(iconElement, color) {
+          var selectClassList = iconElement.classList;
+          console.log(selectClassList);
+          if (selectClassList.contains('select')) {
+            iconElement.style.color = '#B7B7B7';
+            iconElement.classList.remove('select');
+          } else {
+            iconElement.style.color = color;
+            iconElement.classList.add('select');
+          }
+        }
+      </script>
 
 </body>
 
