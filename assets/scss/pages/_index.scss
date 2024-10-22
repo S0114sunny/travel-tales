@@ -112,6 +112,11 @@
       transition: transform 0.3s ease;
     }
   }
+  @include media-breakpoint-up(lg) {
+    .swiper-popular {
+      overflow: hidden;
+    }
+  }
   .popular_slide-second {
     transition: transform 0.3s ease;
   }
@@ -141,7 +146,6 @@
     }
     @include media-breakpoint-up(lg) {
       opacity: 0.5; 
-      pointer-events: none; // PC 版設定不能執行換頁
     }
   }
   .swiper-pagination-popular-two {
@@ -187,6 +191,9 @@
     }
     &_6 {
       background-image: url("/assets/images/popular-6.png");
+    }
+    &_7 {
+      background-image: url("/assets/images/recommend-1.png");
     }
     &-tag {
       display: flex;
