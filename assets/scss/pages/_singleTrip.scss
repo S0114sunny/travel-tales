@@ -52,13 +52,34 @@
     }
 
     .more-img {
-        max-height: 100%;
+        // max-height: 100%;
         right: 8px;
         bottom: 8px;
         padding: 8px 12px;
         background-color: #6F6F6FCC;
         border-radius: 16px;
         border: 1px solid $white;
+
+        @include media-breakpoint-up(lg) {
+            right: 16px;
+            bottom: 16px;
+        }
+
+        &:hover {
+            background-color: #3D3D3DCC;
+        }
+    }
+
+    input {
+        &::placeholder {
+            color: $neutral-4;
+        }
+    }
+
+    .singleTrip-booking {
+        a {
+            color: $neutral-4;
+        }
     }
 }
 
@@ -147,7 +168,7 @@
     max-height: 110px;
     border-radius: 16px;
     object-fit: cover;
-    
+
 }
 
 .comment-body {
