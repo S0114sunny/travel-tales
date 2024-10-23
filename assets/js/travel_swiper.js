@@ -18,15 +18,16 @@ const swiperPopular = new Swiper('.swiper-popular', {
   loop: true,
   pagination: {
     el: '.swiper-pagination-popular',
+    clickable: true, 
     bulletClass: 'swiper-pagination-bullet', // 自定義分頁指示器的class名
     bulletActiveClass: 'swiper-pagination-bullet-active', // 自定義活動分頁指示器的class名
   },
   breakpoints: {
     576: {
-      slidesPerView: 1.5
+      slidesPerView: 2
     },
     768: {
-      slidesPerView: 2
+      slidesPerView: 2.5
     },
     992: {
       slidesPerView: 3
@@ -49,10 +50,6 @@ const swiperPopular2 = new Swiper('.swiperPopular2', {
     clickable: true,
     bulletClass: 'swiper-pagination-bullet', // 自定義分頁指示器的class名
     bulletActiveClass: 'swiper-pagination-bullet-active', // 自定義活動分頁指示器的class名
-  },
-  navigation: {
-    nextEl: '.swiper-popular-next',
-    prevEl: '.swiper-popular-prev',
   },
   autoplay: { // 自動播放
     delay: 3000, // 延遲3秒更換圖片
