@@ -1,139 +1,169 @@
-.banner{
-    background-image: 
+.banner {
+  background-image:
     linear-gradient(180deg, rgba(255, 255, 255, 0) 52.83%, #FFFFFF 100%),
     linear-gradient(360deg, rgba(0, 47, 218, 0.1) 22.53%, rgba(14, 75, 196, 0.2) 100%),
     linear-gradient(360deg, rgba(0, 0, 0, 0) 14.6%, rgba(0, 0, 0, 0.2) 42.59%, rgba(0, 0, 0, 0.172017) 61.79%, rgba(0, 0, 0, 0.0423077) 93.31%),
     url("../assets/images/banner.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: cover;
-    overflow-y: hidden;
-    width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  overflow-y: hidden;
+  width: 100%;
 }
-.search{
-    max-width: 1028px;
-    width: 100%;
-    @include media-breakpoint-up(lg) {
-        width: 87%;
-    }
-    .search-item{
-        position: relative;
-        width: 100%; 
-    }
-    .icon-more{
-        position: absolute;   
-        right: 15px;
-        padding-right: 4px;
-    }
-    h1{
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    //套件
-    input {
-        padding: 8px;
-    }
-    input::placeholder{
-        color: $neutral-3;
-    }
-    .form-content{
-        width: 100%;
-        border: 0px;
-        background-color: transparent;
-    }
-    .form-control::before{
-        content: "keyboard_arrow_down" ; //icon 名稱
-        font-family:"Material Icons"; // 採用的 icon 庫
-        width: auto !important;
-        height: auto !important;
-        font-size: 24px;
-        color: #4b4b4b;
-        background-image: none;
-        border: 0px;
-        right: 0px;
-        position: absolute;
-        pointer-events: none; /* 使圖標不干擾輸入框 */
-    }
 
-    .form-control, .form-control:focus {
-        border-color: transparent;
-        background-color: transparent;
-        color: $neutral-3;
-    }
-    .inputTime, .inputTime:focus {
-        border-color: #FFFFFF;
-        background-color: transparent;
-        color: #C1C1C1;
-    }
-    .datepicker-picker {
-        max-width: 316px;
-        width: 100%;
-    }
-    .datepicker-cell:not(.disabled):hover {
-        background-color: #e8e8e8;
-    }
-    .datepicker-cell.selected, .datepicker-cell.selected:hover {
-        background-color: #e8e8e8;
-        color: #000;
-    }
+.search {
+  max-width: 1028px;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 87%;
+  }
+
+  .search-item {
+    position: relative;
+    width: 100%;
+  }
+
+  .icon-more {
+    position: absolute;
+    right: 15px;
+    padding-right: 4px;
+  }
+
+  h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  //套件
+  input {
+    padding: 8px;
+  }
+
+  input::placeholder {
+    color: $neutral-3;
+  }
+
+  .form-content {
+    width: 100%;
+    border: 0px;
+    background-color: transparent;
+  }
+
+  .form-control::before {
+    content: "keyboard_arrow_down"; //icon 名稱
+    font-family: "Material Icons"; // 採用的 icon 庫
+    width: auto !important;
+    height: auto !important;
+    font-size: 24px;
+    color: #4b4b4b;
+    background-image: none;
+    border: 0px;
+    right: 0px;
+    position: absolute;
+    pointer-events: none;
+    /* 使圖標不干擾輸入框 */
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: transparent;
+    background-color: transparent;
+    color: $neutral-3;
+  }
+
+  .inputTime,
+  .inputTime:focus {
+    border-color: #FFFFFF;
+    background-color: transparent;
+    color: #C1C1C1;
+  }
+
+  .datepicker-picker {
+    max-width: 316px;
+    width: 100%;
+  }
+
+  .datepicker-cell:not(.disabled):hover {
+    background-color: #e8e8e8;
+  }
+
+  .datepicker-cell.selected,
+  .datepicker-cell.selected:hover {
+    background-color: #e8e8e8;
+    color: #000;
+  }
 
 }
+
 .popular {
   position: relative;
   overflow-x: hidden;
   width: 100%;
+
   &_bg-1 {
     position: absolute;
     bottom: 0;
     z-index: -1;
     width: 100%;
   }
+
   &_bg-2 {
     position: absolute;
     z-index: -1;
     top: 42%;
     left: -12%;
   }
+
   &_bg-3 {
     position: absolute;
     z-index: -1;
     top: 30%;
     right: -16%;
   }
+
   .swiper-popular {
     padding: 0px -12px;
     width: 100%;
     overflow: visible;
+
     &_wrapper {
       overflow: visible;
     }
+
     &_slide {
       height: auto;
       transition: transform 0.3s ease;
     }
   }
+
   @include media-breakpoint-up(lg) {
     .swiper-popular {
       overflow: hidden;
     }
   }
+
   .popular_slide-second {
     transition: transform 0.3s ease;
   }
+
   .pagination-popular {
     width: 375px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @include media-breakpoint-down(sm) {
       width: 351px;
     }
   }
+
   .swiper-pagination-popular {
     display: block !important;
     opacity: 1 !important;
     pointer-events: none !important;
   }
+
   .swiper-popular-next,
   .swiper-popular-prev {
     @include media-breakpoint-down(sm) {
@@ -144,26 +174,30 @@
       justify-content: center;
       align-items: center;
     }
+
     @include media-breakpoint-up(lg) {
-      opacity: 0.5; 
+      opacity: 0.5;
     }
   }
+
   .swiper-pagination-popular-two {
     display: flex;
     justify-content: end;
     align-items: center;
+
     .swiper-pagination-bullet {
       width: 8px;
       height: 8px;
       background-color: $primary-4;
     }
-  
+
     .swiper-pagination-bullet-active {
-        width: 8px;
-        width: 8px;
-        background-color: $neutral-4;
+      width: 8px;
+      width: 8px;
+      background-color: $neutral-4;
     }
   }
+
   .popular_img {
     height: 220px;
     background-position: center;
@@ -174,54 +208,68 @@
     display: block;
     width: 100%;
     object-fit: cover;
+
     &_1 {
       background-image: url("/assets/images/popular-1.png");
     }
+
     &_2 {
       background-image: url("/assets/images/popular-2.png");
     }
+
     &_3 {
       background-image: url("/assets/images/popular-4.png");
     }
+
     &_4 {
       background-image: url("/assets/images/popular-3.png");
     }
+
     &_5 {
       background-image: url("/assets/images/popular-5.png");
     }
+
     &_6 {
       background-image: url("/assets/images/popular-6.png");
     }
+
     &_7 {
       background-image: url("/assets/images/recommend-1.png");
     }
+
     &-tag {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 80px;
       height: 36px;
-      border-radius: 24px 0px 24px 0px ;
+      border-radius: 24px 0px 24px 0px;
     }
   }
+
   &_content {
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
     border-radius: 0px 0px 24px 24px;
     flex: 1;
+
     &_price {
       font-size: 18px;
     }
+
     .star-icon {
       margin-right: 6px;
     }
   }
+
   &_cart span {
     color: $neutral-3;
     cursor: pointer;
   }
+
   &_cart:hover span {
     color: $neutral-7;
   }
+
   &_cart:hover::before {
     content: '';
     position: absolute;
@@ -230,230 +278,250 @@
     width: 40px;
     height: 40px;
     background-color: $primary-1;
-    border-radius: 50%; 
+    border-radius: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0; 
+    z-index: 0;
   }
 }
+
 .recommend {
-    background-image: url('../images/bg-recommend.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
+  background-image: url('../images/bg-recommend.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 
-    .bg-img-3 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-188px, 57px);
-
-        @include media-breakpoint-down(lg) {
-            display: none;
-        }
-    }
-
-    .bg-img-2 {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        transform: translate(-520px, 69px);
-
-        @include media-breakpoint-down(lg) {
-            display: none;
-        }
-    }
-
-    @include media-breakpoint-down(sm) {
-        background-image: none;
-        background-color: $primary-4;
-    }
-
-    .trip-title {
-        position: relative;
-
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translate(-272.35px, 0px);
-
-            @include media-breakpoint-down(lg) {
-                display: none;
-            }
-        }
-    }
-
-    .swiper-container {
-        max-width: 306px;
-
-        @include media-breakpoint-down(sm) {
-            max-width: 100%;
-        }
-    }
-
-    .swiper-slide {
-        img {
-            box-shadow: 0px 1px 2px 0px #0000004D;
-            border-top-left-radius: 24px;
-            border-top-right-radius: 24px;
-            display: block;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .info {
-            box-shadow: 0px 1px 3px 1px #00000026;
-            border-bottom-left-radius: 24px;
-            border-bottom-right-radius: 24px;
-
-            .cart {
-                position: relative;
-                width: 40px;
-                height: 40px;
-                cursor: pointer;
-
-                span {
-                    color: $neutral-3;
-                }
-
-                &:hover {
-                    background-color: $primary-1;
-
-                    span {
-                        color: $neutral-7;
-                    }
-                }
-            }
-        }
-    }
-
-    // .swiper-pagination-bullet {
-    //     width: 8px;
-    //     height: 8px;
-    //     background-color: $primary-3;
-    // }
-
-    // .swiper-pagination-bullet-active {
-    //     width: 24px;
-    //     border-radius: 8px;
-    //     background-color: $primary-1;
-    // }
-
-    .comment {
-        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 52.41%, rgba(0, 0, 0, 0.498) 84.15%, rgba(0, 0, 0, 0.6) 99.08%),
-            url("../images/recommend-2.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        background-position: center;
-
-        @include media-breakpoint-down(md) {
-            height: 469px;
-        }
-
-        .score {
-            display: flex;
-            align-items: end;
-
-            span {
-                font-style: 20px;
-            }
-
-            p {
-                line-height: 1.2;
-                font-size: 64px;
-                color: $neutral-7;
-                font-weight: 900;
-            }
-        }
-
-        .comment-btn {
-            cursor: pointer;
-
-            &:hover {
-                backdrop-filter: blur(4px)
-            }
-        }
-
-        .comment-swiper {
-            width: 100%;
-            height: 100%;
-
-            swiper-slide {
-                display: inline-block;
-                width: auto;
-                text-align: center;
-            }
-
-            .comment-tag {
-                display: flex;
-                border-radius: 30px;
-                align-items: center;
-                justify-content: start;
-                background-color: #EBF6FACC;
-                padding: 8px 12px;
-                gap: 12px;
-                width: auto;
-
-                img {
-                    width: 32px;
-                    height: 32px;
-                }
-            }
-        }
-    }
-}
-.reason {
-    .img {
-        height: 220px; // 第三張圖大小不一樣
-    }
-}
-.rank {
-    background-image: url("/assets/images/bg-rank.png");
-    background-size: cover;
+  .bg-img-3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-188px, 57px);
 
     @include media-breakpoint-down(lg) {
-        background-image: none;
+      display: none;
+    }
+  }
+
+  .bg-img-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-520px, 69px);
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-image: none;
+    background-color: $primary-4;
+  }
+
+  .trip-title {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-272.35px, 0px);
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+  }
+
+  .swiper-container {
+    max-width: 306px;
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+    }
+  }
+
+  .swiper-slide {
+    img {
+      box-shadow: 0px 1px 2px 0px #0000004D;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      display: block;
+      width: 100%;
+      object-fit: cover;
     }
 
-    .rank-item {
-        &:hover {
-            background-color: $primary-4;
-            cursor: pointer;
-            border-radius: 24px;
+    .recommend-swiper-img {
+      display: flex;
+      justify-content: end;
+      height: 220px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+      border-radius: 24px 24px 0px 0px;
+      width: 100%;
+      object-fit: cover;
+
+      &_1 {
+        background-image: url('../images/recommend-1.png');
+      }
+    }
+
+    .info {
+      box-shadow: 0px 1px 3px 1px #00000026;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+
+      .cart {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+
+        span {
+          color: $neutral-3;
         }
+
+        &:hover {
+          background-color: $primary-1;
+
+          span {
+            color: $neutral-7;
+          }
+        }
+      }
+    }
+  }
+
+  // .swiper-pagination-bullet {
+  //     width: 8px;
+  //     height: 8px;
+  //     background-color: $primary-3;
+  // }
+
+  // .swiper-pagination-bullet-active {
+  //     width: 24px;
+  //     border-radius: 8px;
+  //     background-color: $primary-1;
+  // }
+
+  .comment {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 52.41%, rgba(0, 0, 0, 0.498) 84.15%, rgba(0, 0, 0, 0.6) 99.08%),
+      url("../images/recommend-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: center;
+
+    @include media-breakpoint-down(md) {
+      height: 469px;
     }
 
-    .rank-img {
-        width: 64px;
-        height: 64px;
-        min-width: 64px;
-        min-height: 64px;
+    .score {
+      display: flex;
+      align-items: end;
+
+      span {
+        font-style: 20px;
+      }
+
+      p {
+        line-height: 1.2;
+        font-size: 64px;
+        color: $neutral-7;
+        font-weight: 900;
+      }
     }
 
-    .material-symbols-outlined {
-        vertical-align: sub;
+    .comment-btn {
+      cursor: pointer;
+
+      &:hover {
+        backdrop-filter: blur(4px)
+      }
     }
 
-    .span-star {
-        width: 20px;
-        height: 20px;
-        color: $secondary-6;
-    }
+    .comment-swiper {
+      width: 100%;
+      height: 100%;
 
-    .span-textsms {
-        width: 20px;
-        height: 20px;
-        color: $neutral-5;
-    }
+      swiper-slide {
+        display: inline-block;
+        width: auto;
+        text-align: center;
+      }
 
-    .span-arrow-right {
-        width: 24px;
-        height: 24px;
-        color: $neutral-4;
-    }
+      .comment-tag {
+        display: flex;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: start;
+        background-color: #EBF6FACC;
+        padding: 8px 12px;
+        gap: 12px;
+        width: auto;
 
-    .border-shadow {
-        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
     }
+  }
+}
+
+.reason {
+  .img {
+    height: 220px; // 第三張圖大小不一樣
+  }
+}
+
+.rank {
+  background-image: url("/assets/images/bg-rank.png");
+  background-size: cover;
+
+  @include media-breakpoint-down(lg) {
+    background-image: none;
+  }
+
+  .rank-item {
+    &:hover {
+      background-color: $primary-4;
+      cursor: pointer;
+      border-radius: 24px;
+    }
+  }
+
+  .rank-img {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+  }
+
+  .material-symbols-outlined {
+    vertical-align: sub;
+  }
+
+  .span-star {
+    width: 20px;
+    height: 20px;
+    color: $secondary-6;
+  }
+
+  .span-textsms {
+    width: 20px;
+    height: 20px;
+    color: $neutral-5;
+  }
+
+  .span-arrow-right {
+    width: 24px;
+    height: 24px;
+    color: $neutral-4;
+  }
+
+  .border-shadow {
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  }
 }
