@@ -20,10 +20,11 @@ form.filter {
             &.show {
                 width: 100%;
                 transform: translate(0px, 60px) !important;
+
                 @include media-breakpoint-down(lg) {
                     transform: translate(0px, 52px) !important;
                 }
-            
+
             }
 
             .dropdown-item {
@@ -38,7 +39,7 @@ form.filter {
                     background-color: #fff;
                 }
 
-                &:last-child{
+                &:last-child {
                     border-bottom: 0;
                 }
             }
@@ -92,6 +93,7 @@ form.filter {
     padding-top: 8.5px;
     padding-bottom: 8.5px;
 }
+
 .member-menu {
     li {
         width: 100%;
@@ -101,23 +103,27 @@ form.filter {
         align-items: center;
         color: black;
     }
+
     li:hover {
         color: $primary-1;
         background: $primary-4;
     }
 }
+
 .sideMenu-container {
     position: relative;
-    width: 306px; 
+    width: 306px;
     transition: width 0.5s;
 }
+
 .sideMenu {
     width: 306px;
     height: auto;
     position: relative;
     transform: translateX(0); // 一開始側邊欄直接顯示
-	transition: transform 0.5s;
+    transition: transform 0.5s;
 }
+
 .sideMenu-switch {
     position: absolute;
     top: 3%;
@@ -130,36 +136,43 @@ form.filter {
     z-index: 2;
     transition: transform 0.5s, right 0.5s;
 }
-#sideMenu-active:checked ~ .sideMenu-container .sideMenu {
+
+#sideMenu-active:checked~.sideMenu-container .sideMenu {
     transform: translateX(-100%);
     // 點選收起側邊欄
 }
-#sideMenu-active:checked ~ .sideMenu-container .sideMenu-switch {
-    transform: scaleX(-1); 
+
+#sideMenu-active:checked~.sideMenu-container .sideMenu-switch {
+    transform: scaleX(-1);
     // 點選側邊欄箭頭水平翻轉
     top: 0%;
     right: -11%;
 }
-#sideMenu-active:checked ~ .sideMenu-container {
+
+#sideMenu-active:checked~.sideMenu-container {
     // 側邊欄收合後寬度設為 0 ，不擠壓到空間
     width: 0;
 }
-#sideMenu-active:checked ~ .filter {
+
+#sideMenu-active:checked~.filter {
     // 側邊欄收合後寬度設為滿版。
     width: 100%;
     margin-left: 0;
+
     .filter-text {
         margin-left: 24px;
         padding-top: 16.5px;
         padding-bottom: 16.5px;
     }
 }
+
 #sideMenu-active {
     // 將 checkbox 設定透明及設定為最底層，避免會被點到。
-	position: absolute;
-	opacity: 0; 
-	z-index: -1; 
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
 }
+
 .orderList {
     img {
         max-width: 119px;
@@ -182,6 +195,7 @@ form.filter {
             &:not(.disabled):hover {
                 background-color: #ebebeb;
                 border-radius: 50%;
+                cursor: pointer;
             }
 
             &.disabled,
@@ -190,6 +204,22 @@ form.filter {
                 color: #ababab;
                 cursor: default;
             }
+        }
+    }
+
+    .span-warning {
+        height: 40px;
+        width: 40px;
+        color: $secondary-6;
+        background: $secondary-5;
+        border-radius: 80px;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    li {
+        &:hover {
+            box-shadow: 0px 1px 2px 0px #0000004D;
         }
     }
 }
