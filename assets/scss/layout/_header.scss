@@ -1,4 +1,10 @@
 .navbar{
+    
+    .navbar-toggler:focus {
+        outline: none !important; /* 隱藏焦點樣式 */
+        box-shadow: none !important; /* 隱藏陰影 */
+        border: none !important; /* 隱藏邊框 */
+    }
     .navbar-toggler{
         border: 0px;
         &:active,&:hover{
@@ -27,8 +33,11 @@
         justify-content: space-between;
         
     }
+    .offcanvas.offcanvas-end {
+        border: 0;
+    }
     .bg-light{
-        background-color: #ffffff75 !important;
+        background-color: #ffffff !important;
     }
     .fixed-top {
         position: fixed;

@@ -1,6 +1,8 @@
 import './assets/scss/all.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
+
+
 //日曆
 const elem = document.querySelector('input[name="datepicker"]');
 const datepicker = new Datepicker(elem, {
@@ -26,7 +28,7 @@ const datepicker4 = new Datepicker(elem4, {
 
 
 
-//監聽naber滾動
+//監聽navber滾動
 const navBarA = document.getElementById('navBarA');
 const navBarB = document.getElementById('navBarB');
 const navbara = document.getElementById('navbara');
@@ -35,9 +37,13 @@ const logo = document.getElementById('logo');
 const textColors = document.querySelectorAll('.textColor');
 const textColors2 = document.querySelector('.textColor2');
 
-// 判断是否滾動超过50px
+
+//navber
 window.addEventListener('scroll', () => {
+  // 判斷是否滾動超过50px
   const isScrolled = window.scrollY > 50;
+  // 判斷是否滾動底部<=50
+
 
   // 更新 navbar
   navBarA.classList.toggle('fixed-top', isScrolled);
@@ -68,3 +74,5 @@ window.addEventListener('scroll', () => {
   textColors2.classList.toggle('custom-1', !isScrolled);
   
 });
+  
+AOS.init();

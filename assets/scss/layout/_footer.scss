@@ -17,23 +17,35 @@
 }
 
 .topbtn{
-    position: absolute;
     width: 48px;
     height: 48px;  
-    z-index: 2;
     color: white;
     background-color: $primary-2;
     border-radius: 400px;
-    right: 5%;
-    top: -30%;
     border: 0px;
+    z-index: 2;
+    text-align: center;
+    right: 5%;
+    transition: all 0.3s ease; 
     &:hover,&:active{
         color: white;
-        background-color: $primary-3 !important;
-        
-    }
+        background-color: $primary-3 !important;   
+    }  
+}
+.topbtnPostionAbsolute{
+    transition: all 0.3s ease; 
+    position: absolute;
+    top: -10%;
     @include media-breakpoint-down(lg){
-        top: -15%;
-    }
+        top: 80%;
+    }  
+}
+
+.topbtnPostionFixed{
+    transition: all 0.3s ease; 
+    position: fixed;
+    bottom: 5%;   
+    z-index: 50;  
     
 }
+
