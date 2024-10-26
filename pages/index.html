@@ -9,7 +9,7 @@
 <body>
   <section class="banner">
     <%- include('./layout/header'); -%>
-    <div class="contenter z-3 ">
+    <div class="contenter z-3">
       <div class="d-flex flex-column align-items-center justify-content-between px-lg-10 py-lg-13 py-8 position-relative">
         <img src="../assets/images/logo.png" width="147px" height="56px" alt="logo" class="object-fit-cover mb-lg-10 mb-8">
         <h1 class="display-3 fw-semibold text-white mb-lg-10 mb-8">每段旅程，都是一段故事</h1>
@@ -29,6 +29,10 @@
   <script type="module" src="../assets/js/filter_dorpdown.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
