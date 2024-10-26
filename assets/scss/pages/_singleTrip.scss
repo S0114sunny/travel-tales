@@ -156,11 +156,15 @@
 
 .pic-md {
     width: 100%;
-    max-height: 220px;
+    max-height: 150px;
 
+    @include media-breakpoint-up(sm) {
+        max-height: 220px;
+    }
     @include media-breakpoint-up(lg) {
         max-height: 420px;
     }
+    
 }
 
 .pic-sm {

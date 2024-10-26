@@ -1,6 +1,10 @@
 .orderModal{
+    
     .modal-content{
         max-width: 1050px;
+    }
+    .modal-body {
+        padding: 0px !important;
     }
     .button-position {
         left: 100%;
@@ -26,12 +30,15 @@
         width: 100%;
         max-width: 119px;
         height: 80px;
+        height: auto;
         position: relative;
         z-index: 1; 
         overflow: hidden;
+        object-fit: cover;
         img{
             position: relative;
-        }       
+        }
+        
     }
     .tag{
         position: absolute;

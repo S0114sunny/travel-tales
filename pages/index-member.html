@@ -1,30 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>index</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--datepicker日曆套件-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+  <%- include('./layout/head'); -%>
+  <title>TravelTales - 每段旅程，都是一段故事</title>
 </head>
 
 <body>
   <section class="banner">
-    <%- include('./layout/header-member'); -%>
-    <div class="contenter z-3 ">
+    <%- include('./layout/header'); -%>
+    <div class="contenter z-3">
       <div class="d-flex flex-column align-items-center justify-content-between px-lg-10 py-lg-13 py-8 position-relative">
         <img src="../assets/images/logo.png" width="147px" height="56px" alt="logo" class="object-fit-cover mb-lg-10 mb-8">
-        <h1 class="display-3 fw-semibold text-white mb-lg-10 mb-8">每段旅程，都是一段故事</h1>
+        <h1 class="display-lg-3 display-5 fw-semibold text-white mb-lg-10 mb-8">每段旅程，都是一段故事</h1>
         <!--datepicker ejs-->
         <%- include('./layout/datepicker'); -%>
-        <a href="#"><span class="material-symbols-outlined custom-icon text-center">keyboard_double_arrow_down</span></a>
+        <a href="#popular"><span class="material-symbols-outlined custom-icon text-center">keyboard_double_arrow_down</span></a>
       </div>
     </div>
   </section>
@@ -32,14 +23,15 @@
   <%- include('./layout/index-content'); -%>
   <%- include('./layout/footer'); -%>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
 
   <script type="module" src="../main.js"></script>
+  <script type="module" src="../assets/js/topbtn.js"></script>
   <script type="module" src="../assets/js/collect-love.js"></script>
   <script type="module" src="../assets/js/travel_swiper.js"></script>
   <script type="module" src="../assets/js/filter_dorpdown.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
 </body>
 
 </html>
