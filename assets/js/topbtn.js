@@ -1,6 +1,6 @@
 //topbtn
-const topbtnJs =document.getElementById('topbtnJs');
-const cartJS =document.getElementById('cartJS');
+const topbtnJs =document.querySelector('#topbtnJs');
+const cartJS =document.querySelector('#cartJS');
 
 
 //navber
@@ -13,22 +13,34 @@ window.addEventListener('scroll', () => {
   //btn
   topbtnJs.classList.toggle('topbtnPostionFixed', isScrolled && !isToBottom);
   topbtnJs.classList.toggle('topbtnPostionAbsolute', isToBottom );
-
-  
 });
 
-//滾動後得topbtn
-window.addEventListener('scroll', () => {
 
-  // 判斷是否碰到 cartJS
-  const isToCart = cartJS.getBoundingClientRect().top <= window.innerHeight && cartJS.getBoundingClientRect().bottom >= 0;
-  // 判斷是否<= 992
-  const isViewMd = window.innerWidth <= 992 ;
-
-  if (isToCart) {
-    if (isViewMd) { // 手機
-      topbtnJs.style.bottom = '15%'; 
-    } 
-  }
-});
+// 判斷是否在 AA 頁面
+if (window.location.pathname === '/travel-tales/pages/singleTrip.html') {
   
+  // 設定 bottom 值的函式
+  const setBottomValue = () => {
+
+    // 宣告
+    const topbtnPostion = document.querySelector('.topbtnPostionFixed'); 
+
+    if (topbtnPostion) { 
+      let bottomValue; // 定義變數
+      if (window.innerWidth >= 992) {
+        bottomValue = '5%'; // 寬度大於等於 992px 時的 bottom 值
+      } else {
+        bottomValue = '18%'; // 寬度小於 992px 時的 bottom 值
+      }
+      topbtnPostion.style.bottom = bottomValue; // 將值賦予到元素的樣式
+    }
+  };
+  // 當滾動時更新 bottom 值
+  window.addEventListener('scroll', setBottomValue);
+  // 當窗口大小改變時更新 bottom 值
+  window.addEventListener('resize', setBottomValue);
+  // 在頁面加載完成後立即執行 setBottomValue
+  document.addEventListener('DOMContentLoaded', setBottomValue);
+  // 初始設定 bottom 值
+  setBottomValue();
+}
