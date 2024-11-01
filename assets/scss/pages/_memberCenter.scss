@@ -218,7 +218,7 @@ form.filter {
     }
 
     li {
-        &:hover {
+        &:not(.disabled):hover {
             box-shadow: 0px 1px 2px 0px #0000004D;
         }
     }
