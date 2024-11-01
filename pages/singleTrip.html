@@ -191,7 +191,8 @@
                 </span>
               </a>
             </div>
-            <button type="button" class="trip-btn fs-6 lh-base fw-400">加入購物車</button>
+            <a href="./cart.html"><button type="button" class="trip-btn fs-6 lh-base fw-400">加入購物車</button></a>
+            
           </div>
         </div>
       </div>
@@ -676,19 +677,21 @@
   </div>
 
   <%- include('./layout/footer'); -%>
-  <section class="container py-4 sticky-bottom d-block d-sm-none z-3 bg-white">
-    <div class="d-flex align-items-center justify-content-between mb-2">
-      <div class="trip-pro-edit me-4">
-        <a href="#" class="material-symbols-outlined trip-edit-text">
-          edit
-        </a>
+  <section class="py-4 sticky-bottom d-block d-lg-none z-3 bg-white">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <div class="trip-pro-edit me-4">
+          <a href="#" class="material-symbols-outlined trip-edit-text">
+            edit
+          </a>
+        </div>
+        <button type="button" class="trip-btn fs-6 lh-base fw-400 w-100">加入購物車</button>
       </div>
-      <button type="button" class="trip-btn fs-6 lh-base fw-400 w-100">加入購物車</button>
-    </div>
-    <div class="d-flex justify-content-between align-items-center ">
-      <span class="fs-14 fw-500 lh-12 text-neutral-3">2024/08/08(四)~2024/08/10(六)</span>
-      <span class="fs-14 fw-500 lh-12 text-neutral-3">2人</span>
-      <span class="fs-14 fw-500 lh-12 text-neutral-3">NT$ 20,000</span>
+      <div class="d-flex justify-content-between align-items-center ">
+        <span class="fs-14 fw-500 lh-12 text-neutral-3">2024/08/08(四)~2024/08/10(六)</span>
+        <span class="fs-14 fw-500 lh-12 text-neutral-3">2人</span>
+        <span class="fs-14 fw-500 lh-12 text-neutral-3">NT$ 20,000</span>
+      </div>
     </div>
   </section>
 
