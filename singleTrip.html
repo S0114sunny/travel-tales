@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- google icon new -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+
+<!--datepicker日曆套件-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+
+<!--aos-->
+<link href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css" rel="stylesheet">
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="data:image/png;base64,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KrnVVXzfx4lGaUomiT6j2thwyI2g64ei6/3nswZsKORGWOCZu+hGNXzL7XmCW9d/AIUZc2/eCKzcAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTEwLTA4VDE2OjQ0OjEwKzAwOjAwDju8NgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0xMC0wOFQxNjo0NDoxMCswMDowMH9mBIoAAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMTkyQF1xVQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE3Mjg0MDU4NTC7lTXjAAAAD3RFWHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zhdmljb25zLzIwMjQtMTAtMDgvMjhlYTk3N2E1MjE0MWNhMTRhMDZhM2MxMWZhZTVkZWMuaWNvLnBuZ491wgUAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" sizes="60x60" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="72x72" href="/travel-tales/assets/apple-icon-72x72-1720a2c7.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/travel-tales/assets/apple-icon-76x76-0f8e874c.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/travel-tales/assets/apple-icon-114x114-2d565d62.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/travel-tales/assets/apple-icon-120x120-d58456f4.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/travel-tales/assets/apple-icon-144x144-7b423789.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/travel-tales/assets/apple-icon-152x152-e00c983d.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/travel-tales/assets/apple-icon-180x180-dbb099df.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/travel-tales/assets/android-icon-192x192-da10cadc.png">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="96x96" href="/travel-tales/assets/favicon-96x96-634a48d8.png">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEX////++vr94t79z8j90sz+6eb+/f393tr9koL+Y0z/VTz+Vz7+a1X9pZj97uv81tD9alT/SC3/Ryz/SS7/SS3/Ryv/SzD8g3H97On87+38emb/SCz/VDv/clz/YUn/aVL/bVf/TjT/Si/6nY/9/fz5wrn+TzX/TTL/q57/9fP/4t3/6eb/7uv/h3X8Ykv649/9///4npH/Ujj/0Mn/qJv+UDb4xr/8/v72lof/lYX/+Pf/6eX/c17+TTP1vrb+///zqZ7+SzD/UTf/pZj/6+j7VTz0zsnx08/5W0P/UDb/gG31c2D27Ov5+Pjtm478TTL/Sy/5Vj7uvbb9/v/z7OvqlYj4Vj3+SjD0YErqsKf4+Pf19PPou7T2XkfwalbrgHDnnZLq08/5+vr419L3aFPszMf09fb5+/v5qp70eGb38vHwurHuurP9/v76+/teLvwPAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+gKCBAsDJVmh/QAAAC7SURBVBjTY2AAAUYmZhZWNgY4YOfg5OLm4eWD8fkFBIWERUTFxCUgfEkpaRlZOXkFRSVlFbCAqpq6hqaWto6utJ4+iG9gKGJkDGKYCJuagWhzC0ExSysGBmsbYVs7e5AKB0clJ2crF10xJVc3sBnuHkpKnpZeYmIi3j5gAV8/f6UAMSUx4cCgYIi9IaFhYsIi4RGRUTCXRcfExsUnJCYh3J6ckpqWbo/g22dkZjEgg+DsnFwUAYakPDgTAAlSG/chCI0WAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTEwLTA4VDE2OjQ0OjEwKzAwOjAwDju8NgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0xMC0wOFQxNjo0NDoxMCswMDowMH9mBIoAAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMTkyQF1xVQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE3Mjg0MDU4NTC7lTXjAAAAD3RFWHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zhdmljb25zLzIwMjQtMTAtMDgvMjhlYTk3N2E1MjE0MWNhMTRhMDZhM2MxMWZhZTVkZWMuaWNvLnBuZ491wgUAAAAASUVORK5CYII=">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+  <title>日本環球影城</title>
+  <script type="module" crossorigin src="/travel-tales/assets/travel_swiper-9a408d52.js"></script>
+  <script type="module" crossorigin src="/travel-tales/assets/filter_dorpdown-72122177.js"></script>
+  <link rel="stylesheet" href="/travel-tales/assets/travel_swiper-f5a183f5.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-light z-3" >   
+  <div class="container justify-content-end"> 
+    <!--滾動後出現-->
+    <nav class="navbar navbar-expand-lg navbar-light z-3 d-none d-lg-block fixed-top bg-light">
+      <div class="container">
+        <a class="navbar-brand position-relative" href="../pages/index-member.html">
+          <img src="/travel-tales/assets/logo2-22d80b9c.png" width="107px" height="40"  alt="logo">
+        </a>
+        <ul class="d-flex ms-auto">
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">全部旅程</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">優惠景點</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">熱門旅程</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">客服中心</a></li> 
+          <li>
+            <button class="navbar-toggler position-relative ms-auto pe-4 d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <img src="/travel-tales/assets/member-photo-51a62db0.png" alt="member-photo" width="40px" height="40px">
+            </button>
+          </li>
+        </ul> 
+      </div>
+    </nav>
+  </div>
+
+  <div class="container-fluid justify-content-end">
+    <!--mobile-->
+    <nav class="navbar navbar-light z-3 d-block d-lg-none fixed-top bg-light">
+      <div class="d-flex justify-content-between">
+        <!--logo--->
+        <a class="navbar-brand position-relative px-4" href="../pages/index-member.html">
+          <img src="/travel-tales/assets/logo2-22d80b9c.png" width="107px" height="40" alt="logo">
+        </a>
+        <!--漢堡--->
+        <button class="navbar-toggler position-relative ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="material-symbols-outlined material-custom2">menu</span>
+        </button>
+      </div>
+    </nav>    
+  </div>
+</nav>
+
+
+
+<!--offcanvas-->
+<div class="navbar">
+  <div class="offcanvas offcanvas-end w-lg-25" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header py-3">
+      <a class="navbar-brand position-relative" href="../pages/index-member.html">
+        <img src="/travel-tales/assets/logo2-22d80b9c.png" width="107px" height="40"  alt="logo" >
+      </a>
+      <button class="material-symbols-outlined material-custom2" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+        menu
+      </button>
+    </div>
+    <div class="offcanvas-body vh-100 p-0">
+      <ul class="navbar-nav px-0">
+        <li class="border-top border-1 py-2"></li>
+        <li class="nav-item d-flex justify-content-start align-items-center px-3 py-5">
+          <a href="index.html"><img src="/travel-tales/assets/member-photo-51a62db0.png" alt="member-photo" width="60px" height="60px" class="me-6"></a>
+          <div class="member-info d-flex flex-column justify-content-start">
+            <p class="text-neutral-3">會員</p>
+            <p>Claire158872</p>
+          </div>
+        </li>
+        <li class="nav-item bg-neutral-6 px-3 py-2">
+          <p class="text-neutral-3 fw-medium">帳號管理</p>
+        </li>
+        <li class="nav-item my-5">
+          <ul>
+            <li><a class="nav-link px-3 py-2" href="#">我的帳戶</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">我的訂單</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">我的收藏</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">我的評論</a></li>
+          </ul>
+        </li>
+        </li>
+        <li class="nav-item bg-neutral-6 px-3 py-2">
+          <p class="text-neutral-3 fw-medium">賣場管理</p>
+        </li>
+        <li class="nav-item my-5">
+          <ul>
+            <li><a class="nav-link px-3 py-2" href="#">成為廠商</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">商品管理</a></li>
+            <li><a class="nav-link px-3 py-2" href="../pages/memberCenter.html">訂單管理</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">商場審核</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">會員管理</a></li>
+          </ul>
+        </li>
+        <li class="border-bottom border-3 py-2"></li>  
+        <li class="nav-item px-3 mt-5">
+          <a class="nav-link nav-link-mb" aria-current="page" href="#">
+            <p>全部旅程</p>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link nav-link-mb" href="#">
+            <p>優惠景點</p>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+          
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link nav-link-mb" href="#">
+            <p>熱門旅程</p>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="nav-item px-3 mb-5">
+          <a class="nav-link nav-link-mb" href="#">
+            客服中心
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="border-bottom border-3 py-2"></li>
+        <li class="nav-item px-3 py-1">
+          <a href="#" class="nav-link d-flex align-items-center">
+            <span class="material-symbols-outlined pe-2">logout</span>
+           登出
+          </a>
+        </li> 
+      </ul>
+    </div>
+    
+  </div>  
+</div>  
+  <section class="singleTrip-banner pt-12 pb-8 pt-lg-14 pb-lg-11">
+    <div class="container">
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="pb-4 pb-lg-8">
+        <ol class="breadcrumb fs-7 fs-lg-6 text-neutral-3">
+          <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+          <li class="breadcrumb-item"><a href="#">全部旅程</a></li>
+          <li class="breadcrumb-item active" aria-current="page">日本環球影城</li>
+        </ol>
+      </nav>
+      <h1 class="h3 fw-bold">日本環球影城</h1>
+      <div class="d-flex justify-content-between mb-4">
+        <div class="py-2">
+          <p class="d-inline-block me-2 fw-medium">
+            <span class="material-symbols-outlined span-star me-1">star</span>4.8
+          </p>
+          <p class="d-inline-block me-2 fs-7">(2,577人評價)</p>
+          <p class="d-inline-block fs-7 text-neutral-3">1K人參加過</p>
+        </div>
+        <div>
+          <input type="checkbox" id="favorite" class="btn-favorite" />
+          <label for="favorite">
+            <span class="material-symbols-outlined span-favorite m-2">favorite</span>
+          </label>
+          <a href="#"><span class="material-symbols-outlined span-share m-2">share</span></a>
+        </div>
+      </div>
+      <div class="row d-flex mb-4">
+        <div class="col-lg-6 mb-4">
+          <img class="img w-100" src="/travel-tales/assets/singleTrip-banner-1-91538626.png" alt="trip photo">
+        </div>
+        <div class="col-lg-6">
+          <div class="d-flex mb-4 mb-lg-6 justify-content-between">
+            <div class="me-2 me-sm-3 flex-fill">
+              <img class="w-100" src="/travel-tales/assets/singleTrip-banner-2-97b51a68.png" alt="trip photo">
+            </div>
+            <div class="ms-2 ms-sm-3 flex-fill">
+              <img class="w-100" src="/travel-tales/assets/singleTrip-banner-4-729b55e3.png" alt="trip photo">
+            </div>
+          </div>
+          <div class="d-flex mb-lg-4 justify-content-center">
+            <div class="me-2 me-sm-3 flex-fill">
+              <img class="w-100" src="/travel-tales/assets/singleTrip-banner-3-93f97fa5.png" alt="trip photo">
+            </div>
+            <div class="ms-2 ms-sm-3 flex-fill relative">
+              <img class="w-100" src="/travel-tales/assets/singleTrip-banner-5-0355e30d.png" alt="trip photo">
+              <div class="more-img text-white absolute">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#picModal">
+                  <div class="d-inline-flex align-items-center">
+                    <span class="material-symbols-outlined span-image m-2 ms-0">image</span>更多照片(10)
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="singleTrip-booking bg-secondary-5 py-4 px-4 px-lg-0 rounded-5">
+        <!--pc-->
+        <div class="container d-lg-block d-none w-100">
+          <div class="d-flex justify-content-around align-items-center">
+            <div class="search bg-white rounded-pill p-2 shadow">
+              <ul class="row d-flex align-items-center">
+                <li class="col position-relative ps-7 mx-2 border-end d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_takeoff</span>
+                  <input type="text" placeholder="旅行開始時間" name="datepicker" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col position-relative px-2 mx-2 border-end d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_land</span>
+                  <input type="text" placeholder="旅行結束時間" name="datepicker2" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col position-relative ms-2 d-flex align-items-center">
+                  <span class="material-symbols-outlined me-2">person</span>
+                  <a class="text-start p-0 w-100" href="#" role="button" id="dropdownFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                    人數
+                  </a>
+                  <ul class="dropdown-menu w-75" aria-labelledby="dropdownFilter">
+                    <li class="dropdown-item">1</li>
+                    <li class="dropdown-item">2</li>
+                    <li class="dropdown-item">3</li>
+                    <li class="dropdown-item">4</li>
+                    <li class="dropdown-item">5</li>
+                    <li class="dropdown-item">6</li>
+                    <li class="dropdown-item">7</li>
+                    <li class="dropdown-item">8</li>
+                    <li class="dropdown-item">9</li>
+                    <li class="dropdown-item">10</li>
+                  </ul>
+                  <span class="material-symbols-outlined icon-more ms-auto me-7">expand_more</span>
+                </li>
+              </ul>
+            </div>
+            <div class="custom-btn-all ">
+              <button class="btn px-xxl-7 px-xl-6 px-lg-4 py-3 ms-5 fs-6 rounded-pill">預訂行程</button>
+            </div>
+          </div>
+        </div>
+        <!--mb-->
+        <div class="d-lg-none d-block w-100">
+          <div class="d-flex flex-column justify-content-around align-items-center">
+            <div class="container search mb-3">
+              <ul class="row d-flex bg-white rounded-5 shadow align-items-center p-4">
+                <li class="col-12 position-relative py-2 border-bottom d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_takeoff</span>
+                  <input type="text" placeholder="旅行開始時間" name="datepicker3" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col-12 position-relative py-2 border-bottom d-flex align-items-center">
+                  <span class="material-symbols-outlined">flight_land</span>
+                  <input type="text" placeholder="旅行結束時間" name="datepicker4" class="form-control">
+                  <span class="material-symbols-outlined icon-more">expand_more</span>
+                </li>
+                <li class="col-12 position-relative py-2 d-flex align-items-center">
+                  <span class="material-symbols-outlined">person</span>
+                  <a class="text-start p-0 w-100 m-2" href="#" role="button" id="dropdownFilter2" data-bs-toggle="dropdown" aria-expanded="false">
+                    人數
+                  </a>
+                  <ul class="dropdown-menu w-75" aria-labelledby="dropdownFilter">
+                    <li class="dropdown-item">1</li>
+                    <li class="dropdown-item">2</li>
+                    <li class="dropdown-item">3</li>
+                    <li class="dropdown-item">4</li>
+                    <li class="dropdown-item">5</li>
+                    <li class="dropdown-item">6</li>
+                    <li class="dropdown-item">7</li>
+                    <li class="dropdown-item">8</li>
+                    <li class="dropdown-item">9</li>
+                    <li class="dropdown-item">10</li>
+                  </ul>
+                  <span class="material-symbols-outlined icon-more ms-auto">expand_more</span>
+                </li>
+              </ul>
+            </div>
+            <div class="custom-btn-all w-100 row">
+              <button class="btn col-12 fs-5 py-4 rounded-pill ">預訂行程</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white z-3 sticky-top trip">
+    <div class="container py-2">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-lg-start flex-column justify-content-between tripTitle">
+          <h3 class="fw-lg-700 fw-500 fs-lg-3 fs-5 text-black lh-12 mb-2">日本環球影城</h3>
+          <div class="d-flex justify-content-lg-start justify-content-between align-items-center">
+            <a class="fw-500 fs-6 lh-12 pb-1 me-lg-6 me-0 trip-subTitle" href="#travel-intro">旅程介紹</a>
+            <a class="fw-500 fs-6 lh-12 pb-1 me-lg-6 me-0 trip-subTitle" href="#travel-notice">旅程須知</a>
+            <a class="fw-500 fs-6 lh-12 pb-1 trip-subTitle" href="#travel-comment">最新評論</a>
+          </div>
+        </div>
+
+        <div class="d-lg-block d-none">
+          <div class="py-2 d-flex justify-content-lg-end align-items-lg-center ">
+            <div class="d-flex align-items-center me-4">
+              <span class="material-symbols-outlined me-1 text-neutral-4">
+                calendar_today
+              </span>
+              <p class="fs-6 fw-500 lh-12 text-neutral-4">2024/08/08(四)~2024/08/10(六)</p>
+            </div>
+            <div class="d-flex align-items-center me-4">
+              <span class="material-symbols-outlined me-1 text-neutral-4">
+                person
+              </span>
+              <p class="fs-6 fw-500 lh-12 text-neutral-4">2人</p>
+            </div>
+            <div class="d-flex align-items-center me-4">
+              <span class="material-symbols-outlined me-1 text-neutral-4">
+                paid
+              </span>
+              <p class="fs-6 fw-500 lh-12 text-neutral-4">NT$ 20,000</p>
+            </div>
+            <div class="trip-pro-edit me-6">
+              <a href="#">
+                <span class="material-symbols-outlined trip-edit-text">
+                  edit
+                </span>
+              </a>
+            </div>
+            <a href="./cart.html"><button type="button" class="trip-btn fs-6 lh-base fw-400">加入購物車</button></a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 旅程介紹+旅程須知+最新評價 -->
+  <section class="mt-lg-12 mt-8 container">
+    <div class="scroll-container">
+      <div class="scroll-page mb-lg-12 mb-8" id="travel-intro">
+        <h6>旅程介紹</h6>
+        <p class="my-6">
+          歡迎來到大阪環球影城,這是日本境內最為知名的遊樂設施之一,也是環球影城品牌在亞洲的一個矚目據點。作為日本環球影城的一部分,它擁有眾多令人驚嘆的遊樂設施和娛樂活動,為遊客提供一場極致的娛樂體驗。無論您是環球影城的愛好者還是首次造訪,都可以透過日本環球影城門票輕鬆進入這個令人興奮的主題樂園。為了更方便您的入場體驗,您還可以選擇使用環球特快入場券或電子憑證,節省寶貴的時間,讓您更充分地享受每個精彩時刻。在這裡,您可以盡情體驗眾多獨家遊樂設施,其中包括飛天翼龍、歐賽車庫巴等令人心跳加速的刺激項目。不僅如此,日本環球影城官方還提供便捷的官方App,讓您隨時隨地獲取最新的活動信息、等候時間和地圖導覽,確保您的遊樂之旅更加順暢。無論您是本地居民還是海外遊客,大阪環球影城都歡迎您的光臨。這裡將為您打開通向無盡娛樂的大門,讓您在環球影城的奇妙世界中留下難以忘懷的回憶。
+        </p>
+        <img src="/travel-tales/assets/trip-content-pic1-a282e8d8.png" alt="">
+      </div>
+      <div class="scroll-page mb-lg-12 mb-8" id="travel-notice">
+        <h6>旅程需知</h6>
+        <ul class="my-6">
+          <li class="mb-3">1.遊客須持有「區域入場保證券」、「區域入場號碼券/抽籤券」,才能進入超級任天堂世界TM★依據現場人潮狀況,「區域入場號碼券」可能提早被抽完。另外,遊客也有可能不需「區</li>
+          <li class="mb-3">2.購買「環球特快入場券」或附「區域入場保證券」的方案可以讓您盡情暢玩園區</li>
+          <li class="mb-3">3.區域內的遊樂設施、餐廳、商店、拍照服務等可能會有停止受理或暫停服務的狀況為了讓您有更順暢地遊玩體驗,建議您事先下載日本環球影城官方 APP,以便遊玩當天取得「區域入場號碼券」
+            ,詳情請參考日本環球影城官方網站</li>
+          <li>4.未滿4歲兒童無須購票。</li>
+        </ul>
+        <div class="mb-6 row">
+          <div class="col-6 ">
+            <img src="/travel-tales/assets/trip-content-pic2-f6e0d7ff.png" class="object-fit-cover pic-md" alt="">
+          </div>
+          <div class="col-6">
+            <img src="/travel-tales/assets/trip-content-pic3-9cad3527.png" class="object-fit-cover pic-md" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="scroll-page" id="travel-comment">
+        <h6>最新評論</h6>
+        <div class="my-4 d-flex align-items-end">
+          <div class="d-flex">
+            <h2 class="fw-medium">4.8 <span class="fs-6 text-neutral-4">/5</span> </h2>
+          </div>
+          <div class="d-flex">
+            <span class="material-symbols-outlined text-secondary-6">
+              star
+            </span>
+            <span class="material-symbols-outlined text-secondary-6">
+              star
+            </span>
+            <span class="material-symbols-outlined text-secondary-6">
+              star
+            </span>
+            <span class="material-symbols-outlined text-secondary-6">
+              star
+            </span>
+            <span class="material-symbols-outlined text-neutral-7">
+              star
+            </span>
+          </div>
+          <a href="" class="border-bottom border-2 border-black">587人評價</a>
+        </div>
+        <div class="container my-6">
+          <div class="swiper swiperComment">
+            <div class="swiper-wrapper swiper-popular_wrapper">
+              <div class="swiper-slide">
+                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                  <div class="comment-title d-flex justify-content-between">
+                    <div class="c">
+                      <img src="/travel-tales/assets/person-1-33634936.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-1">
+                      <span>Amy</span>
+                    </div>
+                    <time datetime="">2024/07/08</time>
+                  </div>
+                  <div class="score mb-4">
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-neutral-7">
+                      star
+                    </span>
+                  </div>
+                  <div class="comment-body mb-4">
+                    <h5 class="mb-2">小朋友喊著還要再來玩</h5>
+                    <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+                  </div>
+                  <div class="comment-photo mb-4">
+                    <div class="d-flex justify-content-between">
+                      <img src="/travel-tales/assets/trip-content-pic1-a282e8d8.png" alt="" class="pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic2-f6e0d7ff.png" alt="" class="pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic3-9cad3527.png" alt="" class="pic-sm
+                        ">
+                    </div>
+                    <div class="comment-photo-postion custom-btn-all">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                        <span class="material-symbols-outlined">
+                          image
+                        </span>
+                        <p>+10</p>
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                  <div class="comment-title d-flex justify-content-between">
+                    <div class="c">
+                      <img src="/travel-tales/assets/person-2-691dea0e.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-2">
+                      <span>Mack</span>
+                    </div>
+                    <time datetime="">2024/07/08</time>
+                  </div>
+                  <div class="comment-score mb-4">
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-neutral-7">
+                      star
+                    </span>
+                  </div>
+                  <div class="comment-body mb-4">
+                    <h5 class="mb-2">食物也太吸引人了!!</h5>
+                    <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+                  </div>
+                  <div class="comment-photo mb-4">
+                    <div class="d-flex justify-content-between">
+                      <img src="/travel-tales/assets/trip-content-pic4-b3076962.png" alt="" class=" rounded-3 object-fit-cover pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic5-58d46965.png" alt="" class=" rounded-3 object-fit-cover pic-sm
+                        me-2">
+                      <img src="/travel-tales/assets/trip-content-pic6-f44e73d0.png" alt="" class=" rounded-3 object-fit-cover pic-sm
+                        ">
+                    </div>
+                    <div class="comment-photo-postion custom-btn-all">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                        <span class="material-symbols-outlined">
+                          image
+                        </span>
+                        <p>+10</p>
+                      </button>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                  <div class="comment-title d-flex justify-content-between">
+                    <div class="c">
+                      <img src="/travel-tales/assets/person-3-5a7e32fc.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-3">
+                      <span>Claire</span>
+                    </div>
+                    <time datetime="">2024/07/08</time>
+                  </div>
+                  <div class="comment-score mb-4">
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-neutral-7">
+                      star
+                    </span>
+                  </div>
+                  <div class="comment-body mb-4">
+                    <h5 class="mb-2">哈利波特魔法世界必玩</h5>
+                    <p>各種主題餐廳,有哈利波特魔法世界的三把掃帚餐廳和小黃人樂園的香蕉奶昔店。看起來都很夢幻,給他買下去!!!。</p>
+                  </div>
+                  <div class="comment-photo mb-4">
+                    <div class="d-flex justify-content-between">
+                      <img src="/travel-tales/assets/trip-content-pic7-ec49bd56.png" alt="" class="pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic8-ca38306c.png" alt="" class="pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic9-4fa278fd.png" alt="" class="pic-sm
+                        ">
+                    </div>
+                    <div class="comment-photo-postion custom-btn-all">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                        <span class="material-symbols-outlined">
+                          image
+                        </span>
+                        <p>+10</p>
+                      </button>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                  <div class="comment-title d-flex justify-content-between">
+                    <div class="c">
+                      <img src="/travel-tales/assets/person-1-33634936.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-1">
+                      <span>Amy</span>
+                    </div>
+                    <time datetime="">2024/07/08</time>
+                  </div>
+                  <div class="score mb-4">
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-neutral-7">
+                      star
+                    </span>
+                  </div>
+                  <div class="comment-body mb-4">
+                    <h5 class="mb-2">小朋友喊著還要再來玩</h5>
+                    <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+                  </div>
+                  <div class="comment-photo mb-4">
+                    <div class="d-flex justify-content-between">
+                      <img src="/travel-tales/assets/trip-content-pic1-a282e8d8.png" alt="" class=" rounded-3 pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic2-f6e0d7ff.png" alt="" class=" rounded-3 pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic3-9cad3527.png" alt="" class=" rounded-3 pic-sm">
+                    </div>
+                    <div class="comment-photo-postion custom-btn-all">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                        <span class="material-symbols-outlined">
+                          image
+                        </span>
+                        <p>+10</p>
+                      </button>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                  <div class="comment-title d-flex justify-content-between">
+                    <div class="c">
+                      <img src="/travel-tales/assets/person-2-691dea0e.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-2">
+                      <span>Mack</span>
+                    </div>
+                    <time datetime="">2024/07/08</time>
+                  </div>
+                  <div class="comment-score mb-4">
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-neutral-7">
+                      star
+                    </span>
+                  </div>
+                  <div class="comment-body mb-4">
+                    <h5 class="mb-2">食物也太吸引人了!!</h5>
+                    <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+                  </div>
+                  <div class="comment-photo mb-4">
+                    <div class="d-flex justify-content-between">
+                      <img src="/travel-tales/assets/trip-content-pic5-58d46965.png" alt="" class=" rounded-3 pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic6-f44e73d0.png" alt="" class=" rounded-3 pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic7-ec49bd56.png" alt="" class=" rounded-3 pic-sm">
+                    </div>
+                    <div class="comment-photo-postion custom-btn-all">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                        <span class="material-symbols-outlined">
+                          image
+                        </span>
+                        <p>+10</p>
+                      </button>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-4 p-lg-6 bg-white rounded-5  border border-shadow mb-6 mb-lg-0">
+                  <div class="comment-title d-flex justify-content-between">
+                    <div class="c">
+                      <img src="/travel-tales/assets/person-3-5a7e32fc.png" class="rounded-circle object-fit-cover member-photo me-4 mb-2" alt="person-3">
+                      <span>Claire</span>
+                    </div>
+                    <time datetime="">2024/07/08</time>
+                  </div>
+                  <div class="comment-score mb-4">
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-secondary-6">
+                      star
+                    </span>
+                    <span class="material-symbols-outlined text-neutral-7">
+                      star
+                    </span>
+                  </div>
+                  <div class="comment-body mb-4">
+                    <h5 class="mb-2">哈利波特魔法世界必玩</h5>
+                    <p>各種主題餐廳,有哈利波特魔法世界的三把掃帚餐廳和小黃人樂園的香蕉奶昔店。看起來都很夢幻,給他買下去!!!。</p>
+                  </div>
+                  <div class="comment-photo mb-4">
+                    <div class="d-flex justify-content-between">
+                      <img src="/travel-tales/assets/trip-content-pic7-ec49bd56.png" alt="" class=" rounded-3 pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic8-ca38306c.png" alt="" class=" rounded-3 pic-sm me-2">
+                      <img src="/travel-tales/assets/trip-content-pic9-4fa278fd.png" alt="" class=" rounded-3 pic-sm">
+                    </div>
+                    <div class="comment-photo-postion custom-btn-all">
+                      <button class="d-flex custom-4s" data-bs-toggle="modal" data-bs-target="#commentModal">
+                        <span class="material-symbols-outlined">
+                          image
+                        </span>
+                        <p>+10</p>
+                      </button>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="pagination pagination-custom text-center p-4">
+              <div class="swiper-popular-prev material-symbols-outlined">
+                arrow_back_ios
+              </div>
+              <div class="swiper-pagination-popular"></div>
+              <div class="swiper-popular-next material-symbols-outlined">
+                arrow_forward_ios
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--官方圖Modal-->
+  <div class="modal modal-xl picModal" id="picModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
+        <div class="button-position position-absolute">
+          <button type="button" data-bs-dismiss="modal" class="btn rounded-circle">
+            <span class="material-symbols-outlined text-neutral-7">
+              close
+            </span>
+          </button>
+        </div>
+        <div class="modal-body p-0 d-flex flex-column gap-2 gap-lg-6">
+          <div class="position-relative">
+            <img id="picModal_mainImage" class="rounded-6" src="" alt="">
+            <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6 mb-4 mb-lg-6">
+              <span id="picModal_imgPage">1</span> / 5
+            </div>
+          </div>
+          <div class="modal-bottom-img">
+            <ul class="d-flex gap-2 gap-lg-6">
+              <li><img class="thumbnails" onclick="changePicModalImage(this,1)" src="/travel-tales/assets/singleTrip-modal-1-bfcd2d49.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changePicModalImage(this,2)" src="/travel-tales/assets/singleTrip-modal-2-e73e4aa4.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changePicModalImage(this,3)" src="/travel-tales/assets/singleTrip-modal-3-a8146554.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changePicModalImage(this,4)" src="/travel-tales/assets/singleTrip-modal-4-5631a9e9.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changePicModalImage(this,5)" src="/travel-tales/assets/singleTrip-modal-5-c6572e87.png" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--評論圖Modal-->
+  <div class="modal modal-xl commentModal picModal" id="commentModal" tabindex="-1" aria-labelledby="picModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-4 p-lg-8 rounded-6 position-relative">
+        <div class="button-position position-absolute d-flex flex-lg-column">
+          <button type="button" data-bs-dismiss="modal" class="btn rounded-circle">
+            <span class="material-symbols-outlined text-neutral-7">
+              close
+            </span>
+          </button>
+          <button type="button" class="btn rounded-circle next">
+            <span class="material-symbols-outlined text-neutral-7">
+              arrow_forward_ios
+            </span>
+          </button>
+        </div>
+        <div class="modal-body p-0 d-flex flex-column gap-4 gap-lg-6">
+          <div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <img src="/travel-tales/assets/person-2-691dea0e.png" class="rounded-circle object-fit-cover member-photo me-4" alt="person-2">
+              <span>Mack</span>
+              <time class="ms-auto" datetime="">2024/07/08</time>
+            </div>
+            <div>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-secondary-6">
+                star
+              </span>
+              <span class="material-symbols-outlined text-neutral-7">
+                star
+              </span>
+            </div>
+          </div>
+          <div>
+            <h5 class="mb-2">食物也太吸引人了!!</h5>
+            <p>不僅有刺激的遊樂設施,還有豐富的餐飲和購物選擇。提前計劃好行程,可以讓你的遊玩體驗更加順利和愉快。</p>
+          </div>
+          <div class="position-relative">
+            <img id="commentModal_mainImage" class="rounded-6" src="" alt="">
+            <div class="showImgPage position-absolute bottom-0 end-0 rounded-4 me-4 me-lg-6 mb-4 mb-lg-6">
+              <span id="commentModal_imgPage">1</span> / 5
+            </div>
+          </div>
+          <div class="modal-bottom-img">
+            <ul class="d-flex gap-2 gap-lg-6">
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,1)" src="/travel-tales/assets/singleTrip-modal-1-bfcd2d49.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,2)" src="/travel-tales/assets/singleTrip-modal-2-e73e4aa4.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,3)" src="/travel-tales/assets/singleTrip-modal-3-a8146554.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,4)" src="/travel-tales/assets/singleTrip-modal-4-5631a9e9.png" alt=""></li>
+              <li><img class="thumbnails" onclick="changeCommentModalImage(this,5)" src="/travel-tales/assets/singleTrip-modal-5-c6572e87.png" alt=""></li>
+            </ul>
+          </div>
+          <div class="modal-todo d-flex justify-content-between justify-content-lg-end align-items-center gap-8">
+            <span class="material-symbols-outlined thumb-up" onclick="changeColor(this,'#FACC44')">thumb_up</span>
+            <span class="material-symbols-outlined favorite" onclick="changeColor(this,'#FF4B30')">favorite</span>
+            <span class="material-symbols-outlined share" onclick="changeColor(this,'#394997')">share</span>
+            <a href="#">立即預訂</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="footer">
+    <div class="container">
+        <div class="d-flex flex-lg-row flex-column justify-content-lg-between justify-content-center  py-lg-8 py-6">
+            <a href="./index.html" class="text-center text-lg-start"><img src="/travel-tales/assets/logo-b8f7c3cc.png" alt="" width="175px"></a>
+                
+               <div class="d-flex align-items-center align-items-lg-start flex-lg-row flex-lg-row  flex-column m-lg-0 m-4">
+                <div class="d-flex">
+                    <ul class="px-2 mx-4">
+                        <li><a href="#" class="py-2 text-secondary-6">關於我們</a></li>
+                        <li><a href="#" class="py-2">最新消息</a></li>
+                    </ul>
+                    <ul class=" px-2 mx-4">
+                        <li><a href="#" class="py-2 text-secondary-6">全部商品</a></li>
+                        <li><a href="#" class="py-2">推薦商品</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex">
+                    <ul class=" px-2 mx-4">
+                        <li><a href="#" class="py-2 text-secondary-6">攜手合作</a></li>
+                        <li><a href="#" class="py-2">廠商註冊</a></li>
+                        <li><a href="#" >廠商登入</a></li>
+                    </ul>
+                    <ul class=" px-2 mx-4">
+                        <li><a href="#" class="py-2 text-secondary-6">客服中心</a></li>
+                        <li><a href="#" class="py-2">常見問題</a></li>
+                        <li><a href="#" >聯絡我們</a></li>
+                    </ul>
+                   </div>
+               </div>
+            
+            <ul class="text-lg-end text-center">
+                <li>
+                    <ul class="d-flex justify-content-lg-end justify-content-center">
+                        <li><a href="#" class="p-1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALTSURBVHgBxVntcZtAEF00+R86CB1IqSB0EJdAKjAdCFcgpQLUgdKBlAqEKxCuwOrgvCvezWAM3K7A8pt5I4T2490eHHsoohvhnEv5Y8X8hc8YFFyYNfjMPEZRdKQbEFmMWZQIeGTmzMonx/GFRVxadgmYYhAxbJ/YrqY5IQmZG+Yrs2AmZIT4MHfMM7O8JcZQ4MeWsJgmAkILCM1oClA1CbSimQGhEntDVmBKD5iSyVUL5NkzT6Y8cNjRnYBCHLTGMq17ujMgchMyynBdfNq0juSOkTsfMvAXbUJfBLkZsWLEfT+WcvuTARh1jgtdBudxwrmMjMAStOmeNFePbR8w2hDOFqEY9PsqonqlIcjG2bE2xC/ezaalepLI3Q7VouyaGX31X1LmSemYBQRsuwPtsXlQ5jqINl/OrdLpPCKuHPDpov8u/egng80XfLykpg0KOWTUtE9D+Es6iLhMYXdkpgskrRUOv8d+5B6v8sftSg+YpxSGxFtaBCakR8h2SWFI8xtHMkoefbCzHqnGFe0YIduu/VjObzQRfYmsYscgU3xxuuagpvlQhwyg6XIVyPxOYVQ0H54VNgmzXiDxT4XD/76TfXdre9EbiPWPdAJfFkicKhx21FR7Kmq+RHcKu5RZ+QoGb3vsef/QdDwp7WQvfbwe4fHzQ+OFR9AHdGyGUChzXNu/9onCGZpV2FsFqp738C9d+9nu+prEcBC/fwkJlLiqDga+/c0zpq4gIyB03zknCaTlz51xA+aafrPs+8FXcfa3CFq40NYDIz67r912ZiHDrTPsT+YCLgndjeSadvtuInHXqrYd3kHK7fe2n/3yqERB7Hkw3cMX7TRxK8RWr49Dgfx6t55DKKq2xoqR0xxwM7y+RQwvbKudUutL9IQ/Cmoe5NI8HKnphmpqupT2S3Rh+18Aoez8tt5udoEdsSk1LZF0QgnY/htCWGEA1a1/Q7wBK3VU4F99QWkAAAAASUVORK5CYII=" alt=""></a></li>
+                        <li><a href="#" class="p-1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALmSURBVHgBxVmBldowDBWdIJ2g2aDXCY4RboNmg2MD0gmgE4QNuE4AnQA6AdcJyAY6Kf6CEAKREw7+e3q+M5YsS7IlOyPqCWYeS/Mk9Iw2ASlKoXfQP6H1aDRaUw+MYgaLUqrAq9BEaGuT4+9SlChr41LQGItIMPaXjHunW0InFJoJ7YVyoZQioTxCC6GdUNFHxiXBrzXFEhoIKJpD0YyGAFZTQU90Y0BRlT2jWMClK7hksNU65lkKbaLmAcOC7gQYYuUdrG5d0p0BJWddgzLExae59crcCeaeXBpgQZvSg6CbESdG0vZjodufHgwcQbNmZ5T1NM1hl+tqPVh5zzy4+tSKsF7hFDDl/pg658hPvOm1HodNZHBlFlhkUuMbO3jUo3v7R921IQfgKsXEOd7SmrWVu528q2oxYJw7mQyuY6imVA5L8sEy3bzzyhAcUs2Lk6lCS3/Kp5tmib6DBa/xX5jrRejN0pqrGGibwOKFz7HnRlxHKlidLMSXDka/gkt0L+BGq/vO4i1Sweq4IS/DFQUNaUP4WbzFKGjjv9BwlI1WkTTa3lAFSx5WHGzRzuBelWUH8h/qCcgp7ZD+5mS65ybRwmGjFlQL/KCewA1N+d/Qpa5ea9/A21sq9H/EISukIqwzOyDo1fRf7YrpBVxWbRrh7bzuckgepVnwO/lg8eZKdQ38RLt2jn8+jEW8dMYhh7xtmLC/WJjW+DIHTzikax2ajnJygI/5tQ+8cxRcL/+4rUi8LiDjY2XThT1bZeKT3V48c6gecnowOIRD0faDWfHmrwhecNfVg0Pg75gfeu3MugbO2Xk/uSU4VEWuwtnK7bspiV3runYYg5p7g1V99uNRAYPEzwN3Xw7aYco9QbbPrVcEZRA0vYWifMwsemL0SZmtQq2M33HP51vIMMXmXpfGPqKn0uQUErmVVX8JL/qNR3Sl+lcApd9C85hKKErBhrJjCi/4WgmloPpnCKUtFrDt+xniA+SJ75iZH9Y1AAAAAElFTkSuQmCC" alt=""></a></li>
+                        <li><a href="#" class="p-1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMmSURBVHgBxVnRldowEFzy8h93cO4gXAVxCZcKwlVwpAK4CiAVQCqADiAVQCrAVwF0oOygUU4YjCXZB/PePht5tRqvpNWu6UkijDGFXvoq33jNKMBBpaT8VVn3er21JKAXo6ykQOBFZaiydYPz/qAkDp5eTin4Ehl1X1WvlC6BAVUmKnuVsUoukUAflbnKTmWWYqPO8ItHLJOWINExiQ6kDeg1GOpLxyBR2J5ILDilK05Ja681jLNQ2USNww5zuRHoiFWoMqZ1ITcGSU6alAZcFx82rVfGzjj2sE7BLdpc7gRsRkaM7NLDGba/3BkMQZNqY5L3+MYj7nj0d9izbZxgMzvzIr03izCSk0AoZjFE+WJjv2EXakD1nviGsUCfp8Ax4IC9+1GobAI7Ppn2KALHWkH3k9hs409Ah1wv8cfSOXByhIQxZEp9EPwqNg1qAqYn5z3Sqq33bMu2tde2ZNucUrId5C7HulOsBc4z9lhrTAao57Dk0nB4MDyq9DpV2fF+ZuyuLHjv0LikuA53n8V6pZRm+C+xr1PSZHQIwl4TPPZD3r1ftVUHeD/DFGcuE+4CSg4Z93OlGWt8KxEgpyPBUJQXfr+KXWs+sL4GlbZcTj0YTBZTfMA6CfDib5UR7wuVN96j3xgEjA2uOfQ4zdCD90qVLxVbV8GdfnBB+iGkg0kL0FXsTMChYOwxusEUw92PTR3o4e/SHj8Dq7pc5Q0EMQVFQAdhbQuSKZsKfZ7VxjJQvxA4jzEqLN0mzHsJGTOtUYWXsXG3cD/2IeuwhigC88rUr8+NiU+5jkHabzhNbxJhzlOwqSTAVNM/cylJTDO88LxWSAJMJXk+BmruUMSmkEP8GpCBYCM8pn4sEnssrs92uufFzr8ihMI0lR76YGjuX3YOmhSnJqI+6Qpcv2GbirvxZiS5a4PKDtch404MTc9TiWUkt0oah9Ndv2jbkevTdlKs9A0NaGjUBVF6bcSI0Tas/Tfqzt6dSfx8SxuO2DR0SmM/oudik1N8FHdVnEtIy8pHdIj/LwDkl8o0psSIIlghW4hNiVC25hT/bwhXmh7rkdST5R+sQn3Mu0/4CgAAAABJRU5ErkJggg==" alt=""></a></li>
+                    </ul>
+                </li>
+                <li><a href="tel:+919878787" class="py-1">客服電話 0919878787</a></li>
+                <li><a href="mailto:travel@gmail.com" class="py-1">客服信箱 travel@gmail.com</a></li>
+                <li class="py-4">2024 TRAVEL TALES版權所有,無商業行為</li>
+            </ul>
+        </div>
+        <a type="button" class="btn topbtn shadow-sm" id="topbtnJs" href="javascript:window.scrollTo(0, 0)">
+            <span class="material-symbols-outlined text-white mt-1">keyboard_arrow_up</span>
+        </a>
+    </div>      
+    </div>
+</section>
+  <section class="py-4 sticky-bottom d-block d-lg-none z-3 bg-white">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <div class="trip-pro-edit me-4">
+          <a href="#" class="material-symbols-outlined trip-edit-text">
+            edit
+          </a>
+        </div>
+        <button type="button" class="trip-btn fs-6 lh-base fw-400 w-100">加入購物車</button>
+      </div>
+      <div class="d-flex justify-content-between align-items-center ">
+        <span class="fs-14 fw-500 lh-12 text-neutral-3">2024/08/08(四)~2024/08/10(六)</span>
+        <span class="fs-14 fw-500 lh-12 text-neutral-3">2人</span>
+        <span class="fs-14 fw-500 lh-12 text-neutral-3">NT$ 20,000</span>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script>
+    const picModal = document.getElementById('picModal');
+    picModal.addEventListener('shown.bs.modal', () => {
+      // 獲取第一個縮圖
+      const firstThumbnail = picModal.querySelector('.thumbnails');
+
+      if (firstThumbnail) {
+        var thumbnails = picModal.getElementsByClassName("thumbnails");
+        for (var i = 0; i < thumbnails.length; i++) {
+          thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
+        }
+
+        const firstSrc = firstThumbnail.src;
+        document.getElementById("picModal_mainImage").src = firstSrc;
+        firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
+      }
+    });
+
+    function changePicModalImage(imgElement, page) {
+      // 獲取點擊的圖片的 src
+      var newSrc = imgElement.src;
+
+      // 將主圖片的 src 設置為點擊的圖片的 src
+      document.getElementById("picModal_mainImage").src = newSrc;
+      // 移除所有縮圖的高亮樣式s
+      var thumbnails = picModal.getElementsByClassName("thumbnails");
+      for (var i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
+      }
+      document.getElementById("picModal_imgPage").textContent = page;
+      imgElement.style.border = "4px #FACC44 solid";
+    }
+
+    const commentModal = document.getElementById('commentModal');
+    commentModal.addEventListener('shown.bs.modal', () => {
+      // 獲取第一個縮圖
+      const firstThumbnail = commentModal.querySelector('.thumbnails');
+
+      if (firstThumbnail) {
+        var thumbnails = commentModal.getElementsByClassName("thumbnails");
+        for (var i = 0; i < thumbnails.length; i++) {
+          thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
+        }
+        const firstSrc = firstThumbnail.src;
+        document.getElementById("commentModal_mainImage").src = firstSrc;
+        firstThumbnail.style.border = "4px solid #FACC44"; // 自定義的黃色邊框
+      }
+    });
+
+    function changeCommentModalImage(imgElement, page) {
+      // 獲取點擊的圖片的 src
+      var newSrc = imgElement.src;
+
+      // 將主圖片的 src 設置為點擊的圖片的 src
+      document.getElementById("commentModal_mainImage").src = newSrc;
+      // 移除所有縮圖的高亮樣式
+      var thumbnails = commentModal.getElementsByClassName("thumbnails");
+      for (var i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].style.border = "none"; // 移除邊框或高亮效果
+      }
+      document.getElementById("commentModal_imgPage").textContent = page;
+      imgElement.style.border = "4px #FACC44 solid";
+    }
+
+    function changeColor(iconElement, color) {
+      var selectClassList = iconElement.classList;
+      console.log(selectClassList);
+      if (selectClassList.contains('select')) {
+        iconElement.style.color = '#B7B7B7';
+        iconElement.classList.remove('select');
+      } else {
+        iconElement.style.color = color;
+        iconElement.classList.add('select');
+      }
+    }
+  </script>
+
+</body>
+
+</html>

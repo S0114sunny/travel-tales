@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- google icon new -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+
+
+<!--datepicker日曆套件-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+
+<!--aos-->
+<link href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css" rel="stylesheet">
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="data:image/png;base64,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KrnVVXzfx4lGaUomiT6j2thwyI2g64ei6/3nswZsKORGWOCZu+hGNXzL7XmCW9d/AIUZc2/eCKzcAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTEwLTA4VDE2OjQ0OjEwKzAwOjAwDju8NgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0xMC0wOFQxNjo0NDoxMCswMDowMH9mBIoAAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMTkyQF1xVQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE3Mjg0MDU4NTC7lTXjAAAAD3RFWHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zhdmljb25zLzIwMjQtMTAtMDgvMjhlYTk3N2E1MjE0MWNhMTRhMDZhM2MxMWZhZTVkZWMuaWNvLnBuZ491wgUAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" sizes="60x60" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="72x72" href="/travel-tales/assets/apple-icon-72x72-1720a2c7.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/travel-tales/assets/apple-icon-76x76-0f8e874c.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/travel-tales/assets/apple-icon-114x114-2d565d62.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/travel-tales/assets/apple-icon-120x120-d58456f4.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/travel-tales/assets/apple-icon-144x144-7b423789.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/travel-tales/assets/apple-icon-152x152-e00c983d.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/travel-tales/assets/apple-icon-180x180-dbb099df.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/travel-tales/assets/android-icon-192x192-da10cadc.png">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="96x96" href="/travel-tales/assets/favicon-96x96-634a48d8.png">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEX////++vr94t79z8j90sz+6eb+/f393tr9koL+Y0z/VTz+Vz7+a1X9pZj97uv81tD9alT/SC3/Ryz/SS7/SS3/Ryv/SzD8g3H97On87+38emb/SCz/VDv/clz/YUn/aVL/bVf/TjT/Si/6nY/9/fz5wrn+TzX/TTL/q57/9fP/4t3/6eb/7uv/h3X8Ykv649/9///4npH/Ujj/0Mn/qJv+UDb4xr/8/v72lof/lYX/+Pf/6eX/c17+TTP1vrb+///zqZ7+SzD/UTf/pZj/6+j7VTz0zsnx08/5W0P/UDb/gG31c2D27Ov5+Pjtm478TTL/Sy/5Vj7uvbb9/v/z7OvqlYj4Vj3+SjD0YErqsKf4+Pf19PPou7T2XkfwalbrgHDnnZLq08/5+vr419L3aFPszMf09fb5+/v5qp70eGb38vHwurHuurP9/v76+/teLvwPAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+gKCBAsDJVmh/QAAAC7SURBVBjTY2AAAUYmZhZWNgY4YOfg5OLm4eWD8fkFBIWERUTFxCUgfEkpaRlZOXkFRSVlFbCAqpq6hqaWto6utJ4+iG9gKGJkDGKYCJuagWhzC0ExSysGBmsbYVs7e5AKB0clJ2crF10xJVc3sBnuHkpKnpZeYmIi3j5gAV8/f6UAMSUx4cCgYIi9IaFhYsIi4RGRUTCXRcfExsUnJCYh3J6ckpqWbo/g22dkZjEgg+DsnFwUAYakPDgTAAlSG/chCI0WAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDI0LTEwLTA4VDE2OjQ0OjEwKzAwOjAwDju8NgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyNC0xMC0wOFQxNjo0NDoxMCswMDowMH9mBIoAAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMTkyQF1xVQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE3Mjg0MDU4NTC7lTXjAAAAD3RFWHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zhdmljb25zLzIwMjQtMTAtMDgvMjhlYTk3N2E1MjE0MWNhMTRhMDZhM2MxMWZhZTVkZWMuaWNvLnBuZ491wgUAAAAASUVORK5CYII=">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+        <title>訂單管理</title>
+  <script type="module" crossorigin src="/travel-tales/assets/travel_swiper-9a408d52.js"></script>
+  <script type="module" crossorigin src="/travel-tales/assets/collect-love-d4b91917.js"></script>
+  <script type="module" crossorigin src="/travel-tales/assets/filter_dorpdown-72122177.js"></script>
+  <link rel="stylesheet" href="/travel-tales/assets/travel_swiper-f5a183f5.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light z-3" >   
+  <div class="container justify-content-end"> 
+    <!--滾動後出現-->
+    <nav class="navbar navbar-expand-lg navbar-light z-3 d-none d-lg-block fixed-top bg-light">
+      <div class="container">
+        <a class="navbar-brand position-relative" href="../pages/index-member.html">
+          <img src="/travel-tales/assets/logo2-22d80b9c.png" width="107px" height="40"  alt="logo">
+        </a>
+        <ul class="d-flex ms-auto">
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">全部旅程</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">優惠景點</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">熱門旅程</a></li>
+          <li><a class="p-1 my-1 mx-4 linkline" href="#">客服中心</a></li> 
+          <li>
+            <button class="navbar-toggler position-relative ms-auto pe-4 d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <img src="/travel-tales/assets/member-photo-51a62db0.png" alt="member-photo" width="40px" height="40px">
+            </button>
+          </li>
+        </ul> 
+      </div>
+    </nav>
+  </div>
+
+  <div class="container-fluid justify-content-end">
+    <!--mobile-->
+    <nav class="navbar navbar-light z-3 d-block d-lg-none fixed-top bg-light">
+      <div class="d-flex justify-content-between">
+        <!--logo--->
+        <a class="navbar-brand position-relative px-4" href="../pages/index-member.html">
+          <img src="/travel-tales/assets/logo2-22d80b9c.png" width="107px" height="40" alt="logo">
+        </a>
+        <!--漢堡--->
+        <button class="navbar-toggler position-relative ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="material-symbols-outlined material-custom2">menu</span>
+        </button>
+      </div>
+    </nav>    
+  </div>
+</nav>
+
+
+
+<!--offcanvas-->
+<div class="navbar">
+  <div class="offcanvas offcanvas-end w-lg-25" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header py-3">
+      <a class="navbar-brand position-relative" href="../pages/index-member.html">
+        <img src="/travel-tales/assets/logo2-22d80b9c.png" width="107px" height="40"  alt="logo" >
+      </a>
+      <button class="material-symbols-outlined material-custom2" type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+        menu
+      </button>
+    </div>
+    <div class="offcanvas-body vh-100 p-0">
+      <ul class="navbar-nav px-0">
+        <li class="border-top border-1 py-2"></li>
+        <li class="nav-item d-flex justify-content-start align-items-center px-3 py-5">
+          <a href="index.html"><img src="/travel-tales/assets/member-photo-51a62db0.png" alt="member-photo" width="60px" height="60px" class="me-6"></a>
+          <div class="member-info d-flex flex-column justify-content-start">
+            <p class="text-neutral-3">會員</p>
+            <p>Claire158872</p>
+          </div>
+        </li>
+        <li class="nav-item bg-neutral-6 px-3 py-2">
+          <p class="text-neutral-3 fw-medium">帳號管理</p>
+        </li>
+        <li class="nav-item my-5">
+          <ul>
+            <li><a class="nav-link px-3 py-2" href="#">我的帳戶</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">我的訂單</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">我的收藏</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">我的評論</a></li>
+          </ul>
+        </li>
+        </li>
+        <li class="nav-item bg-neutral-6 px-3 py-2">
+          <p class="text-neutral-3 fw-medium">賣場管理</p>
+        </li>
+        <li class="nav-item my-5">
+          <ul>
+            <li><a class="nav-link px-3 py-2" href="#">成為廠商</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">商品管理</a></li>
+            <li><a class="nav-link px-3 py-2" href="../pages/memberCenter.html">訂單管理</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">商場審核</a></li>
+            <li><a class="nav-link px-3 py-2" href="#">會員管理</a></li>
+          </ul>
+        </li>
+        <li class="border-bottom border-3 py-2"></li>  
+        <li class="nav-item px-3 mt-5">
+          <a class="nav-link nav-link-mb" aria-current="page" href="#">
+            <p>全部旅程</p>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link nav-link-mb" href="#">
+            <p>優惠景點</p>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+          
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link nav-link-mb" href="#">
+            <p>熱門旅程</p>
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="nav-item px-3 mb-5">
+          <a class="nav-link nav-link-mb" href="#">
+            客服中心
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+          </a>
+        </li>
+        <li class="border-bottom border-3 py-2"></li>
+        <li class="nav-item px-3 py-1">
+          <a href="#" class="nav-link d-flex align-items-center">
+            <span class="material-symbols-outlined pe-2">logout</span>
+           登出
+          </a>
+        </li> 
+      </ul>
+    </div>
+    
+  </div>  
+</div>  
+
+        <section class="container py-lg-12 py-8">
+            <div class="d-flex w-100 overflow-hidden">
+                <input type="checkbox" name="" id="sideMenu-active" />
+                <div class="d-lg-block d-none px-0 sideMenu-container">
+                    <div class="border border-1 border-primary-3 pt-6 sideMenu">
+
+                        <a href="./memberCenter.html" class="d-flex flex-column align-items-center mb-6">
+                            <img src="/travel-tales/assets/member-photo-51a62db0.png" alt="member-photo" class="mb-2" width="84px"
+                                height="84px">
+                            <p class="fw-medium fs-5 text-black lh-12">claire</p>
+                        </a>
+
+                        <ul class="member-menu d-flex justify-content-center flex-column mb-6">
+                            <li class="py-8-5 bg-neutral-6 text-neutral-3 fw-medium fs-5 lh-12">
+                                帳戶管理
+                            </li>
+                            <li>
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">我的帳戶</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">我的訂單</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">我的收藏</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">我的評論</a>
+                            </li>
+                        </ul>
+
+                        <ul class="member-menu d-flex justify-content-center flex-column mb-6">
+                            <li class="py-8-5 bg-neutral-6 text-neutral-3 fw-medium fs-5 lh-12">
+                                賣場管理
+                            </li>
+                            <li>
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">成為廠商</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">商品名稱</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">訂單管理</a>
+                            </li>
+                            <li>
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">廠商審核</a>
+                            </li>
+                            <li class="mb-6">
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">會員管理</a>
+                            </li>
+                            <li class="mb-6 border-top border-4 border-neutral-6"></li>
+                            <li>
+                                <a href="#" class="py-8-5 fw-medium fs-5 lh-12">登出</a>
+                            </li>
+                        </ul>
+
+                        <label for="sideMenu-active" class="sideMenu-switch material-symbols-outlined">
+                            keyboard_double_arrow_left
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter ms-lg-6 ms-0 container-lg-0 container">
+                    <h2 class="filter-text fw-bold lh-12 fs-2 mb-lg-8 mb-6">訂單管理</h3>
+                        <form class="filter d-flex gap-2 flex-column flex-lg-row" action="">
+    <div class="d-flex flex-grow-1 align-items-center border border-neutral-5 rounded-pill px-4 py-3">
+        <span class="material-symbols-outlined text-neutral-3 pe-1"> search </span>
+        <input class="border-0 w-100" type="text" placeholder="輸入關鍵字(例如:日本)" />
+    </div>
+    <div class="d-flex gap-2 flex-column flex-lg-row position-relative">
+        <div class="d-flex gap-2">
+            <div class="dropdown w-100 d-flex align-items-center border border-neutral-5 rounded-pill px-4 py-3">
+                <span class="material-symbols-outlined text-neutral-3 pe-1">
+                    filter_alt
+                </span>
+                <a class="text-start p-0 w-100" href="#" role="button" id="dropdownFilter"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                訂單狀態
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+                <li class="dropdown-item">已付款</li>
+                <li class="dropdown-item">未付款</li>
+                <li class="dropdown-item">取消申請中</li>
+                <li class="dropdown-item">待退款</li>
+                <li class="dropdown-item">已取消</li>
+                <li class="dropdown-item">待處理</li>
+                <li class="dropdown-item">處理中</li>
+                <li class="dropdown-item">已處理</li>
+            </ul>
+                <span class="material-symbols-outlined icon-more ms-auto">expand_more</span>
+            </div>
+            <div class="w-100 d-flex align-items-center border border-neutral-5 rounded-pill px-4 py-3">
+                <span class="material-symbols-outlined pe-1"> calendar_today </span>
+                <input type="text" placeholder="日期" name="datepicker" class="form-control border-0 p-0" />
+                <span class="material-symbols-outlined">expand_more</span>
+            </div>
+        </div>
+        <button class="btn btn-primary-2 rounded-pill px-7 py-4">新增篩選</button>
+    </div>
+</form>
+<div class="conditions pt-4 pb-8 d-flex gap-4 align-items-center  flex-wrap">
+    <p class="fs-6">查詢條件：</p>
+    <p class="conditions-tag">
+        未付款
+        <span class="material-symbols-outlined"> close </span>
+    </p>
+    <p class="conditions-tag">
+        日本
+        <span class="material-symbols-outlined"> close </span>
+    </p>
+    <p class="conditions-tag">
+        2024/08/09 (前180天)
+        <span class="material-symbols-outlined"> close </span>
+    </p>
+</div>
+                            <div class="orderList">
+                                <ul>
+                                    <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" type="button">
+                                        <div class="text-neutral-3 fw-medium mb-4">
+                                            訂單編號 : travelorder000011
+                                        </div>
+                                        <div
+                                            class="d-lg-flex justify-content-lg-between pt-4 border-top border-neutral-5">
+                                            <div
+                                                class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                                <div><img class="rounded-4 me-3 me-lg-5"
+                                                        src="/travel-tales/assets/order-list-1-3379ba63.png" alt="trip photo"></div>
+                                                <div class="min-w-0">
+                                                    <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">日本環球影城</div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01
+                                                        23:59:59</div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                                <div class="text-warning-700 mb-lg-2">已付款 | 已處理</div>
+                                                <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$10,000</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" type="button">
+                                        <div class="text-neutral-3 fw-medium mb-4">
+                                            <span class="material-symbols-outlined span-warning">warning</span>
+                                            訂單編號 : travelorder000012
+                                        </div>
+                                        <div
+                                            class="d-lg-flex justify-content-lg-between pt-4 border-top border-neutral-5">
+                                            <div
+                                                class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                                <div><img class="rounded-4 me-3 me-lg-5"
+                                                        src="/travel-tales/assets/order-list-2-11f4139f.png" alt="trip photo"></div>
+                                                <div class="min-w-0">
+                                                    <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">夜宿海生館體驗
+                                                    </div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01
+                                                        23:59:59</div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                                <div class="text-warning-500 mb-lg-2">未付款 | 待處理</div>
+                                                <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$2680</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" type="button">
+                                        <div class="text-neutral-3 fw-medium mb-4">
+                                            訂單編號 : travelorder000013
+                                        </div>
+                                        <div
+                                            class="d-lg-flex justify-content-lg-between pt-4 border-top border-neutral-5">
+                                            <div
+                                                class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                                <div><img class="rounded-4 me-3 me-lg-5"
+                                                        src="/travel-tales/assets/order-list-3-5e5a1b71.png" alt="trip photo"></div>
+                                                <div class="min-w-0">
+                                                    <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">高雄 | 蒸輕松汗蒸文化
+                                                        | 汗蒸幕 & 按摩體驗</div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01
+                                                        23:59:59</div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                                <div class="text-warning-500 mb-lg-2">未付款 | 待處理</div>
+                                                <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$1,000</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" type="button">
+                                        <div class="text-neutral-3 fw-medium mb-4">
+                                            訂單編號 : travelorder000014
+                                        </div>
+                                        <div
+                                            class="d-lg-flex justify-content-lg-between pt-4 border-top border-neutral-5">
+                                            <div
+                                                class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                                <div><img class="rounded-4 me-3 me-lg-5"
+                                                        src="/travel-tales/assets/order-list-4-09694dd9.png" alt="trip photo"></div>
+                                                <div class="min-w-0">
+                                                    <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">南投 | 日月潭 &
+                                                        清境農場一日</div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01
+                                                        23:59:59</div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                                <div class="text-warning-700 mb-lg-2">已付款 | 已處理</div>
+                                                <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$999</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="p-4 bg-neutral-8 rounded-4 mb-4" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" type="button">
+                                        <div class="text-neutral-3 fw-medium mb-4">
+                                            <span class="material-symbols-outlined span-warning">warning</span>
+                                            訂單編號 : travelorder000015
+                                        </div>
+                                        <div
+                                            class="d-lg-flex justify-content-lg-between pt-4 border-top border-neutral-5">
+                                            <div
+                                                class="d-flex justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                                                <div><img class="rounded-4 me-3 me-lg-5"
+                                                        src="/travel-tales/assets/order-list-5-5ff2bf1a.png" alt="trip photo"></div>
+                                                <div class="min-w-0">
+                                                    <div class="fw-medium mb-1 text-truncate fs-lg-5 lh-sm">
+                                                        宜蘭傳藝園區：門票、DIY套票</div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3 mb-1">訂購日期 : 2024/05/01
+                                                        23:59:59</div>
+                                                    <div class="fs-7 fs-lg-6 text-neutral-3">訂購人 : Mike001</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-lg-column justify-content-lg-start align-items-lg-end">
+                                                <div class="text-warning-700 mb-lg-2">已付款 | 已處理</div>
+                                                <div class="fw-bold fs-5 fs-lg-4 text-primary-2">$499</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!--分頁-->
+                                <div class="mt-6 mb-10 mt-lg-8 mb-lg-12">
+                                    <ul class="d-flex justify-content-center page fs-7 text-center">
+                                        <li class="page-item disabled d-none d-lg-block">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span class="material-symbols-outlined">
+                                                    skip_previous
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span class="material-symbols-outlined">
+                                                    arrow_back_ios
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span class="material-symbols-outlined">
+                                                    arrow_forward_ios
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item d-none d-lg-block">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span class="material-symbols-outlined">
+                                                    skip_next
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </section>
+        <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal modal-xl orderModal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content mt-13 mt-lg-2 p-4 p-lg-8 rounded-6 position-relative d-flex justify-content-center align-items-center">
+        <div class="modal-header border-0">
+            <h2 class="text-center fw-medium" id="exampleModalLabel">訂單資訊</h2>  
+          </div>
+        <div class="modal-body w-100">
+            <h4 class="text-center text-primary-2 p-4">訂單資料</h4>
+            <div class="container border border-1 rounded-4 overflow-hidden">
+                <div class="row">
+                  <div class="col-lg-2 col-md-4 col-4 border border-1 bg-primary-4 py-4 px-2">訂單人姓名</div>
+                  <div class="col-lg-4 col-md-8 col-8 border border-1 py-4">王小名（Mike001）</div>
+                  <div class="col-lg-2 col-md-4 col-4 border border-1 bg-primary-4 py-4 px-2">訂購日期</div>
+                  <div class="col-lg-4 col-md-8 col-8 border border-1 py-4">2024/05/01 23:59:59</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-4 border border-1 bg-primary-4 py-4 px-2">訂單人信箱</div>
+                    <div class="col-lg-4 col-md-8 col-8 border border-1 py-4 ">traveltales@gmail.com</div>
+                    <div class="col-lg-2 col-md-4 col-4 border border-1 bg-primary-4 py-4 px-2">訂單人電話</div>
+                    <div class="col-lg-4 col-md-8 col-8 border border-1 py-4">091234561</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-4 border border-1 bg-primary-4 py-4 px-2">訂單編號</div>
+                    <div class="col-lg-4 col-md-8 col-8 border border-1 py-4">travelorder000011</div>
+                    <div class="col-lg-2 col-md-4 col-4 border border-1 bg-primary-4 py-4 px-2">付款方式</div>
+                    <div class="col-lg-4 col-md-8 col-8 border border-1 py-4">信用卡</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-4 border border-1 bg-primary-4 py-4 px-2">總金額</div>
+                    <div class="col-lg-4 col-md-8 col-8 border border-1 py-4">12,000</div>
+                    <div class="col-lg-2 col-md-4 col-4 border border-1 bg-primary-4 py-4 px-2">訂單人電話</div>
+                    <div class="col-lg-4 col-md-8 col-8 border border-1 py-4">091234561</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-4 border border-1 bg-primary-4 py-4">備註</div>
+                    <div class="col-lg-10 col-md-8 col-8 border border-1 py-4">xxxx</div>
+                   
+                </div>
+                
+            </div>
+
+            <h4 class="text-center text-primary-2 p-4">訂單商品明細</h4>
+            <div class="container d-none d-lg-block">
+                <div class="row align-items-center justify-content-center mx-2">
+                  <div class="col-lg-2 col-md-4 text-center">
+                    商品照
+                  </div>
+                  <div class="col-lg-5 col-md-8 text-center">
+                    名稱
+                  </div>
+                  <div class="col-lg-3 col-md-4 text-lg-end text-start">
+                     單價/數量
+                  </div>
+                  <div class="col-lg-2 col-md-8 text-end">
+                    小計
+                  </div>
+                </div>
+            </div>
+            <div class="container rounded-4 overflow-hidden mb-4">
+                <div class="row bg-neutral-8 py-4 overflow-hidden align-items-center justify-content-center">
+                  <div class="col-lg-2 col-md-4 col-4 px-0">
+                    <div class="modal-img rounded-4 position-relative">
+                        <img src="/travel-tales/assets/order-list-1-3379ba63.png" alt="">
+                        <div class="tag">日本</div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-8 col-8 py-4">
+                    <h5 class="mb-2">日本環球影城日本環球影城日本環球影城日本環球影城</h5>
+                        <div class="d-flex">
+                            <span class="material-symbols-outlined d-none d-md-block">
+                            calendar_today</span>
+                            <p class="text-neutral-3 fs-sm-8 fs-7">2024/08/08(四)~2024/08/10(六)</p>
+                        </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-4 py-4 text-lg-end text-start">
+                    <p class="fs-6 fw-medium">$5,000</p>
+                    <p class="fs-6 fw-medium">x2</p>
+                  </div>
+                  <div class="col-lg-2 col-md-8 col-8 text-end">
+                    <p class="fs-4 text-primary-1 me-2">$10,000</p>
+                  </div>
+                </div>
+                
+            </div>
+            <div class="container rounded-4 overflow-hidden mb-4">
+                <div class="row bg-neutral-8 py-4 overflow-hidden align-items-center justify-content-center">
+                  <div class="col-lg-2 col-md-4 col-4 px-0">
+                    <div class="modal-img rounded-4 position-relative">
+                        <img src="/travel-tales/assets/order-list-2-11f4139f.png" alt="">
+                        <div class="tag">台灣</div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-8 col-8 py-4">
+                    <h5 class="mb-2">夜宿海生館體驗</h5>
+                        <div class="d-flex">
+                            <span class="material-symbols-outlined d-none d-md-block">
+                            calendar_today</span>
+                            <p class="text-neutral-3 fs-sm-8 fs-7">2024/08/08(四)~2024/08/10(六)</p>
+                        </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-4 py-4 text-lg-end text-start">
+                    <p class="fs-6 fw-medium">$1,300</p>
+                    <p class="fs-6 fw-medium">x2</p>
+                  </div>
+                  <div class="col-lg-2 col-md-8 col-8 text-end">
+                    <p class="fs-4 text-primary-1 me-2">$2,600</p>
+                  </div>
+                </div>
+            </div>
+            <h4 class="text-center text-primary-2 p-4">訂單記錄</h4>
+            <div class="container border border-1 rounded-4 py-4">       
+              <div class="row align-items-center justify-content-center mx-2">
+                <div class="col-5 text-end">2024-05-01 23:59
+                </div>
+                <div class="col-2 align-items-center d-flex justify-content-center">
+                  <div class="circle text-center"></div>
+                </div>
+                <div class="col-5 text-start">訂單建立</div>
+              </div>
+              <div class="row align-items-center d-flex justify-content-center">
+                <div class="col-2 align-items-center d-flex justify-content-center">
+                  <div class="stopLine"></div>
+                </div>
+              </div>
+              <div class="row align-items-center justify-content-center mx-2">
+                <div class="col-5 text-end">2024-05-01 23:59
+                </div>
+                <div class="col-2 align-items-center d-flex justify-content-center">
+                  <div class="circle text-center"></div>
+                </div>
+                <div class="col-5 text-start">訂單建立</div>
+              </div>
+          </div>
+        </div>
+        <div class="button-position position-absolute">
+            <button type="button" data-bs-dismiss="modal" class="btn rounded-circle mb-6">
+              <span class="material-symbols-outlined text-neutral-7">
+                close
+              </span>
+            </button>
+            </button>
+          </div>
+       
+      </div>
+    </div>
+  </div>            <section class="footer">
+    <div class="container">
+        <div class="d-flex flex-lg-row flex-column justify-content-lg-between justify-content-center  py-lg-8 py-6">
+            <a href="./index.html" class="text-center text-lg-start"><img src="/travel-tales/assets/logo-b8f7c3cc.png" alt="" width="175px"></a>
+                
+               <div class="d-flex align-items-center align-items-lg-start flex-lg-row flex-lg-row  flex-column m-lg-0 m-4">
+                <div class="d-flex">
+                    <ul class="px-2 mx-4">
+                        <li><a href="#" class="py-2 text-secondary-6">關於我們</a></li>
+                        <li><a href="#" class="py-2">最新消息</a></li>
+                    </ul>
+                    <ul class=" px-2 mx-4">
+                        <li><a href="#" class="py-2 text-secondary-6">全部商品</a></li>
+                        <li><a href="#" class="py-2">推薦商品</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex">
+                    <ul class=" px-2 mx-4">
+                        <li><a href="#" class="py-2 text-secondary-6">攜手合作</a></li>
+                        <li><a href="#" class="py-2">廠商註冊</a></li>
+                        <li><a href="#" >廠商登入</a></li>
+                    </ul>
+                    <ul class=" px-2 mx-4">
+                        <li><a href="#" class="py-2 text-secondary-6">客服中心</a></li>
+                        <li><a href="#" class="py-2">常見問題</a></li>
+                        <li><a href="#" >聯絡我們</a></li>
+                    </ul>
+                   </div>
+               </div>
+            
+            <ul class="text-lg-end text-center">
+                <li>
+                    <ul class="d-flex justify-content-lg-end justify-content-center">
+                        <li><a href="#" class="p-1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALTSURBVHgBxVntcZtAEF00+R86CB1IqSB0EJdAKjAdCFcgpQLUgdKBlAqEKxCuwOrgvCvezWAM3K7A8pt5I4T2490eHHsoohvhnEv5Y8X8hc8YFFyYNfjMPEZRdKQbEFmMWZQIeGTmzMonx/GFRVxadgmYYhAxbJ/YrqY5IQmZG+Yrs2AmZIT4MHfMM7O8JcZQ4MeWsJgmAkILCM1oClA1CbSimQGhEntDVmBKD5iSyVUL5NkzT6Y8cNjRnYBCHLTGMq17ujMgchMyynBdfNq0juSOkTsfMvAXbUJfBLkZsWLEfT+WcvuTARh1jgtdBudxwrmMjMAStOmeNFePbR8w2hDOFqEY9PsqonqlIcjG2bE2xC/ezaalepLI3Q7VouyaGX31X1LmSemYBQRsuwPtsXlQ5jqINl/OrdLpPCKuHPDpov8u/egng80XfLykpg0KOWTUtE9D+Es6iLhMYXdkpgskrRUOv8d+5B6v8sftSg+YpxSGxFtaBCakR8h2SWFI8xtHMkoefbCzHqnGFe0YIduu/VjObzQRfYmsYscgU3xxuuagpvlQhwyg6XIVyPxOYVQ0H54VNgmzXiDxT4XD/76TfXdre9EbiPWPdAJfFkicKhx21FR7Kmq+RHcKu5RZ+QoGb3vsef/QdDwp7WQvfbwe4fHzQ+OFR9AHdGyGUChzXNu/9onCGZpV2FsFqp738C9d+9nu+prEcBC/fwkJlLiqDga+/c0zpq4gIyB03zknCaTlz51xA+aafrPs+8FXcfa3CFq40NYDIz67r912ZiHDrTPsT+YCLgndjeSadvtuInHXqrYd3kHK7fe2n/3yqERB7Hkw3cMX7TRxK8RWr49Dgfx6t55DKKq2xoqR0xxwM7y+RQwvbKudUutL9IQ/Cmoe5NI8HKnphmpqupT2S3Rh+18Aoez8tt5udoEdsSk1LZF0QgnY/htCWGEA1a1/Q7wBK3VU4F99QWkAAAAASUVORK5CYII=" alt=""></a></li>
+                        <li><a href="#" class="p-1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALmSURBVHgBxVmBldowDBWdIJ2g2aDXCY4RboNmg2MD0gmgE4QNuE4AnQA6AdcJyAY6Kf6CEAKREw7+e3q+M5YsS7IlOyPqCWYeS/Mk9Iw2ASlKoXfQP6H1aDRaUw+MYgaLUqrAq9BEaGuT4+9SlChr41LQGItIMPaXjHunW0InFJoJ7YVyoZQioTxCC6GdUNFHxiXBrzXFEhoIKJpD0YyGAFZTQU90Y0BRlT2jWMClK7hksNU65lkKbaLmAcOC7gQYYuUdrG5d0p0BJWddgzLExae59crcCeaeXBpgQZvSg6CbESdG0vZjodufHgwcQbNmZ5T1NM1hl+tqPVh5zzy4+tSKsF7hFDDl/pg658hPvOm1HodNZHBlFlhkUuMbO3jUo3v7R921IQfgKsXEOd7SmrWVu528q2oxYJw7mQyuY6imVA5L8sEy3bzzyhAcUs2Lk6lCS3/Kp5tmib6DBa/xX5jrRejN0pqrGGibwOKFz7HnRlxHKlidLMSXDka/gkt0L+BGq/vO4i1Sweq4IS/DFQUNaUP4WbzFKGjjv9BwlI1WkTTa3lAFSx5WHGzRzuBelWUH8h/qCcgp7ZD+5mS65ybRwmGjFlQL/KCewA1N+d/Qpa5ea9/A21sq9H/EISukIqwzOyDo1fRf7YrpBVxWbRrh7bzuckgepVnwO/lg8eZKdQ38RLt2jn8+jEW8dMYhh7xtmLC/WJjW+DIHTzikax2ajnJygI/5tQ+8cxRcL/+4rUi8LiDjY2XThT1bZeKT3V48c6gecnowOIRD0faDWfHmrwhecNfVg0Pg75gfeu3MugbO2Xk/uSU4VEWuwtnK7bspiV3runYYg5p7g1V99uNRAYPEzwN3Xw7aYco9QbbPrVcEZRA0vYWifMwsemL0SZmtQq2M33HP51vIMMXmXpfGPqKn0uQUErmVVX8JL/qNR3Sl+lcApd9C85hKKErBhrJjCi/4WgmloPpnCKUtFrDt+xniA+SJ75iZH9Y1AAAAAElFTkSuQmCC" alt=""></a></li>
+                        <li><a href="#" class="p-1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMmSURBVHgBxVnRldowEFzy8h93cO4gXAVxCZcKwlVwpAK4CiAVQCqADiAVQCrAVwF0oOygUU4YjCXZB/PePht5tRqvpNWu6UkijDGFXvoq33jNKMBBpaT8VVn3er21JKAXo6ykQOBFZaiydYPz/qAkDp5eTin4Ehl1X1WvlC6BAVUmKnuVsUoukUAflbnKTmWWYqPO8ItHLJOWINExiQ6kDeg1GOpLxyBR2J5ILDilK05Ja681jLNQ2USNww5zuRHoiFWoMqZ1ITcGSU6alAZcFx82rVfGzjj2sE7BLdpc7gRsRkaM7NLDGba/3BkMQZNqY5L3+MYj7nj0d9izbZxgMzvzIr03izCSk0AoZjFE+WJjv2EXakD1nviGsUCfp8Ax4IC9+1GobAI7Ppn2KALHWkH3k9hs409Ah1wv8cfSOXByhIQxZEp9EPwqNg1qAqYn5z3Sqq33bMu2tde2ZNucUrId5C7HulOsBc4z9lhrTAao57Dk0nB4MDyq9DpV2fF+ZuyuLHjv0LikuA53n8V6pZRm+C+xr1PSZHQIwl4TPPZD3r1ftVUHeD/DFGcuE+4CSg4Z93OlGWt8KxEgpyPBUJQXfr+KXWs+sL4GlbZcTj0YTBZTfMA6CfDib5UR7wuVN96j3xgEjA2uOfQ4zdCD90qVLxVbV8GdfnBB+iGkg0kL0FXsTMChYOwxusEUw92PTR3o4e/SHj8Dq7pc5Q0EMQVFQAdhbQuSKZsKfZ7VxjJQvxA4jzEqLN0mzHsJGTOtUYWXsXG3cD/2IeuwhigC88rUr8+NiU+5jkHabzhNbxJhzlOwqSTAVNM/cylJTDO88LxWSAJMJXk+BmruUMSmkEP8GpCBYCM8pn4sEnssrs92uufFzr8ihMI0lR76YGjuX3YOmhSnJqI+6Qpcv2GbirvxZiS5a4PKDtch404MTc9TiWUkt0oah9Ndv2jbkevTdlKs9A0NaGjUBVF6bcSI0Tas/Tfqzt6dSfx8SxuO2DR0SmM/oudik1N8FHdVnEtIy8pHdIj/LwDkl8o0psSIIlghW4hNiVC25hT/bwhXmh7rkdST5R+sQn3Mu0/4CgAAAABJRU5ErkJggg==" alt=""></a></li>
+                    </ul>
+                </li>
+                <li><a href="tel:+919878787" class="py-1">客服電話 0919878787</a></li>
+                <li><a href="mailto:travel@gmail.com" class="py-1">客服信箱 travel@gmail.com</a></li>
+                <li class="py-4">2024 TRAVEL TALES版權所有,無商業行為</li>
+            </ul>
+        </div>
+        <a type="button" class="btn topbtn shadow-sm" id="topbtnJs" href="javascript:window.scrollTo(0, 0)">
+            <span class="material-symbols-outlined text-white mt-1">keyboard_arrow_up</span>
+        </a>
+    </div>      
+    </div>
+</section>
+
+                
+                
+                
+                
+                
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+
+</html>
