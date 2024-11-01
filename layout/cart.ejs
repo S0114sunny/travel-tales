@@ -1,0 +1,31 @@
+
+
+<ul class="mb-lg-12 mb-8 d-flex align-items-lg-start justify-content-center">
+  <li class="d-flex flex-column align-items-center cartStatus <%= (active==='cart' ) ? 'cartStatus-step' : ''%>">
+    <span class="material-symbols-outlined cartStatus-icon cartStatus-bg mb-lg-4 mb-2">
+      shopping_cart
+    </span>
+    <p class="text-neutral-3 fs-lg-6 fs-7 lh-12 fw-medium">確認商品</p>
+  </li>
+  <li class="cartStatus-line mx-lg-5 mx-2"></li>
+  <li class="d-flex flex-column align-items-center cartStatus <%= (active==='cartEdit' ) ? 'cartStatus-step' : ''%>">
+    <span class="material-symbols-outlined cartStatus-icon cartStatus-bg mb-lg-4 mb-2">
+      edit
+    </span>
+    <p class="text-neutral-3 fs-lg-6 fs-7 lh-12 fw-medium">填寫資料</p>
+  </li>
+  <li class="cartStatus-line mx-lg-5 mx-2"></li>
+  <li class="d-flex flex-column align-items-center cartStatus <%= (active==='cartCreditcard' ) ? 'cartStatus-step' : ''%>">
+    <span class="material-symbols-outlined cartStatus-icon cartStatus-bg mb-lg-4 mb-2">
+      credit_card
+    </span>
+    <p class="text-neutral-3 fs-lg-6 fs-7 lh-12 fw-medium">結帳付款</p>
+  </li>
+  <li class="cartStatus-line mx-lg-5 mx-2"></li>
+  <li class="d-flex flex-column align-items-center cartStatus <%= (active==='cartCheck' ) ? 'cartStatus-step' : ''%>">
+    <span class="material-symbols-outlined cartStatus-icon cartStatus-bg mb-lg-4 mb-2">
+      check
+    </span>
+    <p class="text-neutral-3 fs-lg-6 fs-7 lh-12 fw-medium">完成訂購</p>
+  </li>
+</ul>

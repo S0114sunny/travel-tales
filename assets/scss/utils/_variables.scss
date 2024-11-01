@@ -311,6 +311,7 @@ $neutral-4: #B7B7B7;
 $neutral-5: #D9D9D9;
 $neutral-6: #F3F3F3;
 $neutral-7: $white;
+$neutral-8: #FAFAFA;
 
 $warning-50: #FFECE5;
 $warning-300: #EF9072;
@@ -336,6 +337,7 @@ $theme-colors: (
   "neutral-5": $neutral-5,
   "neutral-6": $neutral-6,
   "neutral-7": $neutral-7,
+  "neutral-8": $neutral-8,
 
   "success": $success,
   "info": $info,
@@ -467,6 +469,8 @@ $spacers: (
   // 80
   13: $spacer * 10,
   //
+  14: $spacer * 7.5,
+  // 120
   //4: $spacer * 1.5,
   // 5: $spacer * 3,
   ) !default;

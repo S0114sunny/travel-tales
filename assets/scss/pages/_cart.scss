@@ -1,0 +1,157 @@
+.cart-space {
+  padding-top: 80px;
+  padding-bottom: 76px;
+  @include media-breakpoint-down(lg) {
+    margin-top: 56px;
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+}
+.btnClear {
+  color: $primary-2;
+  border: 1px solid $primary-2;
+  border-radius: 16px;
+  background: transparent;
+  font-weight: 400;
+}
+.btnClear:hover {
+  color: $warning-500;
+  border-color: $warning-500;
+  font-weight: 700;
+}
+.pro-item-bg {
+  background: $neutral-8;
+  border-radius: 16px;
+  .proOder-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 8px;
+    &_1 {
+      width: 119px;
+      height: 80px;
+      background-image: url("/assets/images/singleTrip-banner-1.png");
+      @include media-breakpoint-down(lg) {
+        width: 90px;
+        height: 60px;
+      }
+    }
+    &_2 {
+      width: 119px;
+      height: 80px;
+      background-image: url("/assets/images/recommend-2.jpg");
+      @include media-breakpoint-down(lg) {
+        width: 90px;
+        height: 60px;
+      }
+    }
+  }
+}
+.pro-item-bg:hover {
+  background: $warning-50;
+}
+.cart-list {
+  flex: 1;
+  margin-left: 84px;
+  margin-right: 52px;
+  .cart-list-item {
+    flex-grow: 1; 
+  }
+  .cart-list-item:nth-child(1) {
+    flex-basis: 355px; 
+    text-align: left;
+  }
+  .cart-list-item:nth-child(2) {
+    flex-basis: 340px;
+    text-align: left;
+  }
+  .cart-list-item:nth-child(3) {
+    flex-basis: 150px; 
+    text-align: left;
+  }
+  .cart-list-item:nth-child(4) {
+    flex-basis: 150px;
+    text-align: left;
+  }
+  .cart-list-item:nth-child(5) {
+    flex-basis: 120px; 
+    text-align: left;
+  }
+  .cart-list-item:nth-child(6) {
+    flex-basis: 50px; 
+    text-align: center;
+  }
+}
+.addCart-quantity {
+  border: 1px solid $neutral-5;
+  border-radius: 8px;
+  background: $white;
+  min-width: 130px;
+  @include media-breakpoint-down(lg) {
+    min-width: 122px;
+  }
+
+  .btn-reduce , .btn-add {
+    background: transparent;
+    font-size: 24px;
+  }
+  .addCart-number {
+    height: 100%;
+    max-width: 34px;
+    border: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    outline: none;
+  }
+  .addCart-number::-webkit-inner-spin-button,
+  .addCart-number::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+  .addCart-number[type="number"] {
+    -moz-appearance: textfield; 
+  }
+}
+.subtotal {
+  min-width: 120px;
+  text-align: right;
+  @include media-breakpoint-down(lg) {
+    min-width: 75px;
+    text-align: left;
+  }
+}
+.cartDelete {
+  color: $neutral-3;
+  padding: 11px 13px;
+  border-radius: 80px;
+  background: $neutral-6;
+}
+.cartDelete:hover {
+  color: $warning-500;
+  background: $white;
+}
+.cartTotal {
+  border-radius: 16px;
+  font-weight: 700;
+}
+.cartReturn {
+  color: $primary-2;
+  background: $white;
+  border: 1px solid $primary-2;
+  border-radius: 16px;
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+  }
+}
+.cartReturn:hover {
+  color: $white;
+  background: $primary-2;
+}
+.cartNext {
+  color: $white;
+  background: $primary-2;
+  border: 1px solid $primary-2;
+  border-radius: 16px;
+}
