@@ -192,7 +192,7 @@
               </a>
             </div>
             <a href="./cart.html"><button type="button" class="trip-btn fs-6 lh-base fw-400">加入購物車</button></a>
-            
+
           </div>
         </div>
       </div>
@@ -697,13 +697,19 @@
     </div>
   </section>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
+
   <script type="module" src="../main.js"></script>
   <script type="module" src="../assets/js/topbtn.js"></script>
   <script type="module" src="../assets/js/travel_swiper.js"></script>
   <script type="module" src="../assets/js/filter_dorpdown.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script>
+    AOS.init();
+
     const picModal = document.getElementById('picModal');
     picModal.addEventListener('shown.bs.modal', () => {
       // 獲取第一個縮圖
@@ -779,7 +785,6 @@
       }
     }
   </script>
-
 </body>
 
 </html>

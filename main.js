@@ -8,23 +8,23 @@ const elem = document.querySelector('input[name="datepicker"]');
 const datepicker = new Datepicker(elem, {
   autohide: true,
   language: 'zh-CN',
-}); 
+});
 const elem2 = document.querySelector('input[name="datepicker2"]');
 const datepicker2 = new Datepicker(elem2, {
   autohide: true,
   language: 'zh-CN',
-}); 
+});
 
 const elem3 = document.querySelector('input[name="datepicker3"]');
 const datepicker3 = new Datepicker(elem3, {
   autohide: true,
   language: 'zh-CN',
-}); 
+});
 const elem4 = document.querySelector('input[name="datepicker4"]');
 const datepicker4 = new Datepicker(elem4, {
   autohide: true,
   language: 'zh-CN',
-}); 
+});
 
 
 
@@ -54,10 +54,10 @@ window.addEventListener('scroll', () => {
   // 更新 navbara 和 navbarb
   navbara.classList.toggle('d-block', isScrolled);
   navbara.classList.toggle('d-none', !isScrolled);
-  
+
   navbarb.classList.toggle('d-none', isScrolled);
   navbarb.classList.toggle('d-block', !isScrolled);
-  
+
 
   //pc
   logo.classList.toggle('d-block', isScrolled);
@@ -69,12 +69,8 @@ window.addEventListener('scroll', () => {
     textColor.classList.toggle('linkline', isScrolled);
 
   });
-  
+
   textColors2.classList.toggle('custom-2', isScrolled);
   textColors2.classList.toggle('custom-1', !isScrolled);
-  
-});
-  
-AOS.init({
-  once: true
+
 });
