@@ -60,7 +60,7 @@ const swiperPopular2 = new Swiper('.swiperPopular2', {
 
 
 
-const swiperComment= new Swiper(".swiperComment", {
+const swiperComment = new Swiper(".swiperComment", {
   slidesPerView: 1,
   spaceBetween: 24,
   loop: true,

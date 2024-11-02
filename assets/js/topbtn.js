@@ -17,7 +17,7 @@ window.addEventListener('scroll', () => {
 
 
 // 判斷是否在 AA 頁面
-if (window.location.pathname === '/travel-tales/pages/singleTrip.html') {
+if (window.location.pathname === './singleTrip.html') {
   
   // 設定 bottom 值的函式
   const setBottomValue = () => {
