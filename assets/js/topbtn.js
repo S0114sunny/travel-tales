@@ -1,6 +1,6 @@
 //topbtn
-const topbtnJs =document.querySelector('#topbtnJs');
-const cartJS =document.querySelector('#cartJS');
+const topbtnJs = document.querySelector('#topbtnJs');
+const cartJS = document.querySelector('#cartJS');
 
 
 //navber
@@ -12,20 +12,20 @@ window.addEventListener('scroll', () => {
 
   //btn
   topbtnJs.classList.toggle('topbtnPostionFixed', isScrolled && !isToBottom);
-  topbtnJs.classList.toggle('topbtnPostionAbsolute', isToBottom );
+  topbtnJs.classList.toggle('topbtnPostionAbsolute', isToBottom);
 });
 
 
 // 判斷是否在 AA 頁面
-if (window.location.pathname === '/travel-tales/pages/singleTrip.html') {
-  
+if (window.location.pathname.includes('singleTrip.html')) {
+
   // 設定 bottom 值的函式
   const setBottomValue = () => {
 
     // 宣告
-    const topbtnPostion = document.querySelector('.topbtnPostionFixed'); 
+    const topbtnPostion = document.querySelector('.topbtnPostionFixed');
 
-    if (topbtnPostion) { 
+    if (topbtnPostion) {
       let bottomValue; // 定義變數
       if (window.innerWidth >= 992) {
         bottomValue = '5%'; // 寬度大於等於 992px 時的 bottom 值

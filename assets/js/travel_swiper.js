@@ -18,7 +18,7 @@ const swiperPopular = new Swiper('.swiper-popular', {
   loop: true,
   pagination: {
     el: '.swiper-pagination-popular',
-    clickable: true, 
+    clickable: true,
     bulletClass: 'swiper-pagination-bullet', // 自定義分頁指示器的class名
     bulletActiveClass: 'swiper-pagination-bullet-active', // 自定義活動分頁指示器的class名
   },
@@ -44,7 +44,7 @@ const swiperPopular = new Swiper('.swiper-popular', {
 const swiperPopular2 = new Swiper('.swiperPopular2', {
   slidesPerView: 1,
   nested: true,
-  loop: true, 
+  loop: true,
   pagination: {
     el: '.swiper-pagination-popular-two',
     clickable: true,
@@ -53,14 +53,14 @@ const swiperPopular2 = new Swiper('.swiperPopular2', {
   },
   autoplay: { // 自動播放
     delay: 3000, // 延遲3秒更換圖片
-    disableOnInteraction: false, 
+    disableOnInteraction: false,
     pauseOnMouseEnter: true, // 滑鼠點選到圖片停住
   }
 });
 
 
 
-const swiperComment= new Swiper(".swiperComment", {
+const swiperComment = new Swiper(".swiperComment", {
   slidesPerView: 1,
   spaceBetween: 24,
   loop: true,
